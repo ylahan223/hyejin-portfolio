@@ -3,12 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="웹디자이너 한혜진의 디자인 포트폴리오" />
-    <title>HYEJIN PORTFOLIO</title>
-    <link rel="stylesheet" href="/style.css" />
+    <meta name="description" content="웹디자이너 한혜진의 포트폴리오 관리자 페이지" />
+    <title>WORK ADMIN | HYEJIN</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="app"><main class="login-shell"><div class="login-card"><p>페이지를 불러오는 중…</p></div></main></div>
-    <script type="module" src="/script.js"></script>
+  <body data-page="admin">
+    <!-- 로딩 화면 (세션 확인 중) -->
+    <main class="login-shell" id="admin-loading">
+      <div class="login-card"><p>페이지를 불러오는 중…</p></div>
+    </main>
+
+    <!-- 로그인 화면 -->
+    <main class="login-shell" id="login-view" style="display:none">
+      <form class="login-card" id="login-form">
+        <p class="eyebrow">HYEJIN PORTFOLIO</p>
+        <h1>ADMIN LOGIN</h1>
+        <p>Supabase에서 만든 관리자 계정으로 로그인하세요.</p>
+        <div id="login-notice"></div>
+        <label><span>이메일</span><input name="email" type="email" required></label>
+        <label><span>비밀번호</span><input name="password" type="password" required></label>
+        <button class="button primary">관리자로 로그인</button>
+      </form>
+    </main>
+
+    <!-- 관리자 화면 -->
+    <main class="admin-shell" id="admin-view" style="display:none">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">HYEJIN PORTFOLIO</p>
+          <h1>WORK ADMIN</h1>
+          <a class="archive-link" href="archive.html">WORK ARCHIVE 보기 ↗</a>
+        </div>
+        <div class="account-box">
+          <span>Supabase 연결됨</span>
+          <small id="account-email"></small>
+          <button id="logout">로그아웃</button>
+        </div>
+      </header>
+
+      <div id="admin-notice"></div>
+
+      <div class="workspace">
+        <!-- 작업 등록·수정 폼 -->
+        <section class="panel form-panel">
+          <div class="panel-heading">
+            <div><span class="step">01</span><h2 id="form-mode-title">새 작업 등록</h2></div>
+            <p>필수 항목은 제목 하나뿐이에요.</p>
+          </div>
+          <form id="work-form">
+            <div class="form-section">
+              <h3>기본 정보</h3>
+              <label class="field full"><span>작업 제목 <b>*</b></span><input name="title" placeholder="예: 피부과 여름 프로모션 콘텐츠"></label>
+              <div class="field-grid">
+                <label class="field"><span>카테고리</span>
+                  <select name="category">
+                    <option>콘텐츠 디자인</option>
+                    <option>광고·캠페인</option>
+                    <option>상세·랜딩페이지</option>
+                    <option>웹디자인</option>
+                    <option>퍼블리싱</option>
+                    <option>AI·그래픽</option>
+                  </select>
+                </label>
+                <div class="field date-field"><span>제작 기간</span>
+                  <div class="date-range-inputs native-dates">
+                    <label><small>시작일</small><input name="date" type="date"></label>
+                    <i>→</i>
+                    <label><small>종료일 <em>선택</em></small><input name="endDate" type="date"></label>
+                  </div>
+                </div>
+                <div class="field tools-field"><span>사용 도구</span>
+                  <div class="tool-entry"><input id="tool-input" placeholder="도구 입력 후 쉼표 또는 Enter"><button type="button" id="add-tool">추가</button></div>
+                  <div class="tool-tags" id="tool-tags"></div>
+                  <div class="tool-suggestions"><small>자주 쓰는 도구</small><div id="tool-suggestions"></div></div>
+                </div>
+                <label class="field"><span>담당 범위</span><input name="role" placeholder="디자인 100%"></label>
+              </div>
+            </div>
+            <div class="form-section">
+              <h3>이미지</h3>
+              <div class="image-fields">
+                <div>
+                  <span class="sub-label">대표 이미지</span>
+                  <label class="upload-box" id="cover-box">
+                    <span id="cover-preview" style="display:contents"><div><strong>대표 이미지 선택</strong><span>JPG·PNG·WebP · 최대 20MB</span></div></span>
+                    <input id="cover-input" type="file" accept="image/jpeg,image/png,image/webp">
+                  </label>
+                  <button type="button" class="text-button" id="remove-cover" style="display:none">이미지 제거</button>
+                </div>
+                <div>
+                  <span class="sub-label">상세 이미지 · 여러 장 가능</span>
+                  <label class="detail-upload">
+                    <strong>상세 이미지 추가</strong>
+                    <span>선택하면 웹용 WebP로 자동 최적화돼요.</span>
+                    <input id="detail-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+                  </label>
+                  <div class="detail-grid" id="detail-grid"></div>
+                </div>
+              </div>
+              <p class="optimization-note">일반 이미지는 긴 변 1920px, 긴 상세페이지는 폭 1600px 기준으로 줄이고 WebP 품질 84%로 저장합니다.</p>
+            </div>
+            <div class="form-section">
+              <h3>작업 설명</h3>
+              <label class="field full"><span>간단한 설명</span><textarea name="description" rows="4" placeholder="작업 목적과 맡은 부분을 짧게 기록해 주세요."></textarea></label>
+            </div>
+            <div class="form-section">
+              <h3>노출 설정</h3>
+              <div class="checks">
+                <label class="check-card"><input name="isPublic" type="checkbox"><span><strong>아카이브에 공개</strong><small>전체 작업 목록에 표시</small></span></label>
+                <label class="check-card"><input name="isFeatured" type="checkbox"><span><strong>메인에 노출</strong><small>Selected Works 후보</small></span></label>
+                <label class="check-card"><input name="isPinned" type="checkbox"><span><strong>상단에 고정</strong><small>아카이브 맨 위에 표시</small></span></label>
+              </div>
+            </div>
+            <div class="actions">
+              <button type="button" class="button secondary" id="cancel-edit" style="display:none">취소</button>
+              <button type="submit" class="button primary" id="submit-work">작업 등록하기</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- 썸네일 편집 -->
+        <aside class="preview-column">
+          <section class="panel sticky-panel">
+            <div class="panel-heading compact">
+              <div><span class="step">02</span><h2>썸네일 편집</h2></div>
+            </div>
+            <div class="thumbnail-editor">
+              <div class="thumbnail-mode">
+                <button data-mode="contain">전체 보기</button>
+                <button data-mode="auto">자동 맞춤</button>
+                <button data-mode="cover">꽉 채우기</button>
+              </div>
+              <div class="thumbnail-crop" id="thumbnail-crop"></div>
+              <div class="zoom-control">
+                <button type="button" id="zoom-out">−</button>
+                <label><span>확대·축소</span><input id="zoom-range" type="range" min="1" max="3" step=".05"></label>
+                <button type="button" id="zoom-in">＋</button>
+              </div>
+              <button type="button" class="thumbnail-reset" id="thumb-reset">위치·확대 초기화</button>
+            </div>
+            <article class="work-card preview-card">
+              <div class="thumbnail" id="card-thumbnail"></div>
+              <div class="card-copy">
+                <span class="category" id="preview-category"></span>
+                <h3 id="preview-title"></h3>
+                <p id="preview-meta"></p>
+              </div>
+            </article>
+            <p class="save-note">전체 보기는 같은 이미지를 흐린 배경으로 채워 빈 공간을 자연스럽게 보여줘요.</p>
+          </section>
+        </aside>
+      </div>
+
+      <!-- 등록된 작업 관리 -->
+      <section class="panel list-panel">
+        <div class="panel-heading list-heading">
+          <div><span class="step">03</span><h2>등록된 작업</h2><mark id="works-count">0</mark></div>
+          <div class="filters">
+            <input id="work-search" placeholder="제목 검색">
+            <select id="work-filter">
+              <option>전체</option>
+              <option>콘텐츠 디자인</option>
+              <option>광고·캠페인</option>
+              <option>상세·랜딩페이지</option>
+              <option>웹디자인</option>
+              <option>퍼블리싱</option>
+              <option>AI·그래픽</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>작업</th><th>카테고리</th><th>제작일</th><th>공개</th><th>메인</th><th>고정</th><th>관리</th></tr></thead>
+            <tbody id="works-table"></tbody>
+          </table>
+          <div id="works-empty" class="empty"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="웹디자이너 한혜진의 전체 작업 아카이브" />
+    <title>WORK ARCHIVE | HYEJIN</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="archive">
+    <main class="archive-shell">
+      <div class="archive-glow glow-one"></div>
+      <div class="archive-glow glow-two"></div>
+
+      <!-- 헤더 -->
+      <header class="archive-nav">
+        <a href="index.html" class="archive-logo">HYEJIN <span>✦</span></a>
+      </header>
+
+      <section class="archive-hero">
+        <p class="archive-kicker">WELCOME TO MY LITTLE DESIGN WORLD</p>
+        <h1>WORK<br><i>ARCHIVE</i><span>✦</span></h1>
+        <p class="archive-intro">콘텐츠 디자인부터 웹과 퍼블리싱까지,<br>제가 만들고 경험한 작업을 모았습니다.</p>
+        <div class="archive-spark spark-a">♡</div>
+        <div class="archive-spark spark-b">✦</div>
+        <div class="archive-spark spark-c">✧</div>
+      </section>
+
+      <!-- 작업 목록 -->
+      <section class="archive-browser" id="works">
+        <div class="browser-top"><div><i></i><i></i><i></i></div><span>hyejin.portfolio / work-archive</span><b>♡</b></div>
+        <div class="archive-heading">
+          <div><span>SELECTED &amp; RECENT</span><h2>My Works <i>✦</i></h2></div>
+          <p id="archive-count">00 PROJECTS</p>
+        </div>
+        <!-- 필터 버튼 (JS가 채움) -->
+        <div id="archive-filters" class="archive-filters"></div>
+        <!-- 작업 카드 목록 (JS가 채움) -->
+        <div id="archive-grid" class="archive-state">작업을 불러오는 중이에요 ✦</div>
+        <!-- 더 보기 버튼 (모두 표시되면 자동 숨김) -->
+        <div class="archive-more-wrap" id="archive-more-wrap" style="display:none">
+          <button type="button" class="archive-more" id="archive-more">VIEW MORE <span>✦</span></button>
+        </div>
+      </section>
+
+      <footer class="archive-footer">
+        <span>THANKS FOR VISITING MY WORLD ✦</span>
+        <small>© 2026 Han Hyejin</small>
+      </footer>
+    </main>
+
+    <!-- 상세보기 모달 (JS가 내용을 채우고 열고 닫음) -->
+    <div class="archive-modal" id="archive-modal" role="dialog" aria-modal="true" hidden>
+      <article class="archive-detail">
+        <button class="detail-close" aria-label="상세 보기 닫기">×</button>
+        <div class="detail-title">
+          <span id="detail-category"></span>
+          <h2 id="detail-heading"></h2>
+          <p id="detail-period"></p>
+        </div>
+        <div class="detail-info">
+          <div><b>ROLE</b><span id="detail-role"></span></div>
+          <div><b>TOOLS</b><span id="detail-tools"></span></div>
+        </div>
+        <p class="detail-description" id="detail-description" hidden></p>
+        <div class="detail-images" id="detail-images"></div>
+      </article>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
