@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="웹디자이너 한혜진의 포트폴리오 관리자 페이지" />
     <title>WORK ADMIN | HYEJIN</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="admin">
@@ -101,7 +102,7 @@
                   <div class="detail-grid" id="detail-grid"></div>
                 </div>
               </div>
-              <p class="optimization-note">일반 이미지는 긴 변 1920px, 긴 상세페이지는 폭 1600px 기준으로 줄이고 WebP 품질 84%로 저장합니다.</p>
+              <p class="optimization-note">일반 이미지는 긴 변 1920px, 긴 상세페이지는 폭 1600px 기준으로 줄이고 WebP 품질 84%로 저장합니다.<br>상세 이미지의 삭제·순서 변경은 아래 등록/수정 버튼을 눌러 저장해야 실제로 반영돼요.</p>
             </div>
             <div class="form-section">
               <h3>작업 설명</h3>
@@ -136,9 +137,9 @@
               </div>
               <div class="thumbnail-crop" id="thumbnail-crop"></div>
               <div class="zoom-control">
-                <button type="button" id="zoom-out">−</button>
+                <button type="button" id="zoom-out" aria-label="축소">−</button>
                 <label><span>확대·축소</span><input id="zoom-range" type="range" min="1" max="3" step=".05"></label>
-                <button type="button" id="zoom-in">＋</button>
+                <button type="button" id="zoom-in" aria-label="확대">＋</button>
               </div>
               <button type="button" class="thumbnail-reset" id="thumb-reset">위치·확대 초기화</button>
             </div>
@@ -160,7 +161,10 @@
         <div class="panel-heading list-heading">
           <div><span class="step">03</span><h2>등록된 작업</h2><mark id="works-count">0</mark></div>
           <div class="filters">
-            <input id="work-search" placeholder="제목 검색">
+            <div class="search-box">
+              <input id="work-search" placeholder="제목·도구·설명 검색" aria-label="작업 검색">
+              <button type="button" id="work-search-clear" aria-label="검색어 지우기" hidden>×</button>
+            </div>
             <select id="work-filter">
               <option>전체</option>
               <option>콘텐츠 디자인</option>
@@ -170,15 +174,41 @@
               <option>퍼블리싱</option>
               <option>AI·그래픽</option>
             </select>
+            <select id="work-page-size" aria-label="한 페이지에 보여줄 개수">
+              <option value="10">10개씩</option>
+              <option value="20">20개씩</option>
+              <option value="50">50개씩</option>
+              <option value="100">100개씩</option>
+              <option value="0">전체 보기</option>
+            </select>
           </div>
+        </div>
+        <!-- 선택된 작업이 있을 때 나타나는 일괄 작업 바 -->
+        <div class="bulk-bar" id="bulk-bar" hidden>
+          <strong><span id="bulk-count">0</span>개 선택됨</strong>
+          <select id="bulk-category" aria-label="일괄 변경할 카테고리">
+            <option>콘텐츠 디자인</option>
+            <option>광고·캠페인</option>
+            <option>상세·랜딩페이지</option>
+            <option>웹디자인</option>
+            <option>퍼블리싱</option>
+            <option>AI·그래픽</option>
+          </select>
+          <button type="button" id="bulk-apply">카테고리 변경</button>
+          <i class="bulk-sep" aria-hidden="true"></i>
+          <button type="button" id="bulk-public">공개</button>
+          <button type="button" class="ghost" id="bulk-private">비공개</button>
+          <i class="bulk-sep" aria-hidden="true"></i>
+          <button type="button" class="ghost" id="bulk-clear">선택 해제</button>
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>작업</th><th>카테고리</th><th>제작일</th><th>공개</th><th>메인</th><th>고정</th><th>관리</th></tr></thead>
+            <thead><tr><th class="check-col"><input type="checkbox" id="select-all" aria-label="현재 페이지 전체 선택"></th><th>작업</th><th>카테고리</th><th>제작일</th><th>공개</th><th>메인</th><th>고정</th><th>관리</th></tr></thead>
             <tbody id="works-table"></tbody>
           </table>
           <div id="works-empty" class="empty"></div>
         </div>
+        <div class="table-pagination" id="works-pagination" hidden></div>
       </section>
     </main>
 

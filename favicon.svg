@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3.4 4.4 17.2 16.8">
+  <defs>
+    <radialGradient id="favHeartFill" cx="35%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#ffcede"/>
+      <stop offset="45%" stop-color="#ff8fb6"/>
+      <stop offset="100%" stop-color="#f25e95"/>
+    </radialGradient>
+    <linearGradient id="favHeartShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="rgba(190,40,100,0)"/>
+      <stop offset="100%" stop-color="rgba(190,40,100,.3)"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 20.4 C10.9 19.7 4.2 15.3 4.2 10 C4.2 7.2 6.4 5.2 9 5.2 C10.4 5.2 11.5 5.9 12 6.9 C12.5 5.9 13.6 5.2 15 5.2 C17.6 5.2 19.8 7.2 19.8 10 C19.8 15.3 13.1 19.7 12 20.4 Z" fill="url(#favHeartFill)" stroke="#e2578d" stroke-width=".9" stroke-linejoin="round"/>
+  <path d="M12 20.4 C10.9 19.7 4.2 15.3 4.2 10 C4.2 7.2 6.4 5.2 9 5.2 C10.4 5.2 11.5 5.9 12 6.9 C12.5 5.9 13.6 5.2 15 5.2 C17.6 5.2 19.8 7.2 19.8 10 C19.8 15.3 13.1 19.7 12 20.4 Z" fill="url(#favHeartShade)"/>
+  <ellipse cx="8.7" cy="8.5" rx="2.3" ry="1.5" fill="rgba(255,255,255,.85)" transform="rotate(-22 8.7 8.5)"/>
+</svg>

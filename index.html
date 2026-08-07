@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="웹디자이너 한혜진의 디자인 포트폴리오" />
     <title>HYEJIN PORTFOLIO</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- 링크 공유 미리보기 (배포 후 og:image는 절대 주소로 바꾸면 더 확실해요) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HYEJIN PORTFOLIO" />
+    <meta property="og:description" content="웹디자이너 한혜진의 디자인 포트폴리오" />
+    <meta property="og:image" content="og-image.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="home">
@@ -12,11 +20,77 @@
       <div class="home-glow home-glow-a"></div>
       <div class="home-glow home-glow-b"></div>
 
+      <!-- 배경 큰 반짝이 장식 (SVG) : 샤프한 4포인트 별빛 -->
+      <div class="home-sparkles" aria-hidden="true">
+        <!-- 공통 정의: 날렵한 십자 별빛 + 중심 광원 글로우 -->
+        <svg width="0" height="0" style="position:absolute" focusable="false">
+          <defs>
+            <path id="spShape" d="M50 0C50.6 36 53 47.4 88 50C53 52.6 50.6 64 50 100C49.4 64 47 52.6 12 50C47 47.4 49.4 36 50 0Z"/>
+            <radialGradient id="spCoreGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/>
+              <stop offset="45%" stop-color="#ffffff" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <!-- 상단 (조금 더 밀도 있게) -->
+        <svg class="sparkle sp-l sp-white sp-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 히어로 좌우 바깥 -->
+        <svg class="sparkle sp-s sp-white sp-6" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-7" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-8" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 중반부 가장자리 -->
+        <svg class="sparkle sp-m sp-white sp-9" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-10" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-lav sp-11" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-12" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 하반부 가장자리 -->
+        <svg class="sparkle sp-m sp-white sp-13" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-14" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-15" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-16" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-17" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-18" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 추가 반짝이: 화면 안쪽까지 드문드문 -->
+        <svg class="sparkle sp-s sp-white sp-19" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-20" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-21" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-22" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-23" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-24" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-25" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-pink sp-26" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-27" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-28" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-29" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-30" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+      </div>
+
       <!-- 내비게이션 (둥근 플로팅 바) -->
       <header class="home-nav" id="home-nav">
         <div class="nav-left">
           <span class="nav-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <a href="#top" class="home-logo"><b class="nav-heart" aria-hidden="true">♥</b>HYEJIN PORTFOLIO</a>
+          <svg class="nav-heart" viewBox="0 0.8 24 24" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="navHeartFill" cx="35%" cy="28%" r="85%">
+                <stop offset="0%" stop-color="#ffcede" />
+                <stop offset="45%" stop-color="#ff8fb6" />
+                <stop offset="100%" stop-color="#f25e95" />
+              </radialGradient>
+              <linearGradient id="navHeartShade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="55%" stop-color="rgba(190,40,100,0)" />
+                <stop offset="100%" stop-color="rgba(190,40,100,.3)" />
+              </linearGradient>
+            </defs>
+            <path d="M12 20.4 C10.9 19.7 4.2 15.3 4.2 10 C4.2 7.2 6.4 5.2 9 5.2 C10.4 5.2 11.5 5.9 12 6.9 C12.5 5.9 13.6 5.2 15 5.2 C17.6 5.2 19.8 7.2 19.8 10 C19.8 15.3 13.1 19.7 12 20.4 Z" fill="url(#navHeartFill)" stroke="#e2578d" stroke-width=".9" stroke-linejoin="round" />
+            <path d="M12 20.4 C10.9 19.7 4.2 15.3 4.2 10 C4.2 7.2 6.4 5.2 9 5.2 C10.4 5.2 11.5 5.9 12 6.9 C12.5 5.9 13.6 5.2 15 5.2 C17.6 5.2 19.8 7.2 19.8 10 C19.8 15.3 13.1 19.7 12 20.4 Z" fill="url(#navHeartShade)" />
+            <ellipse cx="8.7" cy="8.5" rx="2.3" ry="1.5" fill="rgba(255,255,255,.85)" transform="rotate(-22 8.7 8.5)" />
+          </svg>
+          <a href="#top" class="home-logo">HYEJIN PORTFOLIO</a>
         </div>
         <nav aria-label="포트폴리오 메뉴" id="nav-menu">
           <a href="#top" class="is-active">HOME</a>
@@ -27,30 +101,92 @@
           <a href="#contact">CONTACT</a>
         </nav>
         <div class="nav-right">
-          <a class="nav-resume" href="#contact">RESUME<span>&nbsp;DOWNLOAD</span> <b>↓</b></a>
+          <a class="nav-resume" href="#contact">RESUME&nbsp;DOWNLOAD<b>↓</b></a>
           <button type="button" class="nav-burger" id="nav-burger" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i><i></i></button>
         </div>
       </header>
 
+      <!-- 화면 하단 고정 구름 장식 (viewport 기준, BACK → MIDDLE → FRONT) -->
+      <div class="site-clouds" aria-hidden="true">
+        <img class="cloud-back" src="assets/images/cloud-back.webp" alt="">
+        <img class="cloud-middle" src="assets/images/cloud-middle.webp" alt="">
+        <img class="cloud-front" src="assets/images/cloud-front.webp" alt="">
+        <!-- 구름 위에서 반짝이는 작은 별빛 -->
+        <svg class="sparkle sp-m sp-white cloud-sp-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink cloud-sp-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white cloud-sp-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-6" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-7" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav cloud-sp-8" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-9" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-10" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-pink cloud-sp-11" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-12" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-13" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white cloud-sp-14" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink cloud-sp-15" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-16" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+      </div>
+
       <!-- Hero -->
       <section class="home-hero" id="top">
-        <p>WELCOME TO MY LITTLE DESIGN WORLD</p>
-        <h1><strong>WORK</strong><i>ARCHIVE</i><span>✦</span></h1>
-        <div class="home-hero-copy">콘텐츠 디자인부터 웹과 퍼블리싱까지,<br>제가 만들고 경험한 작업을 모았습니다.</div>
-        <a class="home-scroll" href="#work">SCROLL TO EXPLORE ↓</a>
-        <b class="home-deco deco-heart">♡</b>
-        <b class="home-deco deco-star">✦</b>
-        <b class="home-deco deco-spark">✧</b>
-      </section>
-
-      <!-- Work -->
-      <section class="home-work" id="work">
-        <div class="home-section-head">
-          <div><span>SELECTED WORK ✦</span><h2>Recent Projects</h2></div>
-          <p>최근 작업 중 대표 작업을 모았습니다.</p>
+        <div class="hero-frames">
+          <!-- 1. 메인 브라우저/폴더형 창 -->
+          <article class="hero-main-window">
+            <div class="hero-window-bar" aria-hidden="true">
+              <span class="bar-dots"><i></i><i></i><i></i></span>
+              <span class="bar-tab">♥<b>×</b></span>
+            </div>
+            <div class="hero-window-panel">
+              <div class="hero-panel-inner">
+                <p class="hero-badge"><i>♥</i> 디자인으로 가치를, 코드로 경험을 만듭니다 <i>♥</i></p>
+                <span class="name-wrap" data-text="HAN HYEJIN">
+                  <h1 class="hero-name" data-text="HAN HYEJIN">HAN HYEJIN</h1>
+                  <svg class="name-glint ngl-1" viewBox="0 0 100 100" aria-hidden="true"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+                  <svg class="name-glint ngl-2" viewBox="0 0 100 100" aria-hidden="true"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+                  <svg class="name-glint ngl-3" viewBox="0 0 100 100" aria-hidden="true"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+                </span>
+                <p class="hero-script"><i>✦</i> Web Designer &amp; Publisher <i>✦</i></p>
+                <p class="hero-desc">사용자의 마음을 설계하고, 브랜드의 이야기를 아름답게 전달하는<br>웹 디자이너 &amp; 퍼블리셔입니다. <b>♥</b></p>
+                <div class="hero-btns">
+                  <a class="hero-btn hero-btn-pink" href="#work">View My Work <span>♥</span></a>
+                  <a class="hero-btn hero-btn-lav" href="archive.html">Explore Archive <span>↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 2. 오른쪽 세로형 이미지 프레임 -->
+          <aside class="hero-photo-frame">
+            <!-- 좌상단 핑크 클립 -->
+            <svg class="frame-clip" viewBox="0 0 100 160" aria-hidden="true">
+              <defs>
+                <linearGradient id="clipGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffb6d7"/>
+                  <stop offset=".55" stop-color="#f77fb4"/>
+                  <stop offset="1" stop-color="#ee619e"/>
+                </linearGradient>
+              </defs>
+              <path d="M31 132 L31 42 A19 19 0 0 1 69 42 L69 112 A13 13 0 0 1 43 112 L43 58 A7 7 0 0 1 57 58 L57 102"
+                fill="none" stroke="url(#clipGrad)" stroke-width="11" stroke-linecap="round"/>
+              <path d="M31 132 L31 42 A19 19 0 0 1 69 42 L69 112 A13 13 0 0 1 43 112 L43 58 A7 7 0 0 1 57 58 L57 102"
+                fill="none" stroke="rgba(255,255,255,.6)" stroke-width="3" stroke-linecap="round" transform="translate(-1.5 -2)"/>
+            </svg>
+            <div class="photo-frame-top" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="photo-frame-body"><span>IMAGE COMING SOON ♡</span></div>
+          </aside>
+          <!-- 3. 우측 THINGS I LOVE 미니 창 -->
+          <aside class="hero-love">
+            <p class="love-title">THINGS I LOVE <span>♥</span></p>
+            <ul>
+              <li><img src="assets/images/love-games.png" alt=""> Playing Games</li>
+              <li><img src="assets/images/love-quirky.png" alt=""> Quirky Things</li>
+              <li><img src="assets/images/love-pink.png" alt=""> Pink Mood</li>
+              <li><img src="assets/images/love-hearts.png" alt=""> Hearts</li>
+            </ul>
+          </aside>
         </div>
-        <div id="home-work-grid" class="home-loading">작업을 불러오는 중이에요 ✦</div>
-        <a class="home-more" href="archive.html">전체 작업 보기 <span>↗</span></a>
       </section>
 
       <!-- About -->
@@ -79,8 +215,16 @@
             <article><span>03</span><div><small>VERSATILE</small><h3>폭넓은 실무 경험</h3><p>콘텐츠·배너·상세페이지·웹디자인을 오가며 목적에 맞는 표현을 유연하게 찾아냅니다.</p></div><b>↗</b></article>
           </div>
         </div>
-        <span class="about-deco about-deco-a">♡</span>
-        <span class="about-deco about-deco-b">✦</span>
+      </section>
+
+      <!-- Work -->
+      <section class="home-work" id="work">
+        <div class="home-section-head">
+          <div><span>SELECTED WORK ✦</span><h2>Recent Projects</h2></div>
+          <p>최근 작업 중 대표 작업을 모았습니다.</p>
+        </div>
+        <div id="home-work-grid" class="home-loading">작업을 불러오는 중이에요 ✦</div>
+        <a class="home-more" href="archive.html">전체 작업 보기 <span>↗</span></a>
       </section>
 
       <!-- Career -->
@@ -130,8 +274,6 @@
             </article>
           </div>
         </div>
-        <span class="career-deco career-deco-a">♡</span>
-        <span class="career-deco career-deco-b">✧</span>
       </section>
 
       <!-- Skills -->
@@ -166,8 +308,6 @@
           </div>
           <div class="skills-note"><span>DESIGN</span><i>→</i><span>BUILD</span><i>→</i><span>CREATE</span><b>Always learning, always making ✦</b></div>
         </div>
-        <span class="skills-deco skills-deco-a">✦</span>
-        <span class="skills-deco skills-deco-b">♡</span>
       </section>
 
       <!-- Contact -->
@@ -192,9 +332,6 @@
             <a href="#top">BACK TO TOP ↑</a>
           </div>
         </div>
-        <span class="contact-deco contact-deco-a">♡</span>
-        <span class="contact-deco contact-deco-b">✦</span>
-        <span class="contact-deco contact-deco-c">✧</span>
       </section>
     </main>
 
