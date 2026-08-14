@@ -45,6 +45,18 @@ if (location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(locatio
 }
 
 const categories = ["콘텐츠 디자인", "광고·캠페인", "상세·랜딩페이지", "웹디자인", "퍼블리싱", "AI·그래픽"];
+
+// 카테고리별 배지 색상 매핑 (화면 표시 전용 — 데이터에는 영향 없음)
+// 메인 Selected Works, /archive 카드, 상세 팝업에서 공통으로 사용한다.
+const CATEGORY_BADGE_CLASS = {
+  "콘텐츠 디자인": "cat-pink",
+  "광고·캠페인": "cat-coral",
+  "상세·랜딩페이지": "cat-lavender",
+  "웹디자인": "cat-mint",
+  "퍼블리싱": "cat-blue",
+};
+// 등록되지 않은 카테고리는 기본 라벤더 배지(cat-default)
+const categoryBadgeClass = (category) => `cat-badge ${CATEGORY_BADGE_CLASS[category] || "cat-default"}`;
 const quickTools = ["Figma", "Photoshop", "Illustrator", "ChatGPT"];
 const defaultThumbnail = { mode: "contain", scale: 1, x: 0, y: 0 };
 const thumbnailMarker = "\n\n<!--HYEJIN_THUMBNAIL:";
@@ -104,6 +116,17 @@ const thumbnailStyle = (thumbnail) => {
   return `object-fit:contain;transform:translate(${thumbnail.x}%,${thumbnail.y}%) scale(${thumbnail.scale})`;
 };
 const thumbnailHTML = (url, title, thumbnail) => !url ? `<span>IMAGE COMING SOON</span>` : `${thumbnail.mode === "contain" ? `<img class="thumbnail-blur" src="${url}" alt="" aria-hidden="true" loading="lazy">` : ""}<img class="thumbnail-main" src="${url}" alt="${escapeHTML(title)}" style="${thumbnailStyle(thumbnail)}" loading="lazy">`;
+
+// ---------- 메인 Selected Works 전용 썸네일 ----------
+// 타일을 항상 꽉 채우는 cover 방식 (블러 배경·레터박스 없음).
+// 아카이브·상세 팝업·관리자 편집 화면은 기존 thumbnailHTML을 그대로 사용한다.
+const homeThumbnailStyle = (thumbnail) => {
+  // 관리자에서 저장한 위치(초점)가 있으면 object-position에 반영, 없으면 중앙
+  if (thumbnail.mode === "cover") return `object-fit:cover;object-position:${50 - thumbnail.x}% ${50 - thumbnail.y}%;transform:scale(${thumbnail.scale})`;
+  if (thumbnail.mode === "contain") return `object-fit:cover;object-position:${50 - thumbnail.x}% ${50 - thumbnail.y}%;transform:none`;
+  return "object-fit:cover;object-position:center;transform:none";
+};
+const homeThumbnailHTML = (url, title, thumbnail) => !url ? `<span>IMAGE COMING SOON</span>` : `<img class="thumbnail-main home-thumb-cover" src="${url}" alt="${escapeHTML(title)}" style="${homeThumbnailStyle(thumbnail)}" loading="lazy">`;
 
 // ---------- Supabase 데이터 ----------
 async function signedUrl(path) {
@@ -175,7 +198,8 @@ function initHome() {
   getPublicWorks(4).then((works) => {
     const grid = document.querySelector("#home-work-grid");
     grid.className = "home-work-grid";
-    grid.innerHTML = works.map((work) => `<a class="home-work-card" href="archive.html#work-${work.id}"><div class="home-work-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<em>VIEW ↗</em></div><div class="home-work-copy"><span>${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${month(work.startDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></a>`).join("");
+    // 카드 정보는 이미지 하단 그라데이션 오버레이 위에 배지 + 제목만 표시 (날짜·도구는 상세 팝업에서)
+    grid.innerHTML = works.map((work) => `<a class="home-work-card" href="archive.html#work-${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<em>VIEW ↗</em><div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></a>`).join("");
   }).catch(() => { document.querySelector("#home-work-grid").textContent = "작업을 불러오지 못했어요."; });
 }
 
@@ -198,7 +222,7 @@ async function initArchive() {
       const visible = filtered.slice(0, visibleCount); // 처음 12개, VIEW MORE마다 +12
       countBox.textContent = `${String(visible.length).padStart(2, "0")} / ${String(filtered.length).padStart(2, "0")} PROJECTS`;
       grid.className = visible.length ? "archive-grid" : "archive-state";
-      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}${work.isPinned ? '<span class="pin-label">PINNED ✦</span>' : ""}<span class="view-label">VIEW PROJECT ↗</span></div><div class="archive-card-copy"><span>${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "이 카테고리에는 공개된 작업이 아직 없어요.";
+      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}${work.isPinned ? '<span class="pin-label">PINNED ✦</span>' : ""}<span class="view-label">VIEW PROJECT ↗</span></div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "이 카테고리에는 공개된 작업이 아직 없어요.";
       grid.querySelectorAll(".archive-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
       moreWrap.style.display = visibleCount < filtered.length ? "" : "none"; // 모두 표시되면 버튼 숨김
     };
@@ -230,7 +254,9 @@ function bindArchiveModal() {
 
 function openArchiveModal(work) {
   const modal = document.querySelector("#archive-modal");
-  modal.querySelector("#detail-category").textContent = work.category;
+  const detailCategory = modal.querySelector("#detail-category");
+  detailCategory.textContent = work.category;
+  detailCategory.className = categoryBadgeClass(work.category);
   modal.querySelector("#detail-heading").textContent = work.title;
   modal.querySelector("#detail-period").textContent = formatMonthPeriod(work.startDate, work.endDate);
   modal.querySelector("#detail-role").textContent = work.role || "DESIGN";
