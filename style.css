@@ -2327,7 +2327,7 @@ html:has(body[data-page="home"]) {
   background: rgba(255, 255, 255, .75);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .95), 0 4px 12px rgba(240, 130, 175, .14);
   color: #8d8098;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -2643,7 +2643,7 @@ html:has(body[data-page="home"]) {
 .hero-desc {
   margin: 0 0 44px;
   color: #756d81;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 2.05;
 }
 
@@ -2970,7 +2970,7 @@ html:has(body[data-page="home"]) {
 /* 섹션 제목 공통: Fredoka SemiBold */
 .home-work-intro h2,
 .about-head h2,
-.career-heading h2,
+.career-head h2,
 .skills-heading h2,
 .contact-body h2,
 .archive-hero h1,
@@ -3457,238 +3457,238 @@ html:has(body[data-page="home"]) {
   border-top: 0;
 }
 
-.career-heading {
+/* ---------- Career: 중앙 세로선 좌우 교차 타임라인 ---------- */
+.career-head {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  overflow: visible;
   margin-bottom: 40px;
 }
 
-.career-heading span {
-  color: var(--home-purple);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .18em;
-}
-
-.career-heading h2 {
-  margin: 10px 0 0;
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: .9;
-  letter-spacing: -.07em;
-}
-
-.career-heading h2 i {
-  color: transparent;
-  font-style: normal;
-  -webkit-text-stroke: 1.2px var(--home-pink);
-}
-
-.career-heading>p {
-  margin: 0 0 7px;
-  color: #918698;
-  font-size: 12px;
-  line-height: 1.7;
-  text-align: right;
-}
-
-.career-browser {
-  overflow: hidden;
-  border: 1px solid #d8cae7;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, .8);
-  box-shadow: 0 24px 70px rgba(175, 144, 205, .15);
-  backdrop-filter: blur(18px);
-}
-
-.career-window {
-  height: 50px;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  border-bottom: 1px solid #e5dced;
-  background: rgba(250, 245, 255, .88);
-}
-
-.career-window>div {
-  display: flex;
-  gap: 7px;
-}
-
-.career-window i {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #ff9ebe;
-}
-
-.career-window i:nth-child(2) {
-  background: #c5b8ff;
-}
-
-.career-window i:nth-child(3) {
-  background: #a9e9d9;
-}
-
-.career-window span {
-  color: #9c91a7;
-  font-size: 10px;
-  letter-spacing: .06em;
-}
-
-.career-window b {
-  justify-self: end;
-  color: var(--home-purple);
-  font-size: 14px;
-}
-
-.career-list {
-  padding: 46px 54px 50px;
-}
-
-.career-item {
+.career-head h2 {
   position: relative;
-  display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 34px;
+  z-index: 1;
+  margin: 0;
+  width: fit-content;
+  height: auto;
+  font-size: clamp(34px, 3.6vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  padding: 0;
+  overflow: visible;
 }
 
-.career-item:not(:last-child) {
-  padding-bottom: 22px;
+.career-head > p {
+  margin: 14px 0 0;
+  color: #756a82;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .01em;
 }
 
-.career-period {
+.career-timeline {
   position: relative;
-  padding: 21px 0 0 24px;
-  display: flex;
-  flex-direction: column;
-  color: #80758a;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 8px 0 4px;
 }
 
-.career-period::before {
+/* 지그재그: 인접 row를 동일한 값만큼 위로 당겨 겹침 —
+   카드 높이가 같으므로 하트 간격도 전부 동일하게 유지된다 */
+.tl-item + .tl-item {
+  margin-top: -34px;
+}
+
+/* 중앙 세로선: 핑크 → 라벤더 */
+.career-timeline::before {
   content: "";
   position: absolute;
+  left: 50%;
   top: 0;
-  bottom: -22px;
-  left: 4px;
-  width: 1px;
-  background: #ded3e7;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7a8c9, #c9a8ef);
 }
 
-.career-item:last-child .career-period::before {
-  bottom: 50%;
+/* 각 row: 2열 그리드, 카드 세로 중앙 = 하트 중심 */
+.tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
-.career-period i {
+/* 1·3번 왼쪽 열, 2·4번 오른쪽 열 (좌우 교차) */
+.tl-item:nth-child(odd) .tl-card {
+  grid-column: 1;
+  margin-left: auto;
+  margin-right: 52px;
+}
+
+.tl-item:nth-child(even) .tl-card {
+  grid-column: 2;
+  margin-left: 52px;
+}
+
+/* 카드 → 중앙선 가로 연결선: 하트 노드 바깥 테두리에서 카드 테두리까지 빈틈없이.
+   노드 반지름 17px, 카드 여백 52px → 선 길이 = 52 - 17 = 35px (좌우 동일).
+   카드 뒤 레이어(z-index:0)라 카드 내부를 침범하지 않는다 */
+.tl-item::before {
+  content: "";
   position: absolute;
-  top: 27px;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #b9a8cc;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 2px;
+  background: rgba(226, 164, 216, .8);
+}
+
+.tl-item:nth-child(odd)::before {
+  left: calc(50% - 52px); /* 카드 오른쪽 테두리 지점부터 */
+}
+
+.tl-item:nth-child(even)::before {
+  left: calc(50% + 17px); /* 노드 바깥 테두리부터 */
+}
+
+/* 중앙선 위 글라스 노드 + 핑크 하트 (이미지 파일 없이 CSS + 인라인 SVG) */
+.tl-node {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
   border-radius: 50%;
-  background: #fffafd;
-  box-shadow: 0 0 0 5px #f6effa;
+  background: rgba(255, 255, 255, .58);
+  border: 1px solid rgba(255, 255, 255, .8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 5px 14px rgba(214, 145, 190, .28);
+  z-index: 1;
 }
 
-.career-period strong {
-  color: #4b4357;
-  font-size: 18px;
-  letter-spacing: -.03em;
+.tl-node {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.career-period span {
-  margin-top: 4px;
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: .08em;
+/* 하트는 4개 모두 동일한 단색 핑크 */
+.tl-node svg {
+  width: 17px;
+  height: 17px;
+  color: #f2679d;
 }
 
-.career-item.current .career-period i {
-  border-color: var(--home-pink);
-  background: var(--home-pink);
-  box-shadow: 0 0 0 5px #ffeaf2;
-}
-
-.career-item.current .career-period strong {
-  color: var(--home-pink);
-}
-
-.career-card {
-  padding: 22px 25px;
-  border: 1px solid #e0d6e8;
-  border-radius: 17px;
-  background: rgba(255, 255, 255, .82);
+/* 얇은 가로형 프로스티드 글라스 카드 (콘텐츠 폭에 맞게 축소) */
+.tl-card {
+  position: relative;
+  z-index: 1; /* 연결선 위 */
+  width: min(368px, 100%);
+  min-height: 150px;
+  padding: 18px 22px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .62), rgba(255, 244, 250, .5));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 26px rgba(233, 158, 196, .13);
   transition: .25s ease;
 }
 
-.career-item.current .career-card {
-  border-color: #e0c9df;
-  background: linear-gradient(120deg, rgba(255, 240, 247, .9), rgba(247, 244, 255, .88) 60%, rgba(240, 252, 249, .78));
-}
-
-.career-card:hover {
-  transform: translateX(4px);
-  border-color: #cbb9da;
-  box-shadow: 0 13px 32px rgba(171, 137, 201, .12);
-}
-
-.career-card>div {
+/* 직무명 옆 작은 단색 아이콘 (반짝이 / </>) */
+.tl-card h3 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 7px;
 }
 
-.career-card small {
-  color: var(--home-purple);
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .13em;
+.role-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  color: var(--tl-color, #ee7fac);
 }
 
-.career-card em {
-  padding: 5px 8px;
+.role-icon--code {
+  width: 16px;
+  height: 16px;
+}
+
+.tl-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(219, 143, 188, .18);
+}
+
+/* 기간: 네 카드 공통 알약형 date pill (색상만 카드별 포인트 컬러) */
+.tl-period {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  height: 26px;
+  padding: 0 13px;
   border-radius: 999px;
-  background: #ffe5ef;
-  color: #e86091;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 800;
+  background: color-mix(in srgb, var(--tl-color, #ee7fac) 20%, #ffffff 80%);
+  border: 1px solid color-mix(in srgb, var(--tl-color, #ee7fac) 45%, #ffffff 55%);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--tl-color, #ee7fac) 12%, transparent);
+  color: color-mix(in srgb, var(--tl-color, #ee7fac) 88%, #4a3d55 12%);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  line-height: 1;
 }
 
-.career-card h3 {
-  margin: 8px 0 7px;
-  font-size: 20px;
-  letter-spacing: -.04em;
+.tl-card h3 {
+  margin: 11px 0 7px;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  color: #453c52;
 }
 
-.career-card p {
+.tl-card ul {
   margin: 0;
-  color: #7d7386;
-  font-size: 12px;
-  line-height: 1.7;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+}
+
+.tl-card li {
+  position: relative;
+  padding-left: 13px;
+  color: #6d6378;
+  font-size: 14px;
+  line-height: 1.6;
   word-break: keep-all;
 }
 
-.career-card ul {
-  margin: 15px 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  list-style: none;
+/* 작고 단정한 불릿 */
+.tl-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--tl-color, #ee7fac);
+  opacity: .65;
 }
 
-.career-card li {
-  padding: 6px 9px;
-  border: 1px solid #e1d7e8;
-  border-radius: 999px;
-  color: #8b7f94;
-  font-size: 10px;
-  font-weight: 700;
-  background: #fffafd;
-}
+/* 4색 순환 팔레트: 핑크 → 라벤더 → 로즈 퍼플 → 소프트 블루 → (반복)
+   의미 부여용이 아니라 시각적 리듬용. 항목이 늘어나도 자동 순환.
+   색은 날짜 알약·불릿·직무 심볼에만 쓰이고 카드 배경·테두리·그림자는 공통 */
+.tl-item:nth-child(4n + 1) { --tl-color: #ee7fac; }
+.tl-item:nth-child(4n + 2) { --tl-color: #9d86e8; }
+.tl-item:nth-child(4n + 3) { --tl-color: #c583cf; }
+.tl-item:nth-child(4n)     { --tl-color: #8ba3e8; }
 
 .home-skills {
   width: min(1280px, calc(100% - 64px));
@@ -4528,6 +4528,15 @@ html:has(body[data-page="home"]) {
   }
 }
 
+/* 태블릿: 타임라인 카드 폭 소폭 축소 (좌우 교차 유지) */
+@media (min-width: 721px) and (max-width: 1020px) {
+  .tl-item:nth-child(odd) { padding-right: 40px; }
+  .tl-item:nth-child(even) { padding-left: 40px; }
+  .tl-item::before { width: 40px; }
+  .tl-item:nth-child(odd)::before { width: 40px; }
+  .tl-card { padding: 16px 18px 14px; }
+}
+
 /* 태블릿: 2열 (모바일 1열 규칙과 충돌하지 않게 범위 지정) */
 @media (min-width: 721px) and (max-width: 1020px) {
   .archive-grid {
@@ -4807,7 +4816,6 @@ html:has(body[data-page="home"]) {
     letter-spacing: .14em;
   }
 
-  .career-heading>p,
   .skills-heading>p {
     display: none;
   }
@@ -4916,13 +4924,48 @@ html:has(body[data-page="home"]) {
   }
 
 
-  .career-list {
-    padding: 30px 22px 34px;
+  /* 모바일: 좌우 교차 해제, 세로선 왼쪽 + 카드 오른쪽 1열 */
+  .career-head {
+    margin-bottom: 30px;
   }
 
-  .career-item {
-    grid-template-columns: 120px 1fr;
-    gap: 18px;
+  .tl-item + .tl-item {
+    margin-top: 18px;
+  }
+
+  .career-timeline::before {
+    left: 13px;
+    transform: none;
+  }
+
+  .tl-item {
+    grid-template-columns: 1fr;
+    padding-left: 42px;
+  }
+
+  .tl-item:nth-child(odd) .tl-card,
+  .tl-item:nth-child(even) .tl-card {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .tl-item:nth-child(odd)::before,
+  .tl-item:nth-child(even)::before {
+    left: 30px; /* 노드 바깥 테두리 */
+    width: 12px; /* 카드 왼쪽 테두리(42px)까지 */
+    background: rgba(226, 164, 216, .8);
+  }
+
+  .tl-node {
+    left: 13px; /* 세로선 중심 */
+  }
+
+  .tl-card li {
+    font-size: 14px;
+  }
+
+  .tl-card h3 {
+    font-size: 17px;
   }
 
   .skills-grid {
@@ -5166,62 +5209,8 @@ html:has(body[data-page="home"]) {
     font-size: 32px;
   }
 
-  .career-heading h2 {
-    font-size: 40px;
-  }
-
-  .career-window {
-    grid-template-columns: 1fr auto;
-  }
-
-  .career-window>span {
-    display: none;
-  }
-
-  .career-list {
-    padding: 26px 16px 30px;
-  }
-
-  .career-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .career-item:not(:last-child) {
-    padding-bottom: 28px;
-  }
-
-  .career-period {
-    padding: 0 0 0 24px;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 7px;
-  }
-
-  .career-period::before {
-    top: 8px;
-    bottom: -36px;
-  }
-
-  .career-item:last-child .career-period::before {
-    bottom: -8px;
-  }
-
-  .career-period i {
-    top: 4px;
-  }
-
-  .career-period strong {
-    font-size: 16px;
-  }
-
-  .career-card {
-    margin-left: 24px;
-    padding: 19px;
-  }
-
-  .career-card h3 {
-    font-size: 18px;
+  .career-head h2 {
+    font-size: 32px;
   }
 
   .skills-heading h2 {
