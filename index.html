@@ -216,9 +216,27 @@
             <p>Experience shaped my strengths</p>
           </div>
           <div class="about-strengths">
-            <article><span class="strength-no">01</span><small>FAST</small><h3>빠른 제작과 정확한 정리</h3><p>업무의 핵심과 우선순위를 빠르게 파악해 안정적인 속도로 결과물을 완성합니다.</p></article>
-            <article><span class="strength-no">02</span><small>DESIGN + PUBLISHING</small><h3>디자인부터 구현까지</h3><p>시각적인 완성도뿐 아니라 실제 웹에서 자연스럽게 작동하는 방식까지 함께 생각합니다.</p></article>
-            <article><span class="strength-no">03</span><small>VERSATILE</small><h3>폭넓은 실무 경험</h3><p>콘텐츠·배너·상세페이지·웹디자인을 오가며 목적에 맞는 표현을 유연하게 찾아냅니다.</p></article>
+            <article>
+              <div class="strength-icon" aria-hidden="true"><img src="assets/images/deco/stopwatch.webp" alt=""></div>
+              <p class="strength-label"><span class="strength-no">01</span><small>FAST</small></p>
+              <h3>빠른 실행과 유연한 대응</h3>
+              <p class="strength-desc">변화와 요구사항을 빠르게 파악하고<br>신속하게 실행하여 효율적으로 결과를 만들어냅니다.</p>
+              <ul class="strength-tags"><li>빠른 실행</li><li>문제 해결</li><li>효율 중심</li></ul>
+            </article>
+            <article>
+              <div class="strength-icon" aria-hidden="true"><img src="assets/images/deco/monitor.webp" alt=""></div>
+              <p class="strength-label"><span class="strength-no">02</span><small>DESIGN + PUBLISHING</small></p>
+              <h3>디자인부터 구현까지,<br>완성도 높은 결과물 제작</h3>
+              <p class="strength-desc">기획과 디자인부터 퍼블리싱까지 모든 과정을<br>직접 수행하여 일관성 있고 완성도 높은 결과물을 만듭니다.</p>
+              <ul class="strength-tags"><li>UX/UI</li><li>퍼블리싱</li><li>디테일 완성도</li></ul>
+            </article>
+            <article>
+              <div class="strength-icon" aria-hidden="true"><img src="assets/images/deco/puzzle.webp" alt=""></div>
+              <p class="strength-label"><span class="strength-no">03</span><small>VERSATILE</small></p>
+              <h3>폭넓은 실무 경험과 유연한 사고</h3>
+              <p class="strength-desc">다양한 프로젝트 경험을 바탕으로 상황에 맞게<br>유연하게 문제를 해결하고 최적의 결과를 도출합니다.</p>
+              <ul class="strength-tags"><li>적응력</li><li>다양한 경험</li><li>유연한 사고</li></ul>
+            </article>
           </div>
         </div>
       </section>
@@ -330,6 +348,24 @@
         </div>
       </section>
     </main>
+
+    <!-- 작업 상세 팝업 (JS가 내용을 채우고 열고 닫음) -->
+    <div class="archive-modal" id="archive-modal" role="dialog" aria-modal="true" hidden>
+      <article class="archive-detail">
+        <button class="detail-close" aria-label="상세 보기 닫기">×</button>
+        <div class="detail-title">
+          <span id="detail-category"></span>
+          <h2 id="detail-heading"></h2>
+          <p id="detail-period"></p>
+        </div>
+        <div class="detail-info">
+          <div><b>ROLE</b><span id="detail-role"></span></div>
+          <div><b>TOOLS</b><span id="detail-tools"></span></div>
+        </div>
+        <p class="detail-description" id="detail-description" hidden></p>
+        <div class="detail-images" id="detail-images"></div>
+      </article>
+    </div>
 
     <script type="module" src="script.js"></script>
   </body>

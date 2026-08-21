@@ -195,11 +195,14 @@ function initHomeNav() {
 
 function initHome() {
   initHomeNav();
+  bindArchiveModal(); // 홈에서도 같은 상세 팝업 사용
   getPublicWorks(4).then((works) => {
     const grid = document.querySelector("#home-work-grid");
     grid.className = "home-work-grid";
     // 카드 정보는 이미지 하단 그라데이션 오버레이 위에 배지 + 제목만 표시 (날짜·도구는 상세 팝업에서)
-    grid.innerHTML = works.map((work) => `<a class="home-work-card" href="archive.html#work-${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<em>VIEW ↗</em><div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></a>`).join("");
+    grid.innerHTML = works.map((work) => `<button type="button" class="home-work-card" data-id="${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<em>VIEW ↗</em><div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></button>`).join("");
+    // 카드 클릭 → 아카이브 이동이 아니라 상세 팝업 열기 (전체 보기 버튼만 아카이브로 이동)
+    grid.querySelectorAll(".home-work-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
   }).catch(() => { document.querySelector("#home-work-grid").textContent = "작업을 불러오지 못했어요."; });
 }
 

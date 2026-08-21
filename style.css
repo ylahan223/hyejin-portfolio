@@ -3077,6 +3077,14 @@ html:has(body[data-page="home"]) {
 
 .home-work-card {
   display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 /* 모든 카드: 이미지가 셀 전체를 채움 */
@@ -3240,12 +3248,15 @@ html:has(body[data-page="home"]) {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 0 calc(50% - 50vw);
-  background: linear-gradient(180deg,
-      rgba(255, 253, 255, 0) 0%,
-      rgba(253, 248, 255, .72) 16%,
-      rgba(255, 250, 253, .72) 84%,
-      rgba(255, 253, 255, 0) 100%);
+  /* 위아래로 넉넉히 확장: 그라데이션이 박스 끝에서 잘리며 생기는 직선 경계 방지 */
+  inset: -160px calc(50% - 50vw);
+  background: radial-gradient(ellipse 60% 55% at 50% 47%,
+      rgba(255, 251, 254, .45) 0%,
+      rgba(254, 248, 253, .3) 38%,
+      rgba(253, 246, 253, .14) 62%,
+      rgba(254, 247, 252, .05) 80%,
+      rgba(255, 250, 253, 0) 96%);
+  filter: blur(32px); /* 남는 단차까지 부드럽게 */
   pointer-events: none;
 }
 
@@ -3288,84 +3299,153 @@ html:has(body[data-page="home"]) {
   letter-spacing: .01em;
 }
 
+/* 강점 3열: 카드 박스 없이 세로 구분선으로 나눈 중앙 정렬 컬럼 */
 .about-strengths {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
   align-items: stretch;
 }
 
 .about-strengths article {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
-  padding: 26px 22px 24px;
-  border: 1px solid #ddd2e7;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, .74);
-  box-shadow: 0 14px 34px rgba(218, 154, 188, .1);
-  transition: .25s ease;
+  padding: 8px 34px 4px;
+  text-align: center;
 }
 
-.about-strengths article:hover {
-  transform: translateY(-3px);
-  border-color: #c9b9db;
-  box-shadow: 0 18px 40px rgba(171, 137, 201, .15);
+/* 컬럼 사이 얇은 세로 구분선 */
+.about-strengths article + article::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6%;
+  bottom: 6%;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(216, 202, 231, 0), rgba(216, 202, 231, .75) 22%, rgba(216, 202, 231, .75) 78%, rgba(216, 202, 231, 0));
+}
+
+/* 상단 원형 아이콘: 반투명 프로스티드 글라스 패널 (아이콘을 받쳐주는 배경 역할) */
+.strength-icon {
+  width: 176px;
+  height: 176px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  margin-bottom: 26px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  backdrop-filter: blur(5px) saturate(1.05);
+  -webkit-backdrop-filter: blur(5px) saturate(1.05);
+  box-shadow:
+    inset 0 1px 6px rgba(255, 255, 255, .45),   /* 약한 내부 하이라이트 */
+    inset 0 0 0 1px rgba(255, 255, 255, .12);
+}
+
+.strength-icon img {
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+}
+
+/* 01 FAST 라인 */
+.strength-label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
 }
 
 .strength-no {
-  color: #d5c9dd;
   font-size: 22px;
   font-weight: 800;
-  letter-spacing: -.04em;
+  letter-spacing: -.02em;
   line-height: 1;
 }
 
-/* 카드별 작은 보조 그래픽: 번호 옆 포인트 색 짧은 라인 (그 외 장식 없음) */
-.strength-no {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.strength-no::after {
-  content: "";
-  width: 26px;
-  height: 3px;
-  border-radius: 999px;
-  background: currentColor;
-}
-
 .about-strengths small {
-  margin-top: 14px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 850;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
 }
-
-/* 카테고리별 작은 포인트 색만 사용 (카드 전체를 채우지 않음) */
-.about-strengths article:nth-child(1) small { color: var(--home-pink); }
-.about-strengths article:nth-child(2) small { color: var(--home-purple); }
-.about-strengths article:nth-child(3) small { color: #5cc3a8; }
-
-.about-strengths article:nth-child(1) .strength-no { color: #f3c4d9; }
-.about-strengths article:nth-child(2) .strength-no { color: #cfc6f2; }
-.about-strengths article:nth-child(3) .strength-no { color: #b3e2d4; }
 
 .about-strengths h3 {
-  margin: 7px 0 9px;
-  font-size: 18px;
+  margin: 12px 0 12px;
+  font-size: 20px;
+  line-height: 1.42;
   letter-spacing: -.035em;
-}
-
-.about-strengths p {
-  margin: 0;
-  color: #80768a;
-  font-size: 13px;
-  line-height: 1.7;
   word-break: keep-all;
 }
+
+.strength-desc {
+  margin: 0 0 20px;
+  color: #857a91;
+  font-size: 13px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+/* 하단 태그 */
+.strength-tags {
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.strength-tags li {
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 4px 10px rgba(186, 152, 205, .14);
+}
+
+/* 컬럼별 포인트 색: 흰색이 살짝 섞인 반투명 컬러 + 매우 부드러운 컬러 글로우 */
+.about-strengths article:nth-child(1) .strength-icon img {
+  transform: translateX(-7px); /* 스피드라인 때문에 치우친 시각 중심 보정 (본체 무게중심 실측값) */
+}
+
+.about-strengths article:nth-child(1) .strength-icon {
+  background: rgba(250, 214, 229, .38);
+  box-shadow:
+    inset 0 1px 6px rgba(255, 255, 255, .45),
+    inset 0 0 0 1px rgba(255, 255, 255, .12),
+    0 12px 34px rgba(238, 127, 172, .14);
+}
+
+.about-strengths article:nth-child(2) .strength-icon {
+  background: rgba(226, 216, 250, .38);
+  box-shadow:
+    inset 0 1px 6px rgba(255, 255, 255, .45),
+    inset 0 0 0 1px rgba(255, 255, 255, .12),
+    0 12px 34px rgba(157, 134, 232, .14);
+}
+
+.about-strengths article:nth-child(3) .strength-icon {
+  background: rgba(211, 240, 228, .42);
+  box-shadow:
+    inset 0 1px 6px rgba(255, 255, 255, .45),
+    inset 0 0 0 1px rgba(255, 255, 255, .12),
+    0 12px 34px rgba(95, 192, 164, .14);
+}
+
+.about-strengths article:nth-child(1) .strength-no,
+.about-strengths article:nth-child(1) small { color: #ee7fac; }
+.about-strengths article:nth-child(2) .strength-no,
+.about-strengths article:nth-child(2) small { color: #9d86e8; }
+.about-strengths article:nth-child(3) .strength-no,
+.about-strengths article:nth-child(3) small { color: #5fc0a4; }
+
+.about-strengths article:nth-child(1) .strength-tags li { background: #fdeaf2; color: #d9628f; }
+.about-strengths article:nth-child(2) .strength-tags li { background: #efe9fd; color: #7d63cf; }
+.about-strengths article:nth-child(3) .strength-tags li { background: #e4f5ee; color: #3f9d81; }
 
 .home-career {
   width: min(1280px, calc(100% - 64px));
@@ -4788,10 +4868,43 @@ html:has(body[data-page="home"]) {
     padding-top: 54px;
   }
 
-  /* 모바일: 중앙 제목 아래 강점 카드 1열 */
+  /* 모바일: 중앙 제목 아래 강점 1열, 구분선은 가로로 */
   .about-strengths {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 34px;
+  }
+
+  .about-strengths article {
+    padding: 0 6px;
+  }
+
+  .about-strengths article + article::before {
+    left: 12%;
+    right: 12%;
+    top: -17px;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(216, 202, 231, 0), rgba(216, 202, 231, .75) 22%, rgba(216, 202, 231, .75) 78%, rgba(216, 202, 231, 0));
+  }
+
+  .strength-icon {
+    width: 138px;
+    height: 138px;
+    margin-bottom: 18px;
+  }
+
+  .strength-icon img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .about-strengths h3 {
+    font-size: 18px;
+  }
+
+  .strength-desc br {
+    display: none;
   }
 
   .about-head {
@@ -4802,9 +4915,6 @@ html:has(body[data-page="home"]) {
     font-size: 14px;
   }
 
-  .about-strengths p {
-    font-size: 13px;
-  }
 
   .career-list {
     padding: 30px 22px 34px;
