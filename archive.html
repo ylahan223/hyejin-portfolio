@@ -15,33 +15,146 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="archive">
-    <main class="archive-shell">
-      <div class="archive-glow glow-one"></div>
-      <div class="archive-glow glow-two"></div>
+    <main class="portfolio-home">
+      <div class="home-glow home-glow-a"></div>
+      <div class="home-glow home-glow-b"></div>
 
-      <!-- 헤더 -->
-      <header class="archive-nav">
-        <a href="index.html" class="archive-logo">HYEJIN <span>✦</span></a>
+      <!-- 배경 큰 반짝이 장식 (SVG) : 샤프한 4포인트 별빛 -->
+      <div class="home-sparkles" aria-hidden="true">
+        <!-- 공통 정의: 날렵한 십자 별빛 + 중심 광원 글로우 -->
+        <svg width="0" height="0" style="position:absolute" focusable="false">
+          <defs>
+            <path id="spShape" d="M50 0C50.6 36 53 47.4 88 50C53 52.6 50.6 64 50 100C49.4 64 47 52.6 12 50C47 47.4 49.4 36 50 0Z"/>
+            <radialGradient id="spCoreGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/>
+              <stop offset="45%" stop-color="#ffffff" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <!-- 상단 (조금 더 밀도 있게) -->
+        <svg class="sparkle sp-l sp-white sp-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 히어로 좌우 바깥 -->
+        <svg class="sparkle sp-s sp-white sp-6" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-7" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-8" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 중반부 가장자리 -->
+        <svg class="sparkle sp-m sp-white sp-9" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-10" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-lav sp-11" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-12" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 하반부 가장자리 -->
+        <svg class="sparkle sp-m sp-white sp-13" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-14" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-15" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-16" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-17" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-18" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <!-- 추가 반짝이: 화면 안쪽까지 드문드문 -->
+        <svg class="sparkle sp-s sp-white sp-19" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white sp-20" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink sp-21" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-22" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav sp-23" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-24" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-25" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-pink sp-26" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav sp-27" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-28" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-l sp-white sp-29" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white sp-30" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+      </div>
+
+      <!-- 화면 하단 고정 구름 장식 (viewport 기준, BACK → MIDDLE → FRONT) -->
+      <div class="site-clouds" aria-hidden="true">
+        <!-- 구름과 함께 고정되는 데코 아이템 -->
+        <img class="deco deco-wand" src="assets/images/deco/wand.webp" alt="">
+        <img class="deco deco-star" src="assets/images/deco/star.webp" alt="">
+        <img class="deco deco-heart" src="assets/images/deco/heart.webp" alt="">
+        <img class="deco deco-heart-right" src="assets/images/deco/heart.webp" alt="">
+        <img class="cloud-back" src="assets/images/cloud-back.webp" alt="">
+        <img class="cloud-middle" src="assets/images/cloud-middle.webp" alt="">
+        <img class="cloud-front" src="assets/images/cloud-front.webp" alt="">
+        <!-- 구름 위에서 반짝이는 작은 별빛 -->
+        <svg class="sparkle sp-m sp-white cloud-sp-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink cloud-sp-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white cloud-sp-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-6" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-7" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-lav cloud-sp-8" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-9" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-10" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-pink cloud-sp-11" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-12" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-white cloud-sp-13" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-m sp-white cloud-sp-14" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-pink cloud-sp-15" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        <svg class="sparkle sp-s sp-lav cloud-sp-16" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+      </div>
+
+      <!-- 내비게이션 (메인과 동일한 둥근 플로팅 바) -->
+      <header class="home-nav" id="home-nav">
+        <img class="deco deco-nav-star" src="assets/images/deco/star.webp" alt="" aria-hidden="true">
+        <div class="nav-left">
+          <span class="nav-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <svg class="nav-heart" viewBox="0 0.8 24 24" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="navHeartFill" cx="35%" cy="28%" r="85%">
+                <stop offset="0%" stop-color="#ffcede" />
+                <stop offset="45%" stop-color="#ff8fb6" />
+                <stop offset="100%" stop-color="#f25e95" />
+              </radialGradient>
+              <linearGradient id="navHeartShade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="55%" stop-color="rgba(190,40,100,0)" />
+                <stop offset="100%" stop-color="rgba(190,40,100,.3)" />
+              </linearGradient>
+            </defs>
+            <path d="M12 20.6C10.7 19.8 2.6 15.2 2.6 9.6 2.6 6.5 5 4.4 7.9 4.4 9.6 4.4 11.1 5.2 12 6.5 12.9 5.2 14.4 4.4 16.1 4.4 19 4.4 21.4 6.5 21.4 9.6 21.4 15.2 13.3 19.8 12 20.6Z" fill="url(#navHeartFill)" stroke="#e2578d" stroke-width=".9" stroke-linejoin="round" />
+            <path d="M12 20.6C10.7 19.8 2.6 15.2 2.6 9.6 2.6 6.5 5 4.4 7.9 4.4 9.6 4.4 11.1 5.2 12 6.5 12.9 5.2 14.4 4.4 16.1 4.4 19 4.4 21.4 6.5 21.4 9.6 21.4 15.2 13.3 19.8 12 20.6Z" fill="url(#navHeartShade)" />
+            <ellipse cx="8.2" cy="8.3" rx="2.7" ry="1.7" fill="rgba(255,255,255,.85)" transform="rotate(-20 8.2 8.3)" />
+          </svg>
+          <a href="index.html" class="home-logo">HYEJIN PORTFOLIO</a>
+        </div>
+        <nav aria-label="포트폴리오 메뉴" id="nav-menu">
+          <a href="index.html">HOME</a>
+          <a href="index.html#work">WORK</a>
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#career">CAREER</a>
+          <a href="index.html#skills">SKILLS</a>
+          <a href="index.html#contact">CONTACT</a>
+        </nav>
+        <div class="nav-right">
+          <a class="nav-resume" href="index.html#contact">RESUME&nbsp;DOWNLOAD<b>↓</b></a>
+          <button type="button" class="nav-burger" id="nav-burger" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i><i></i></button>
+        </div>
       </header>
 
-      <section class="archive-hero">
-        <p class="archive-kicker">WELCOME TO MY LITTLE DESIGN WORLD</p>
-        <h1>WORK<br><i>ARCHIVE</i><span>✦</span></h1>
-        <p class="archive-intro">콘텐츠 디자인부터 웹과 퍼블리싱까지,<br>제가 만들고 경험한 작업을 모았습니다.</p>
-        <div class="archive-spark spark-a">♡</div>
-        <div class="archive-spark spark-b">✦</div>
-        <div class="archive-spark spark-c">✧</div>
-      </section>
-
-      <!-- 작업 목록 -->
-      <section class="archive-browser" id="works">
-        <div class="browser-top"><div><i></i><i></i><i></i></div><span>hyejin.portfolio / work-archive</span><b>♡</b></div>
-        <div class="archive-heading">
-          <div><span>SELECTED &amp; RECENT</span><h2>My Works <i>✦</i></h2></div>
-          <p id="archive-count">00 PROJECTS</p>
+      <!-- 타이틀 + 작업 목록 (히어로와 브라우저 래퍼를 하나의 영역으로 통합) -->
+      <section class="archive-works" id="works">
+        <div class="archive-head">
+          <div class="archive-head-top">
+            <h1 class="jelly-title"><span class="title-last-line"><span class="gradient-title" data-text="WORK ARCHIVE"><span class="gradient-title-text" data-text="WORK ARCHIVE">WORK ARCHIVE</span></span><svg class="h2-sparkle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#spShape" fill="currentColor"/></svg></span></h1>
+            <p id="archive-count">173 PROJECTS</p>
+          </div>
+          <p class="archive-desc">콘텐츠부터 웹까지, 경험을 쌓아온 작업들을 소개합니다.</p>
         </div>
-        <!-- 필터 버튼 (JS가 채움) -->
-        <div id="archive-filters" class="archive-filters"></div>
+        <!-- 필터 툴바: 카테고리 칩(JS가 채움) + 연도·정렬 -->
+        <div class="archive-toolbar">
+          <div id="archive-filters" class="archive-filters"></div>
+          <div class="archive-controls">
+            <select id="archive-year" aria-label="연도 필터"></select>
+            <select id="archive-sort" aria-label="정렬 방식">
+              <option value="new">최신순</option>
+              <option value="old">오래된순</option>
+            </select>
+          </div>
+        </div>
         <!-- 작업 카드 목록 (JS가 채움) -->
         <div id="archive-grid" class="archive-state">작업을 불러오는 중이에요 ✦</div>
         <!-- 더 보기 버튼 (모두 표시되면 자동 숨김) -->

@@ -38,9 +38,38 @@
         <div class="account-box">
           <span>Supabase 연결됨</span>
           <small id="account-email"></small>
-          <button id="logout">로그아웃</button>
+          <div class="account-actions">
+            <button type="button" id="backup-open">전체 백업 다운로드</button>
+            <button id="logout">로그아웃</button>
+          </div>
         </div>
       </header>
+
+      <!-- 백업 패널 (관리자 전용) -->
+      <section class="backup-panel" id="backup-panel" hidden>
+        <div class="backup-panel-head">
+          <h2>포트폴리오 백업</h2>
+          <button type="button" class="text-button" id="backup-close">닫기 ×</button>
+        </div>
+        <div class="backup-field">
+          <b>연도 선택</b>
+          <div class="backup-years" id="backup-years"></div>
+        </div>
+        <div class="backup-field">
+          <b>포함 범위</b>
+          <div class="backup-scope">
+            <label><input type="radio" name="backup-scope" value="full" checked> 전체 백업</label>
+            <label><input type="radio" name="backup-scope" value="cover"> 데이터 + 대표 이미지</label>
+            <label><input type="radio" name="backup-scope" value="data"> 데이터만</label>
+          </div>
+        </div>
+        <div class="backup-actions">
+          <button type="button" class="button primary" id="backup-start">백업 다운로드</button>
+          <button type="button" class="button secondary" id="backup-retry" hidden>실패한 연도만 다시 시도</button>
+          <small id="backup-status" class="backup-status"></small>
+        </div>
+        <ul class="backup-log" id="backup-log"></ul>
+      </section>
 
       <div id="admin-notice"></div>
 
@@ -73,7 +102,7 @@
                     <label><small>종료일 <em>선택</em></small><input name="endDate" type="date"></label>
                   </div>
                 </div>
-                <div class="field tools-field"><span>사용 도구</span>
+                <div class="field tools-field"><span>사용 도구<em class="tool-hint" id="tool-hint" hidden>최근 태그 적용됨<button type="button" id="tool-clear">전체 해제</button></em></span>
                   <div class="tool-entry"><input id="tool-input" placeholder="도구 입력 후 쉼표 또는 Enter"><button type="button" id="add-tool">추가</button></div>
                   <div class="tool-tags" id="tool-tags"></div>
                   <div class="tool-suggestions"><small>자주 쓰는 도구</small><div id="tool-suggestions"></div></div>

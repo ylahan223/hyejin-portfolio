@@ -159,7 +159,8 @@ function initHomeNav() {
   if (!nav) return;
   const links = [...nav.querySelectorAll("nav a")];
   const burger = document.querySelector("#nav-burger");
-  const pairs = links.map((link) => ({ link, section: document.querySelector(link.hash) })).filter((pair) => pair.section);
+  // 아카이브처럼 해시 없는 링크(index.html)가 있어도 안전하게
+  const pairs = links.map((link) => ({ link, section: link.hash ? document.querySelector(link.hash) : null })).filter((pair) => pair.section);
 
   const onScroll = () => {
     // 스크롤하면 compact 상태 (높이·여백만 살짝 축소, 숨기지 않음)
@@ -167,6 +168,7 @@ function initHomeNav() {
     // 현재 보고 있는 섹션 표시
     const marker = window.scrollY + 170;
     const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    if (!pairs.length) return; // 아카이브처럼 페이지 안에 대상 섹션이 없으면 하이라이트 생략
     let current = pairs[0];
     pairs.forEach((pair) => {
       const top = pair.section.getBoundingClientRect().top + window.scrollY;
@@ -200,7 +202,7 @@ function initHome() {
     const grid = document.querySelector("#home-work-grid");
     grid.className = "home-work-grid";
     // 카드 정보는 이미지 하단 그라데이션 오버레이 위에 배지 + 제목만 표시 (날짜·도구는 상세 팝업에서)
-    grid.innerHTML = works.map((work) => `<button type="button" class="home-work-card" data-id="${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<em>VIEW ↗</em><div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></button>`).join("");
+    grid.innerHTML = works.map((work) => `<button type="button" class="home-work-card" data-id="${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></button>`).join("");
     // 카드 클릭 → 아카이브 이동이 아니라 상세 팝업 열기 (전체 보기 버튼만 아카이브로 이동)
     grid.querySelectorAll(".home-work-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
   }).catch(() => { document.querySelector("#home-work-grid").textContent = "작업을 불러오지 못했어요."; });
@@ -208,28 +210,46 @@ function initHome() {
 
 // ---------- 아카이브 페이지 (archive.html) ----------
 async function initArchive() {
+  initHomeNav(); // 메인과 동일한 내비게이션 동작 (컴팩트·모바일 버거)
   bindArchiveModal();
   try {
     const works = await getPublicWorks(); // 정렬: 상단 고정 → 메인 노출 → 제작 시작일 최신순 (Supabase 쿼리 그대로)
     const PAGE_SIZE = 12;
     let filter = "ALL";
+    let year = "all";   // 연도 필터 (기본: 전체 연도)
+    let sort = "new";   // 정렬 (기본: 최신순)
     let visibleCount = PAGE_SIZE;
-    const filters = ["ALL", ...new Set(works.map((work) => work.category))];
+    // 카테고리 칩 순서: 지정 순서 우선, 목록에 없는 카테고리는 뒤에
+    const CATEGORY_ORDER = ["콘텐츠 디자인", "광고·캠페인", "상세·랜딩페이지", "웹디자인", "퍼블리싱", "AI·그래픽"];
+    const cats = [...new Set(works.map((work) => work.category))].sort((a, b) => {
+      const ai = CATEGORY_ORDER.indexOf(a), bi = CATEGORY_ORDER.indexOf(b);
+      return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi);
+    });
+    const filters = ["ALL", ...cats];
     const filterBox = document.querySelector("#archive-filters");
     const grid = document.querySelector("#archive-grid");
     const countBox = document.querySelector("#archive-count");
     const moreWrap = document.querySelector("#archive-more-wrap");
+    const yearSelect = document.querySelector("#archive-year");
+    const sortSelect = document.querySelector("#archive-sort");
+    // 데이터에 존재하는 연도를 최신순으로 자동 노출
+    const years = [...new Set(works.map((work) => (work.startDate || "").slice(0, 4)).filter(Boolean))].sort().reverse();
+    yearSelect.innerHTML = `<option value="all">전체 연도</option>` + years.map((y) => `<option value="${y}">${y}</option>`).join("");
     const draw = () => {
       filterBox.innerHTML = filters.map((category) => `<button class="${filter === category ? "active" : ""}" data-filter="${escapeHTML(category)}">${escapeHTML(category)}</button>`).join("");
-      const filtered = filter === "ALL" ? works : works.filter((work) => work.category === filter);
+      let filtered = works.filter((work) => (filter === "ALL" || work.category === filter) && (year === "all" || (work.startDate || "").startsWith(year)));
+      // 오래된순: 고정 여부와 무관하게 순수 날짜 오름차순 / 최신순: 서버 순서(고정 → 최신) 유지
+      if (sort === "old") filtered = filtered.slice().sort((a, b) => (a.startDate || "").localeCompare(b.startDate || ""));
       const visible = filtered.slice(0, visibleCount); // 처음 12개, VIEW MORE마다 +12
-      countBox.textContent = `${String(visible.length).padStart(2, "0")} / ${String(filtered.length).padStart(2, "0")} PROJECTS`;
+      countBox.textContent = `${filtered.length} PROJECTS`;
       grid.className = visible.length ? "archive-grid" : "archive-state";
-      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}${work.isPinned ? '<span class="pin-label">PINNED ✦</span>' : ""}<span class="view-label">VIEW PROJECT ↗</span></div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "이 카테고리에는 공개된 작업이 아직 없어요.";
+      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}${work.isPinned ? '<span class="pin-label">PINNED ✦</span>' : ""}</div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "조건에 맞는 작업이 아직 없어요.";
       grid.querySelectorAll(".archive-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
       moreWrap.style.display = visibleCount < filtered.length ? "" : "none"; // 모두 표시되면 버튼 숨김
     };
     filterBox.addEventListener("click", (event) => { const button = event.target.closest("button"); if (!button) return; filter = button.dataset.filter; visibleCount = PAGE_SIZE; draw(); });
+    yearSelect.addEventListener("change", () => { year = yearSelect.value; visibleCount = PAGE_SIZE; draw(); });
+    sortSelect.addEventListener("change", () => { sort = sortSelect.value; visibleCount = PAGE_SIZE; draw(); });
     document.querySelector("#archive-more").addEventListener("click", () => { visibleCount += PAGE_SIZE; draw(); });
     draw();
     // 메인 카드에서 #work-아이디 해시로 넘어온 경우: 해당 작업 상세를 바로 열기
@@ -314,10 +334,32 @@ function bindLoginForm() {
   });
 }
 
+
+// 새 작업 등록 화면 기본값: 가장 최근에 등록한 작업의 사용 도구 태그만 미리 채운다.
+// (카테고리·공개·고정 등 다른 항목에는 적용하지 않음, 조회 실패해도 폼은 정상 동작)
+async function applyRecentTools() {
+  if (!adminState || adminState.recentToolsApplied || adminState.editingId) return;
+  adminState.recentToolsApplied = true; // 폼 작성 중 재조회로 덮어쓰지 않도록 최초 1회만
+  try {
+    const { data, error } = await supabase.from("works").select("tools").order("created_at", { ascending: false }).limit(1);
+    if (error) throw error;
+    const tools = (data?.[0]?.tools || []).filter(Boolean);
+    if (!tools.length) return;              // 최근 작업이 없거나 태그가 비면 아무것도 선택하지 않음
+    if (adminState.editingId) return;       // 그 사이 수정 화면으로 갔다면 적용하지 않음
+    if (adminState.form.tools.length) return; // 이미 사용자가 태그를 넣었으면 유지
+    adminState.form.tools = [...tools];
+    adminState.recentTools = [...tools];
+    updateAdminUI();
+  } catch {
+    // 조회 실패 시 태그 기본값만 비운 채로 진행 (등록 화면은 그대로 사용 가능)
+  }
+}
+
 async function startAdmin(session) {
-  adminState = { session, form: blankForm(), works: [], editingId: null, coverFile: null, pendingDeletes: [], query: "", filter: "전체", page: 1, pageSize: WORKS_PAGE_SIZE, selected: new Set(), drag: null };
+  adminState = { session, form: blankForm(), works: [], editingId: null, coverFile: null, pendingDeletes: [], query: "", filter: "전체", page: 1, pageSize: WORKS_PAGE_SIZE, selected: new Set(), drag: null , recentTools: [], recentToolsApplied: false };
   await loadAdminWorks();
   showAdminView("admin");
+  applyRecentTools();
   document.querySelector("#account-email").textContent = session.user.email || "";
   document.querySelector("#work-search").value = "";
   document.querySelector("#work-search-clear").hidden = true;
@@ -372,6 +414,8 @@ function refreshAdminDynamic() {
   const card = document.querySelector("#card-thumbnail"); card.innerHTML = f.image ? thumbnailHTML(f.image, "", f.thumbnail) : "<span>IMAGE PREVIEW</span>"; if (f.isPinned) card.insertAdjacentHTML("beforeend", "<em>PIN</em>");
   document.querySelector("#zoom-range").value = f.thumbnail.scale;["#zoom-range", "#zoom-out", "#zoom-in", "#thumb-reset"].forEach(s => document.querySelector(s).disabled = f.thumbnail.mode === "auto");
   document.querySelector("#preview-category").textContent = f.category; document.querySelector("#preview-title").textContent = f.title || "작업 제목이 여기에 표시됩니다"; document.querySelector("#preview-meta").textContent = `${formatPeriod(f.date, f.endDate)} · ${f.tools.join(" · ") || "사용 도구"}`;
+  const hint = document.querySelector("#tool-hint");
+  if (hint) hint.hidden = Boolean(adminState.editingId) || !adminState.recentTools.length || !f.tools.some(t => adminState.recentTools.includes(t));
   document.querySelector("#tool-tags").innerHTML = f.tools.length ? f.tools.map((tool, index) => `<button type="button" data-remove-tool="${index}">${escapeHTML(tool)}<span>×</span></button>`).join("") : "<small>아직 추가한 도구가 없어요.</small>";
   const counts = new Map(); adminState.works.forEach(w => new Set(w.tools).forEach(t => counts.set(t, (counts.get(t) || 0) + 1))); const suggestions = [...quickTools, ...[...counts].filter(([, n]) => n >= 3).map(([t]) => t).filter(t => !quickTools.includes(t))]; document.querySelector("#tool-suggestions").innerHTML = suggestions.map(t => `<button type="button" data-add-tool="${escapeHTML(t)}" ${f.tools.some(x => x.toLowerCase() === t.toLowerCase()) ? "disabled" : ""}>+ ${escapeHTML(t)}</button>`).join("");
   document.querySelector("#detail-grid").innerHTML = f.detailImages.map((image, index) => `<div draggable="true" data-drag-id="${image.id}"><img src="${image.kind === "pending" ? image.preview : image.url}" alt="상세 이미지 ${index + 1}" draggable="false">${image.kind === "pending" ? '<em class="new-tag">NEW</em>' : ""}<button type="button" data-remove-image="${image.id}" aria-label="이미지 제거">×</button><div class="img-order"><button type="button" data-move-image="${image.id}" data-dir="-1" aria-label="앞으로" ${index === 0 ? "disabled" : ""}>◀</button><button type="button" data-move-image="${image.id}" data-dir="1" aria-label="뒤로" ${index === f.detailImages.length - 1 ? "disabled" : ""}>▶</button></div></div>`).join("");
@@ -418,9 +462,14 @@ function drawWorksTable() {
 function addTool(raw) { const tool = raw.trim().replace(/,+$/, ""); if (tool && !adminState.form.tools.some(t => t.toLowerCase() === tool.toLowerCase())) adminState.form.tools.push(tool); const input = document.querySelector("#tool-input"); if (input) input.value = ""; refreshAdminDynamic(); }
 
 function bindAdminEvents() {
+  document.querySelector("#backup-open")?.addEventListener("click", openBackupPanel);
+  document.querySelector("#backup-close")?.addEventListener("click", () => { document.querySelector("#backup-panel").hidden = true; });
+  document.querySelector("#backup-start")?.addEventListener("click", () => runBackup());
+  document.querySelector("#backup-retry")?.addEventListener("click", () => runBackup([...backupFailedYears]));
   document.querySelector("#logout").addEventListener("click", async () => { await supabase.auth.signOut(); showLogin(); }); document.querySelector("#admin-notice").addEventListener("click", () => document.querySelector("#admin-notice").innerHTML = "");
   document.querySelector("#work-form").addEventListener("input", (event) => { if (event.target.id === "tool-input" || event.target.type === "file") return; syncFormFromInputs(); refreshAdminDynamic(); });
-  document.querySelector("#work-form").addEventListener("submit", submitAdminWork); document.querySelector("#cancel-edit").addEventListener("click", () => { adminState.form = blankForm(); adminState.editingId = null; adminState.coverFile = null; adminState.pendingDeletes = []; updateAdminUI(); });
+  document.querySelector("#work-form").addEventListener("submit", submitAdminWork); document.querySelector("#cancel-edit").addEventListener("click", () => { adminState.form = blankForm(); adminState.editingId = null; adminState.coverFile = null; adminState.pendingDeletes = []; adminState.recentTools = []; updateAdminUI(); });
+  document.querySelector("#tool-clear")?.addEventListener("click", () => { adminState.form.tools = []; adminState.recentTools = []; refreshAdminDynamic(); });
   document.querySelector("#add-tool").addEventListener("click", () => addTool(document.querySelector("#tool-input").value)); document.querySelector("#tool-input").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === ",") { e.preventDefault(); addTool(e.target.value); } }); document.querySelector("#tool-input").addEventListener("blur", e => addTool(e.target.value));
   document.querySelector("#tool-tags").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; adminState.form.tools.splice(Number(b.dataset.removeTool), 1); refreshAdminDynamic(); }); document.querySelector("#tool-suggestions").addEventListener("click", e => { const b = e.target.closest("button"); if (b) addTool(b.dataset.addTool); });
   document.querySelector("#cover-input").addEventListener("change", e => { const file = e.target.files[0]; e.target.value = ""; if (!file) return; if (file.size > 20_000_000) return showNotice("이미지는 한 장당 20MB 이하로 올려 주세요."); adminState.coverFile = file; adminState.form.image = URL.createObjectURL(file); adminState.form.thumbnail = { ...defaultThumbnail }; updateAdminUI(); }); document.querySelector("#remove-cover").addEventListener("click", () => { adminState.coverFile = null; adminState.form.image = ""; adminState.form.coverImagePath = ""; updateAdminUI(); });
@@ -695,6 +744,221 @@ async function handleWorkTable(event) {
     refreshAdminDynamic();
   }
 }
+
+// ---------- 백업 (관리자 전용) ----------
+// works / work_images 테이블 + Storage 원본 이미지를 연도별 ZIP으로 내려받는다.
+// 연도 기준은 아카이브 카드와 동일한 '제작일(start_date)'이며, 이미지 업로드일이 아니다.
+// service_role·secret key는 사용하지 않고, 로그인한 관리자 세션(RLS)으로 접근 가능한 데이터만 다룬다.
+const BACKUP_FORMAT_VERSION = 1;
+const BACKUP_PAGE = 1000; // Supabase 기본 반환 한도를 넘겨도 누락되지 않게 페이지 단위 조회
+const BACKUP_ZIP_MAX_BYTES = 250 * 1024 * 1024; // 한 연도가 이보다 크면 ZIP을 나눠 저장 (브라우저 메모리 보호)
+let backupCache = null;      // { works, workImages }
+let backupFailedYears = [];  // 실패한 연도 (다시 시도용)
+
+async function fetchAllRows(table, orderColumn) {
+  const rows = [];
+  for (let from = 0; ; from += BACKUP_PAGE) {
+    let query = supabase.from(table).select("*").range(from, from + BACKUP_PAGE - 1);
+    if (orderColumn) query = query.order(orderColumn, { ascending: true });
+    const { data, error } = await query;
+    if (error) throw error;
+    rows.push(...(data || []));
+    if (!data || data.length < BACKUP_PAGE) return rows;
+  }
+}
+
+const backupSafeName = (path = "") => (path.split("/").pop() || "image").replace(/[^\w.-]/g, "_");
+const backupYearOf = (work) => (work.start_date || "").slice(0, 4) || "미지정";
+
+async function loadJSZip() {
+  if (window.JSZip) return window.JSZip;
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js";
+    script.onload = resolve;
+    script.onerror = () => reject(new Error("ZIP 라이브러리를 불러오지 못했어요."));
+    document.head.appendChild(script);
+  });
+  return window.JSZip;
+}
+
+function saveBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+const backupStatus = (text) => { const box = document.querySelector("#backup-status"); if (box) box.textContent = text || ""; };
+function backupLog(message, kind = "") {
+  const list = document.querySelector("#backup-log");
+  if (!list) return;
+  const item = document.createElement("li");
+  if (kind) item.className = kind;
+  item.textContent = message;
+  list.appendChild(item);
+}
+
+// 연도 목록(최신순) + 연도별 작업 개수 체크박스
+async function openBackupPanel() {
+  const panel = document.querySelector("#backup-panel");
+  panel.hidden = false;
+  const box = document.querySelector("#backup-years");
+  box.innerHTML = "<small>연도를 불러오는 중…</small>";
+  try {
+    const [works, workImages] = await Promise.all([fetchAllRows("works", "created_at"), fetchAllRows("work_images", "sort_order")]);
+    backupCache = { works, workImages };
+    const counts = works.reduce((acc, work) => { const year = backupYearOf(work); acc[year] = (acc[year] || 0) + 1; return acc; }, {});
+    const years = Object.keys(counts).sort().reverse();
+    box.innerHTML = `<label class="backup-year-all"><input type="checkbox" id="backup-year-all" checked> 전체 연도 <em>${works.length}건</em></label>`
+      + years.map((year) => `<label><input type="checkbox" class="backup-year" value="${escapeHTML(year)}" checked> ${escapeHTML(year)} <em>${counts[year]}건</em></label>`).join("");
+    const all = box.querySelector("#backup-year-all");
+    const items = [...box.querySelectorAll(".backup-year")];
+    all.addEventListener("change", () => items.forEach((item) => { item.checked = all.checked; }));
+    items.forEach((item) => item.addEventListener("change", () => { all.checked = items.every((one) => one.checked); }));
+  } catch (error) {
+    box.innerHTML = "";
+    showNotice(`백업 정보를 불러오지 못했어요: ${error.message}`);
+  }
+}
+
+// 한 연도 백업 (데이터 조회 → 이미지 다운로드 → ZIP 생성). 실패는 예외로 던져 상위에서 연도 단위로 처리
+async function backupOneYear(year, scope, JSZip) {
+  const { works: allWorks, workImages: allImages } = backupCache;
+  const works = year === "ALL" ? allWorks : allWorks.filter((work) => backupYearOf(work) === year);
+  const workIds = new Set(works.map((work) => work.id));
+  const workImages = allImages.filter((image) => workIds.has(image.work_id));
+
+  const files = [];
+  if (scope !== "data") {
+    works.forEach((work) => {
+      if (!work.cover_image_path) return;
+      files.push({ storagePath: work.cover_image_path, workId: work.id,
+        zipPath: `images/covers/${work.id}__${backupSafeName(work.cover_image_path)}` });
+    });
+  }
+  if (scope === "full") {
+    workImages.forEach((image) => {
+      if (!image.storage_path) return;
+      files.push({ storagePath: image.storage_path, workId: image.work_id, imageId: image.id,
+        zipPath: `images/details/${image.work_id}__${image.id}__${backupSafeName(image.storage_path)}` });
+    });
+  }
+
+  const zipPathByStorage = new Map(files.map((file) => [file.storagePath, file.zipPath]));
+  const worksJson = works.map((work) => ({
+    ...work,
+    backup_cover_zip_path: work.cover_image_path ? zipPathByStorage.get(work.cover_image_path) || null : null,
+    backup_detail_image_ids: workImages.filter((image) => image.work_id === work.id)
+      .sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0)).map((image) => image.id),
+  }));
+  const imagesJson = workImages.map((image) => ({
+    ...image,
+    backup_zip_path: image.storage_path ? zipPathByStorage.get(image.storage_path) || null : null,
+  }));
+
+  const errors = [];
+  const parts = [];
+  let zip = new JSZip();
+  let partBytes = 0;
+  const label = year === "ALL" ? "전체" : year;
+  for (let index = 0; index < files.length; index += 1) {
+    const file = files[index];
+    backupStatus(`${label}년 백업 준비 중 ${index + 1} / ${files.length}`);
+    const { data, error } = await supabase.storage.from("portfolio-images").download(file.storagePath);
+    if (error || !data) {
+      errors.push({ storagePath: file.storagePath, workId: file.workId, imageId: file.imageId || null, message: error?.message || "다운로드 실패" });
+      continue;
+    }
+    zip.file(file.zipPath, data);
+    partBytes += data.size;
+    if (partBytes >= BACKUP_ZIP_MAX_BYTES) { parts.push(await zip.generateAsync({ type: "blob" })); zip = new JSZip(); partBytes = 0; }
+  }
+
+  zip.file("backup-info.json", JSON.stringify({
+    created_at: new Date().toISOString(),
+    format_version: BACKUP_FORMAT_VERSION,
+    year: year === "ALL" ? "all" : year,
+    scope, // full | cover | data
+    work_count: works.length,
+    image_count: files.length,
+    downloaded_image_count: files.length - errors.length,
+    failed_image_count: errors.length,
+    storage_bucket: "portfolio-images",
+  }, null, 2));
+  zip.file("works.json", JSON.stringify(worksJson, null, 2));
+  zip.file("work-images.json", JSON.stringify(imagesJson, null, 2));
+  if (errors.length) zip.file("backup-errors.json", JSON.stringify(errors, null, 2));
+
+  backupStatus(`${label}년 ZIP 만드는 중…`);
+  parts.push(await zip.generateAsync({ type: "blob" }));
+
+  const stamp = new Date().toISOString().slice(0, 10);
+  parts.forEach((blob, partIndex) => {
+    const suffix = parts.length > 1 ? `-part${partIndex + 1}` : "";
+    saveBlob(blob, `hyejin-portfolio-backup-${year === "ALL" ? "all" : year}-${stamp}${suffix}.zip`);
+  });
+  return { works: works.length, images: files.length, errors };
+}
+
+async function runBackup(targetYears) {
+  const startButton = document.querySelector("#backup-start");
+  const retryButton = document.querySelector("#backup-retry");
+  if (!adminState?.session) return showNotice("관리자로 로그인한 뒤 이용해 주세요.");
+  if (startButton.disabled) return; // 중복 실행 방지
+
+  const scope = document.querySelector('input[name="backup-scope"]:checked')?.value || "full";
+  const checked = [...document.querySelectorAll(".backup-year:checked")].map((input) => input.value);
+  const years = targetYears || checked;
+  if (!years.length) return showNotice("백업할 연도를 선택해 주세요.");
+
+  startButton.disabled = true;
+  retryButton.disabled = true;
+  retryButton.hidden = true;
+  document.querySelector("#backup-log").innerHTML = "";
+  backupFailedYears = [];
+  try {
+    const JSZip = await loadJSZip();
+    if (!backupCache) {
+      backupStatus("데이터 불러오는 중…");
+      const [works, workImages] = await Promise.all([fetchAllRows("works", "created_at"), fetchAllRows("work_images", "sort_order")]);
+      backupCache = { works, workImages };
+    }
+    // 연도별로 독립 처리 — 한 연도가 실패해도 나머지는 계속 진행
+    for (const year of years) {
+      try {
+        const result = await backupOneYear(year, scope, JSZip);
+        if (result.errors.length) {
+          backupLog(`${year}년 · 작업 ${result.works}건 저장 (이미지 ${result.errors.length}장 실패)`, "warn");
+        } else {
+          backupLog(`${year}년 · 작업 ${result.works}건 · 이미지 ${result.images}장 저장 완료`, "ok");
+        }
+      } catch (error) {
+        backupFailedYears.push(year);
+        backupLog(`${year}년 백업 실패: ${error.message}`, "fail");
+      }
+    }
+    if (backupFailedYears.length) {
+      retryButton.hidden = false;
+      showNotice(`${backupFailedYears.length}개 연도 백업에 실패했어요. "실패한 연도만 다시 시도"로 재시도할 수 있어요.`);
+      backupStatus(`완료 (실패 ${backupFailedYears.length}개 연도)`);
+    } else {
+      showNotice(`백업을 저장했어요. 연도 ${years.length}개 · ZIP 파일이 각각 내려받아졌어요.`);
+      backupStatus("완료");
+    }
+  } catch (error) {
+    showNotice(`백업하지 못했어요: ${error.message}`);
+    backupStatus("");
+  } finally {
+    startButton.disabled = false;
+    retryButton.disabled = false;
+  }
+}
+
 function showNotice(message) { const box = document.querySelector("#admin-notice"); if (box) box.innerHTML = `<button class="notice">${escapeHTML(message)}<span>닫기 ×</span></button>`; else alert(message); }
 
 // 브라우저 confirm() 대신 사이트 톤에 맞는 확인 모달 (true/false 반환)
