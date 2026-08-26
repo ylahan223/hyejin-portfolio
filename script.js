@@ -112,8 +112,9 @@ const thumbnailStyle = (thumbnail) => {
   if (thumbnail.mode === "auto") return "object-fit:cover;object-position:50% 50%;transform:none";
   // 꽉 채우기: object-position으로 이미지 '안'을 이동 → 여백이 절대 생기지 않고, 긴 이미지도 끝까지 이동 가능
   if (thumbnail.mode === "cover") return `object-fit:cover;object-position:${50 - thumbnail.x}% ${50 - thumbnail.y}%;transform:scale(${thumbnail.scale})`;
-  // 전체 보기: 기존처럼 translate 이동 (빈 공간은 흐린 배경이 채움)
-  return `object-fit:contain;transform:translate(${thumbnail.x}%,${thumbnail.y}%) scale(${thumbnail.scale})`;
+  // 전체 보기: translate 이동 (빈 공간은 흐린 배경이 채움).
+  // translate %는 확대 전 크기 기준이라, 배율을 곱해야 크게 확대해도 이미지 위/아래 끝까지 이동할 수 있어요.
+  return `object-fit:contain;transform:translate(${thumbnail.x * thumbnail.scale}%,${thumbnail.y * thumbnail.scale}%) scale(${thumbnail.scale})`;
 };
 const thumbnailHTML = (url, title, thumbnail) => !url ? `<span>IMAGE COMING SOON</span>` : `${thumbnail.mode === "contain" ? `<img class="thumbnail-blur" src="${url}" alt="" aria-hidden="true" loading="lazy">` : ""}<img class="thumbnail-main" src="${url}" alt="${escapeHTML(title)}" style="${thumbnailStyle(thumbnail)}" loading="lazy">`;
 
@@ -136,15 +137,20 @@ async function signedUrl(path) {
 }
 
 async function getPublicWorks(limit) {
-  let query = supabase.from("works").select("*, work_images(*)").eq("is_public", true)
-    .order("is_pinned", { ascending: false }).order("is_featured", { ascending: false }).order("start_date", { ascending: false });
-  if (limit) query = query.limit(limit);
-  const { data, error } = await query;
+  // pin_order 컬럼이 아직 없는 환경에서도 동작하도록 실패 시 기존 정렬로 폴백
+  const build = (withPinOrder) => {
+    let query = supabase.from("works").select("*, work_images(*)").eq("is_public", true).order("is_pinned", { ascending: false });
+    if (withPinOrder) query = query.order("pin_order", { ascending: true, nullsFirst: false });
+    query = query.order("is_featured", { ascending: false }).order("start_date", { ascending: false });
+    return limit ? query.limit(limit) : query;
+  };
+  let { data, error } = await build(true);
+  if (error) ({ data, error } = await build(false));
   if (error) throw error;
   return Promise.all((data || []).map(async (row) => {
     const parsed = parseWorkMeta(row);
     return {
-      id: row.id, title: row.title, category: row.category, startDate: row.start_date, endDate: row.end_date || "",
+      id: row.id, title: row.title, category: row.category, startDate: row.start_date, endDate: row.end_date || "", pinOrder: row.pin_order ?? null,
       tools: row.tools || [], role: row.role || "", description: parsed.description, thumbnail: parsed.thumbnail,
       coverUrl: await signedUrl(row.cover_image_path), isPinned: row.is_pinned,
       images: await Promise.all((row.work_images || []).sort((a, b) => a.sort_order - b.sort_order)
@@ -217,6 +223,7 @@ async function initArchive() {
     const PAGE_SIZE = 12;
     let filter = "ALL";
     let year = "all";   // 연도 필터 (기본: 전체 연도)
+    let month = "all";  // 월 필터 (기본: 전체 월)
     let sort = "new";   // 정렬 (기본: 최신순)
     let visibleCount = PAGE_SIZE;
     // 카테고리 칩 순서: 지정 순서 우선, 목록에 없는 카테고리는 뒤에
@@ -231,24 +238,45 @@ async function initArchive() {
     const countBox = document.querySelector("#archive-count");
     const moreWrap = document.querySelector("#archive-more-wrap");
     const yearSelect = document.querySelector("#archive-year");
+    const monthSelect = document.querySelector("#archive-month");
     const sortSelect = document.querySelector("#archive-sort");
     // 데이터에 존재하는 연도를 최신순으로 자동 노출
     const years = [...new Set(works.map((work) => (work.startDate || "").slice(0, 4)).filter(Boolean))].sort().reverse();
     yearSelect.innerHTML = `<option value="all">전체 연도</option>` + years.map((y) => `<option value="${y}">${y}</option>`).join("");
     const draw = () => {
       filterBox.innerHTML = filters.map((category) => `<button class="${filter === category ? "active" : ""}" data-filter="${escapeHTML(category)}">${escapeHTML(category)}</button>`).join("");
-      let filtered = works.filter((work) => (filter === "ALL" || work.category === filter) && (year === "all" || (work.startDate || "").startsWith(year)));
-      // 오래된순: 고정 여부와 무관하게 순수 날짜 오름차순 / 최신순: 서버 순서(고정 → 최신) 유지
-      if (sort === "old") filtered = filtered.slice().sort((a, b) => (a.startDate || "").localeCompare(b.startDate || ""));
+      // 월 드롭다운: 선택한 연도에 작업이 있는 월만 (전체 연도면 비활성)
+      const monthsInYear = year === "all" ? [] : [...new Set(works.filter((work) => (work.startDate || "").startsWith(year))
+        .map((work) => (work.startDate || "").slice(5, 7)).filter(Boolean))].sort();
+      if (year === "all" || !monthsInYear.includes(month)) month = "all";
+      monthSelect.disabled = year === "all" || !monthsInYear.length;
+      monthSelect.innerHTML = `<option value="all">전체 월</option>` + monthsInYear.map((m) => `<option value="${m}">${Number(m)}월</option>`).join("");
+      monthSelect.value = month;
+      let filtered = works.filter((work) => (filter === "ALL" || work.category === filter)
+        && (year === "all" || (work.startDate || "").startsWith(year))
+        && (month === "all" || (work.startDate || "").slice(5, 7) === month));
+      // 오래된순: 중요 작업 구분 없이 순수 날짜 오름차순
+      // 최신순: 조건에 맞는 중요 작업을 지정 순서대로 먼저, 이어서 일반 작업을 최신순 (중복 없음)
+      if (sort === "old") {
+        filtered = filtered.slice().sort((a, b) => (a.startDate || "").localeCompare(b.startDate || ""));
+      } else {
+        const pinned = filtered.filter((work) => work.isPinned)
+          .sort((a, b) => (a.pinOrder ?? Number.MAX_SAFE_INTEGER) - (b.pinOrder ?? Number.MAX_SAFE_INTEGER)
+            || (b.startDate || "").localeCompare(a.startDate || ""));
+        const normal = filtered.filter((work) => !work.isPinned)
+          .sort((a, b) => (b.startDate || "").localeCompare(a.startDate || ""));
+        filtered = [...pinned, ...normal];
+      }
       const visible = filtered.slice(0, visibleCount); // 처음 12개, VIEW MORE마다 +12
       countBox.textContent = `${filtered.length} PROJECTS`;
       grid.className = visible.length ? "archive-grid" : "archive-state";
-      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}${work.isPinned ? '<span class="pin-label">PINNED ✦</span>' : ""}</div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "조건에 맞는 작업이 아직 없어요.";
+      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}</div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "조건에 맞는 작업이 아직 없어요.";
       grid.querySelectorAll(".archive-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
       moreWrap.style.display = visibleCount < filtered.length ? "" : "none"; // 모두 표시되면 버튼 숨김
     };
     filterBox.addEventListener("click", (event) => { const button = event.target.closest("button"); if (!button) return; filter = button.dataset.filter; visibleCount = PAGE_SIZE; draw(); });
-    yearSelect.addEventListener("change", () => { year = yearSelect.value; visibleCount = PAGE_SIZE; draw(); });
+    yearSelect.addEventListener("change", () => { year = yearSelect.value; month = "all"; visibleCount = PAGE_SIZE; draw(); }); // 연도가 바뀌면 월은 전체로 초기화
+    monthSelect.addEventListener("change", () => { month = monthSelect.value; visibleCount = PAGE_SIZE; draw(); });
     sortSelect.addEventListener("change", () => { sort = sortSelect.value; visibleCount = PAGE_SIZE; draw(); });
     document.querySelector("#archive-more").addEventListener("click", () => { visibleCount += PAGE_SIZE; draw(); });
     draw();
@@ -372,7 +400,7 @@ async function startAdmin(session) {
 async function loadAdminWorks() {
   const { data, error } = await supabase.from("works").select("*, work_images(*)").order("is_pinned", { ascending: false }).order("created_at", { ascending: false });
   if (error) throw error;
-  adminState.works = await Promise.all((data || []).map(async (row) => { const parsed = parseWorkMeta(row); return { id: row.id, title: row.title, category: row.category, date: row.start_date, endDate: row.end_date || "", tools: row.tools || [], role: row.role || "", description: parsed.description, image: await signedUrl(row.cover_image_path), coverImagePath: row.cover_image_path || "", detailImages: await Promise.all((row.work_images || []).sort((a, b) => a.sort_order - b.sort_order).map(async (image) => ({ id: image.id, kind: "existing", path: image.storage_path, url: await signedUrl(image.storage_path), sortOrder: image.sort_order }))), isPublic: row.is_public, isFeatured: row.is_featured, isPinned: row.is_pinned, thumbnail: parsed.thumbnail }; }));
+  adminState.works = await Promise.all((data || []).map(async (row) => { const parsed = parseWorkMeta(row); return { id: row.id, title: row.title, category: row.category, date: row.start_date, endDate: row.end_date || "", tools: row.tools || [], role: row.role || "", description: parsed.description, image: await signedUrl(row.cover_image_path), coverImagePath: row.cover_image_path || "", detailImages: await Promise.all((row.work_images || []).sort((a, b) => a.sort_order - b.sort_order).map(async (image) => ({ id: image.id, kind: "existing", path: image.storage_path, url: await signedUrl(image.storage_path), sortOrder: image.sort_order }))), isPublic: row.is_public, isFeatured: row.is_featured, isPinned: row.is_pinned, pinOrder: row.pin_order ?? null, thumbnail: parsed.thumbnail }; }));
 }
 
 // 폼 입력값을 상태(adminState.form)에서 화면으로 채우기
@@ -410,9 +438,10 @@ function syncFormFromInputs() { const form = document.querySelector("#work-form"
 function refreshAdminDynamic() {
   const f = adminState.form;
   document.querySelectorAll(".thumbnail-mode button").forEach(b => b.classList.toggle("active", b.dataset.mode === f.thumbnail.mode));
-  const crop = document.querySelector("#thumbnail-crop"); crop.classList.toggle("locked", f.thumbnail.mode === "auto"); crop.innerHTML = f.image ? `${thumbnailHTML(f.image, "썸네일 편집 미리보기", f.thumbnail)}<small>${f.thumbnail.mode === "auto" ? "이미지를 자동으로 가운데 맞춰요" : "이미지를 드래그해 위치를 옮겨보세요"}</small>` : `<span>IMAGE PREVIEW</span>`;
+  if (f.thumbnail.mode === "auto") f.thumbnail.mode = "cover"; // '자동 맞춤' 모드는 더 이상 사용하지 않아요 (기존 데이터는 꽉 채우기로 표시)
+  const crop = document.querySelector("#thumbnail-crop"); crop.classList.toggle("locked", false); crop.innerHTML = f.image ? `${thumbnailHTML(f.image, "썸네일 편집 미리보기", f.thumbnail)}<small>이미지를 드래그해 위치를 옮겨보세요</small>` : `<span>IMAGE PREVIEW</span>`;
   const card = document.querySelector("#card-thumbnail"); card.innerHTML = f.image ? thumbnailHTML(f.image, "", f.thumbnail) : "<span>IMAGE PREVIEW</span>"; if (f.isPinned) card.insertAdjacentHTML("beforeend", "<em>PIN</em>");
-  document.querySelector("#zoom-range").value = f.thumbnail.scale;["#zoom-range", "#zoom-out", "#zoom-in", "#thumb-reset"].forEach(s => document.querySelector(s).disabled = f.thumbnail.mode === "auto");
+  document.querySelector("#zoom-range").value = f.thumbnail.scale;["#zoom-range", "#zoom-out", "#zoom-in", "#thumb-reset"].forEach(s => document.querySelector(s).disabled = false);
   document.querySelector("#preview-category").textContent = f.category; document.querySelector("#preview-title").textContent = f.title || "작업 제목이 여기에 표시됩니다"; document.querySelector("#preview-meta").textContent = `${formatPeriod(f.date, f.endDate)} · ${f.tools.join(" · ") || "사용 도구"}`;
   const hint = document.querySelector("#tool-hint");
   if (hint) hint.hidden = Boolean(adminState.editingId) || !adminState.recentTools.length || !f.tools.some(t => adminState.recentTools.includes(t));
@@ -420,6 +449,7 @@ function refreshAdminDynamic() {
   const counts = new Map(); adminState.works.forEach(w => new Set(w.tools).forEach(t => counts.set(t, (counts.get(t) || 0) + 1))); const suggestions = [...quickTools, ...[...counts].filter(([, n]) => n >= 3).map(([t]) => t).filter(t => !quickTools.includes(t))]; document.querySelector("#tool-suggestions").innerHTML = suggestions.map(t => `<button type="button" data-add-tool="${escapeHTML(t)}" ${f.tools.some(x => x.toLowerCase() === t.toLowerCase()) ? "disabled" : ""}>+ ${escapeHTML(t)}</button>`).join("");
   document.querySelector("#detail-grid").innerHTML = f.detailImages.map((image, index) => `<div draggable="true" data-drag-id="${image.id}"><img src="${image.kind === "pending" ? image.preview : image.url}" alt="상세 이미지 ${index + 1}" draggable="false">${image.kind === "pending" ? '<em class="new-tag">NEW</em>' : ""}<button type="button" data-remove-image="${image.id}" aria-label="이미지 제거">×</button><div class="img-order"><button type="button" data-move-image="${image.id}" data-dir="-1" aria-label="앞으로" ${index === 0 ? "disabled" : ""}>◀</button><button type="button" data-move-image="${image.id}" data-dir="1" aria-label="뒤로" ${index === f.detailImages.length - 1 ? "disabled" : ""}>▶</button></div></div>`).join("");
   document.querySelector("#works-count").textContent = adminState.works.length;
+  renderPinManager();
   drawWorksTable();
 }
 
@@ -462,6 +492,7 @@ function drawWorksTable() {
 function addTool(raw) { const tool = raw.trim().replace(/,+$/, ""); if (tool && !adminState.form.tools.some(t => t.toLowerCase() === tool.toLowerCase())) adminState.form.tools.push(tool); const input = document.querySelector("#tool-input"); if (input) input.value = ""; refreshAdminDynamic(); }
 
 function bindAdminEvents() {
+  bindPinManager();
   document.querySelector("#backup-open")?.addEventListener("click", openBackupPanel);
   document.querySelector("#backup-close")?.addEventListener("click", () => { document.querySelector("#backup-panel").hidden = true; });
   document.querySelector("#backup-start")?.addEventListener("click", () => runBackup());
@@ -469,6 +500,23 @@ function bindAdminEvents() {
   document.querySelector("#logout").addEventListener("click", async () => { await supabase.auth.signOut(); showLogin(); }); document.querySelector("#admin-notice").addEventListener("click", () => document.querySelector("#admin-notice").innerHTML = "");
   document.querySelector("#work-form").addEventListener("input", (event) => { if (event.target.id === "tool-input" || event.target.type === "file") return; syncFormFromInputs(); refreshAdminDynamic(); });
   document.querySelector("#work-form").addEventListener("submit", submitAdminWork); document.querySelector("#cancel-edit").addEventListener("click", () => { adminState.form = blankForm(); adminState.editingId = null; adminState.coverFile = null; adminState.pendingDeletes = []; adminState.recentTools = []; updateAdminUI(); });
+  // 제작 기간: 입력칸 어디를 눌러도 달력이 바로 열리게 (직접 타이핑 대신)
+  document.querySelectorAll('.native-dates input[type="date"]').forEach((input) => {
+    const openPicker = (event) => {
+      if (typeof input.showPicker !== "function") return; // 미지원 브라우저는 기본 동작 유지
+      event.preventDefault();
+      try { input.showPicker(); } catch { /* 사용자 제스처가 아니면 무시 */ }
+    };
+    input.addEventListener("mousedown", openPicker);
+    input.addEventListener("focus", () => { try { input.showPicker?.(); } catch {} });
+    // 직접 타이핑만 막고 달력 선택은 그대로 (readOnly는 달력 선택까지 막혀서 사용하지 않음)
+    input.addEventListener("keydown", (event) => {
+      if (["Tab", "Escape", "Enter"].includes(event.key)) return;
+      event.preventDefault();
+      try { input.showPicker?.(); } catch {}
+    });
+  });
+
   document.querySelector("#tool-clear")?.addEventListener("click", () => { adminState.form.tools = []; adminState.recentTools = []; refreshAdminDynamic(); });
   document.querySelector("#add-tool").addEventListener("click", () => addTool(document.querySelector("#tool-input").value)); document.querySelector("#tool-input").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === ",") { e.preventDefault(); addTool(e.target.value); } }); document.querySelector("#tool-input").addEventListener("blur", e => addTool(e.target.value));
   document.querySelector("#tool-tags").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; adminState.form.tools.splice(Number(b.dataset.removeTool), 1); refreshAdminDynamic(); }); document.querySelector("#tool-suggestions").addEventListener("click", e => { const b = e.target.closest("button"); if (b) addTool(b.dataset.addTool); });
@@ -540,7 +588,7 @@ function bindThumbnailDrag() {
     if (cardImg) cardImg.style.cssText = style;
   };
   crop.addEventListener("pointerdown", e => {
-    if (!adminState.form.image || adminState.form.thumbnail.mode === "auto") return; // 자동 맞춤에서는 드래그 비활성화
+    if (!adminState.form.image) return;
     e.preventDefault();
     crop.setPointerCapture(e.pointerId);
     adminState.drag = { pointerX: e.clientX, pointerY: e.clientY, x: adminState.form.thumbnail.x, y: adminState.form.thumbnail.y };
@@ -549,8 +597,10 @@ function bindThumbnailDrag() {
   crop.addEventListener("pointermove", e => {
     if (!adminState.drag) return;
     const bounds = crop.getBoundingClientRect();
-    adminState.form.thumbnail.x = Math.min(50, Math.max(-50, adminState.drag.x + (e.clientX - adminState.drag.pointerX) / bounds.width * 100 * DRAG_SENSITIVITY));
-    adminState.form.thumbnail.y = Math.min(50, Math.max(-50, adminState.drag.y + (e.clientY - adminState.drag.pointerY) / bounds.height * 100 * DRAG_SENSITIVITY));
+    // 전체 보기는 translate에 배율이 곱해지므로, 저장값 이동량은 배율로 나눠 체감 속도를 맞춘다
+    const factor = adminState.form.thumbnail.mode === "contain" ? adminState.form.thumbnail.scale : 1;
+    adminState.form.thumbnail.x = Math.min(50, Math.max(-50, adminState.drag.x + (e.clientX - adminState.drag.pointerX) / bounds.width * 100 * DRAG_SENSITIVITY / factor));
+    adminState.form.thumbnail.y = Math.min(50, Math.max(-50, adminState.drag.y + (e.clientY - adminState.drag.pointerY) / bounds.height * 100 * DRAG_SENSITIVITY / factor));
     applyLive();
   });
   ["pointerup", "pointercancel"].forEach(name => crop.addEventListener(name, () => {
@@ -578,7 +628,13 @@ async function saveWorkRow(basePayload, f, editingId) {
   try {
     return await attempt({ ...basePayload, description: f.description.trim(), thumbnail: f.thumbnail });
   } catch (error) {
-    if (!String(error.message || "").includes("thumbnail")) throw error;
+    const message = String(error.message || "");
+    // pin_order 컬럼이 없는 환경이면 해당 필드를 빼고 다시 저장
+    if (message.includes("pin_order")) {
+      const { pin_order, ...rest } = basePayload;
+      return saveWorkRow(rest, f, editingId);
+    }
+    if (!message.includes("thumbnail")) throw error;
     return attempt({ ...basePayload, description: writeThumbnailSettings(f.description, f.thumbnail) });
   }
 }
@@ -602,7 +658,9 @@ async function submitAdminWork(event) {
   button.disabled = true;
   button.textContent = "저장 중…";
   try {
-    const basePayload = { title: f.title.trim(), category: f.category, start_date: f.date, end_date: f.endDate || null, tools: f.tools, role: f.role || null, is_public: f.isPublic, is_featured: f.isFeatured, is_pinned: f.isPinned };
+    const pinOrders = adminState.works.filter((w) => w.isPinned && w.pinOrder != null && w.id !== adminState.editingId).map((w) => w.pinOrder);
+    const basePayload = { title: f.title.trim(), category: f.category, start_date: f.date, end_date: f.endDate || null, tools: f.tools, role: f.role || null, is_public: f.isPublic, is_featured: f.isFeatured, is_pinned: f.isPinned,
+      pin_order: f.isPinned ? (adminState.works.find((w) => w.id === adminState.editingId)?.pinOrder ?? (pinOrders.length ? Math.max(...pinOrders) + 1 : 0)) : null };
     const id = await saveWorkRow(basePayload, f, adminState.editingId);
 
     // 대표 이미지 업로드
@@ -641,7 +699,11 @@ async function submitAdminWork(event) {
       }
     }
 
+    // 방금 저장한 작업의 도구 태그를 다음 등록 폼에도 그대로 유지 (연속 등록 편의)
+    const keepTools = [...f.tools];
     adminState.form = blankForm();
+    adminState.form.tools = keepTools;
+    adminState.recentTools = keepTools;
     adminState.editingId = null;
     adminState.coverFile = null;
     adminState.pendingDeletes = [];
@@ -738,7 +800,13 @@ async function handleWorkTable(event) {
   if (button.dataset.toggle) {
     const key = button.dataset.toggle;
     const dbKey = { isPublic: "is_public", isFeatured: "is_featured", isPinned: "is_pinned" }[key];
-    const { error } = await supabase.from("works").update({ [dbKey]: !work[key] }).eq("id", id);
+    // 중요 작업을 켜면 순서를 맨 뒤로, 끄면 순서를 비움
+    const payload = { [dbKey]: !work[key] };
+    if (key === "isPinned") {
+      const orders = adminState.works.filter((w) => w.isPinned && w.pinOrder != null).map((w) => w.pinOrder);
+      payload.pin_order = work[key] ? null : (orders.length ? Math.max(...orders) + 1 : 0);
+    }
+    const error = await updateWorkSafe(id, payload);
     if (error) return showNotice(`설정을 변경하지 못했어요: ${error.message}`);
     await loadAdminWorks();
     refreshAdminDynamic();
@@ -957,6 +1025,79 @@ async function runBackup(targetYears) {
     startButton.disabled = false;
     retryButton.disabled = false;
   }
+}
+
+
+
+// pin_order 컬럼이 없는 환경에서도 저장이 실패하지 않도록 한 번 더 시도
+async function updateWorkSafe(id, payload) {
+  let { error } = await supabase.from("works").update(payload).eq("id", id);
+  if (error && "pin_order" in payload) {
+    const { pin_order, ...rest } = payload;
+    ({ error } = await supabase.from("works").update(rest).eq("id", id));
+  }
+  return error;
+}
+
+// ---------- 중요 작업 노출 순서 (드래그로 정렬) ----------
+function renderPinManager() {
+  const list = document.querySelector("#pin-list");
+  const countBox = document.querySelector("#pin-count");
+  if (!list) return;
+  const pinned = adminState.works.filter((work) => work.isPinned)
+    .sort((a, b) => (a.pinOrder ?? Number.MAX_SAFE_INTEGER) - (b.pinOrder ?? Number.MAX_SAFE_INTEGER)
+      || (b.date || "").localeCompare(a.date || ""));
+  if (countBox) countBox.textContent = pinned.length;
+  list.innerHTML = pinned.length
+    ? pinned.map((work, index) => `<li draggable="true" data-pin-id="${work.id}"><span class="pin-no">${index + 1}</span><div class="pin-thumb">${work.image ? `<img src="${work.image}" alt="">` : "IMG"}</div><strong>${escapeHTML(work.title)}</strong><small>${formatPeriod(work.date, work.endDate)}</small><button type="button" data-unpin="${work.id}">해제</button></li>`).join("")
+    : `<li class="pin-empty">아직 중요 작업으로 지정한 작업이 없어요. 아래 목록에서 <b>중요</b>를 켜 보세요.</li>`;
+}
+
+async function savePinOrder(ids) {
+  // 화면 순서대로 pin_order 저장 (개수 제한 없음)
+  for (let index = 0; index < ids.length; index += 1) {
+    const error = await updateWorkSafe(ids[index], { pin_order: index });
+    if (error) { showNotice(`순서를 저장하지 못했어요: ${error.message}`); return; }
+  }
+  await loadAdminWorks();
+  updateAdminUI("중요 작업 순서를 저장했어요.");
+}
+
+function bindPinManager() {
+  const list = document.querySelector("#pin-list");
+  if (!list) return;
+  let dragId = null;
+  list.addEventListener("dragstart", (event) => {
+    const item = event.target.closest("li[data-pin-id]");
+    if (!item) return;
+    dragId = item.dataset.pinId;
+    item.classList.add("dragging");
+    event.dataTransfer.effectAllowed = "move";
+  });
+  list.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    const dragging = list.querySelector(".dragging");
+    const target = event.target.closest("li[data-pin-id]");
+    if (!dragging || !target || dragging === target) return;
+    const bounds = target.getBoundingClientRect();
+    const after = event.clientY > bounds.top + bounds.height / 2;
+    target.parentNode.insertBefore(dragging, after ? target.nextSibling : target);
+  });
+  list.addEventListener("dragend", async () => {
+    const dragging = list.querySelector(".dragging");
+    if (dragging) dragging.classList.remove("dragging");
+    if (!dragId) return;
+    dragId = null;
+    await savePinOrder([...list.querySelectorAll("li[data-pin-id]")].map((item) => item.dataset.pinId));
+  });
+  list.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-unpin]");
+    if (!button) return;
+    const error = await updateWorkSafe(button.dataset.unpin, { is_pinned: false, pin_order: null });
+    if (error) return showNotice(`해제하지 못했어요: ${error.message}`);
+    await loadAdminWorks();
+    updateAdminUI("중요 작업에서 해제했어요.");
+  });
 }
 
 function showNotice(message) { const box = document.querySelector("#admin-notice"); if (box) box.innerHTML = `<button class="notice">${escapeHTML(message)}<span>닫기 ×</span></button>`; else alert(message); }

@@ -267,6 +267,96 @@ h1 {
 .backup-log li.warn { color: #b47b12; }
 .backup-log li.fail { color: #c2436b; }
 
+/* 중요 작업 순서 패널 */
+.pin-manager .panel-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.pin-list {
+  margin: 0;
+  padding: 14px 18px 18px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.pin-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  cursor: grab;
+}
+
+.pin-list li.dragging {
+  opacity: .55;
+  cursor: grabbing;
+}
+
+.pin-list li.pin-empty {
+  color: var(--muted);
+  font-size: 12px;
+  cursor: default;
+  background: #fbfaff;
+}
+
+.pin-no {
+  width: 22px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.pin-thumb {
+  width: 44px;
+  height: 32px;
+  flex: none;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #f1edf6;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.pin-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pin-list strong {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pin-list small {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.pin-list button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  padding: 5px 11px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
 .notice {
   width: 100%;
   border: 1px solid #cec9ff;
@@ -1912,7 +2002,7 @@ td {
 .home-logo {
   display: flex;
   align-items: center;
-  color: var(--home-ink);
+  color: #8E3E63;
   font-size: 13px;
   font-weight: 900;
   letter-spacing: .06em;
@@ -3099,7 +3189,6 @@ html:has(body[data-page="home"]) {
 .home-work-intro h2,
 .about-head h2,
 .career-head h2,
-.skills-heading h2,
 .contact-body h2,
 .archive-head h1,
 .archive-heading h2 {
@@ -3115,7 +3204,7 @@ html:has(body[data-page="home"]) {
   height: auto;
   font-size: clamp(40px, 4.4vw, 64px);
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: 0;
   /* 잘림 방지는 span의 padding+음수 margin(레이아웃 무영향)이 담당 → h2 자체 패딩은 제거해 좌측·하단 정렬 유지 */
   padding: 0;
   overflow: visible;
@@ -3413,7 +3502,7 @@ html:has(body[data-page="home"]) {
   height: auto;
   font-size: clamp(34px, 3.6vw, 52px);
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: 0;
   padding: 0;
   overflow: visible;
 }
@@ -3585,6 +3674,79 @@ html:has(body[data-page="home"]) {
   border-top: 0;
 }
 
+
+/* ---------- About 하단: TOOLS I USE 가로 스트립 ---------- */
+.tools-strip {
+  width: fit-content; /* 내용 길이에 맞춰 */
+  min-height: 62px;
+  margin: 44px auto 0; /* 키워드 칩과의 여백 + 가운데 배치 */
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 52px; /* 라벨 ↔ 도구 목록 고정 간격 */
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 22px rgba(218, 154, 188, .09);
+}
+
+.tools-strip-label {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--home-pink);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  white-space: nowrap;
+}
+
+.tools-strip-label i {
+  font-style: normal;
+}
+
+.tools-strip-list {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px; /* 중점 좌우 간격과 동일 */
+}
+
+/* 개별 도구: 카드·캡슐 없이 아이콘 + 이름만 */
+/* 도구명: 아이콘 없이 텍스트만, 그룹 안에서는 중점(·)으로 구분 */
+.tool-item {
+  display: flex;
+  align-items: center;
+  color: #574d64;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 같은 그룹 안에서 앞 항목이 있을 때만 중점 표시 (구분선 뒤 첫 항목은 제외) */
+.tool-item + .tool-item::before {
+  content: "·";
+  margin-right: 8px;
+  color: #b3a6c4;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* 그룹 사이 얇은 세로 구분선 */
+.tool-divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 8px; /* 좌우 여백 동일 */
+  background: rgba(200, 186, 214, .7);
+}
+
 /* ---------- Career: 중앙 세로선 좌우 교차 타임라인 ---------- */
 .career-head {
   display: flex;
@@ -3604,7 +3766,7 @@ html:has(body[data-page="home"]) {
   height: auto;
   font-size: clamp(34px, 3.6vw, 52px);
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: 0;
   padding: 0;
   overflow: visible;
 }
@@ -3827,268 +3989,6 @@ html:has(body[data-page="home"]) {
 .tl-item:nth-child(4n + 2) { --tl-color: #9d86e8; }
 .tl-item:nth-child(4n + 3) { --tl-color: #c583cf; }
 .tl-item:nth-child(4n)     { --tl-color: #8ba3e8; }
-
-.home-skills {
-  width: min(1280px, calc(100% - 64px));
-  margin-inline: auto;
-  margin: 0 auto 110px;
-  position: relative;
-  z-index: 2;
-  padding: 72px 0 20px;
-  border-top: 0;
-}
-
-.skills-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.skills-heading span {
-  color: var(--home-mint);
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: .18em;
-}
-
-.skills-heading h2 {
-  margin: 10px 0 0;
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: .92;
-  letter-spacing: -.07em;
-}
-
-.skills-heading h2 i {
-  color: transparent;
-  font-style: normal;
-  -webkit-text-stroke: 1.2px var(--home-purple);
-}
-
-.skills-heading>p {
-  margin: 0 0 7px;
-  color: #918698;
-  font-size: 12px;
-}
-
-.skills-browser {
-  overflow: hidden;
-  border: 1px solid #d8cae7;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, .8);
-  box-shadow: 0 24px 70px rgba(174, 148, 205, .15);
-  backdrop-filter: blur(18px);
-}
-
-.skills-window {
-  height: 50px;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  border-bottom: 1px solid #e5dced;
-  background: rgba(250, 245, 255, .88);
-}
-
-.skills-window>div {
-  display: flex;
-  gap: 7px;
-}
-
-.skills-window i {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #ff9ebe;
-}
-
-.skills-window i:nth-child(2) {
-  background: #c5b8ff;
-}
-
-.skills-window i:nth-child(3) {
-  background: #a9e9d9;
-}
-
-.skills-window span {
-  color: #9c91a7;
-  font-size: 10px;
-  letter-spacing: .06em;
-}
-
-.skills-window b {
-  justify-self: end;
-  color: var(--home-pink);
-  font-weight: 500;
-}
-
-.skills-grid {
-  padding: 46px 54px 26px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.skill-card {
-  min-height: 270px;
-  position: relative;
-  overflow: hidden;
-  padding: 27px;
-  border: 1px solid #ded3e7;
-  border-radius: 19px;
-  background: rgba(255, 255, 255, .8);
-  transition: .25s ease;
-}
-
-.skill-card::after {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  right: -55px;
-  bottom: -68px;
-  border-radius: 50%;
-  opacity: .45;
-}
-
-.skill-design::after {
-  background: #ffd8e7;
-}
-
-.skill-publishing::after {
-  background: #ded7ff;
-}
-
-.skill-ai::after {
-  background: #d7f7ef;
-}
-
-.skill-experience::after {
-  background: #ffe7d5;
-}
-
-.skill-card:hover {
-  transform: translateY(-4px);
-  border-color: #c9b9db;
-  box-shadow: 0 15px 35px rgba(171, 137, 201, .13);
-}
-
-.skill-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.skill-card-top span {
-  color: #d2c6dc;
-  font-size: 24px;
-  font-weight: 850;
-}
-
-.skill-card-top i {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #dfd2e8;
-  border-radius: 12px;
-  color: var(--home-purple);
-  font-size: 17px;
-  font-style: normal;
-  background: rgba(255, 255, 255, .72);
-}
-
-.skill-card>small {
-  display: block;
-  margin-top: 21px;
-  color: var(--home-pink);
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .14em;
-}
-
-.skill-publishing>small {
-  color: var(--home-purple);
-}
-
-.skill-ai>small {
-  color: #49aa92;
-}
-
-.skill-experience>small {
-  color: #de8560;
-}
-
-.skill-card h3 {
-  margin: 7px 0 19px;
-  font-size: 24px;
-  letter-spacing: -.045em;
-}
-
-.skill-pills {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.skill-pills>span {
-  min-height: 34px;
-  padding: 7px 11px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  border: 1px solid #e1d7e8;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .82);
-  color: #756b7e;
-  font-size: 11px;
-  font-weight: 650;
-}
-
-.skill-pills b {
-  min-width: 20px;
-  height: 20px;
-  padding: 0 4px;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  background: #f1ecf8;
-  color: #7768a4;
-  font-size: 10px;
-}
-
-.skills-note {
-  margin: 0 54px 46px;
-  padding: 19px 22px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  border: 1px dashed #d9cde2;
-  border-radius: 15px;
-  color: #867b90;
-  background: #fffafd;
-}
-
-.skills-note span {
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .12em;
-}
-
-.skills-note i {
-  color: #c0b3ca;
-  font-size: 12px;
-  font-style: normal;
-}
-
-.skills-note b {
-  margin-left: auto;
-  color: #756a7f;
-  font-size: 11px;
-  font-weight: 700;
-}
 
 .home-contact {
   width: min(1280px, calc(100% - 64px));
@@ -4454,7 +4354,7 @@ html:has(body[data-page="home"]) {
   font-weight: 600;
   font-size: clamp(34px, 3.6vw, 50px);
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: 0;
   padding: 0;
   overflow: visible;
 }
@@ -4505,6 +4405,25 @@ html:has(body[data-page="home"]) {
   flex-shrink: 0;
 }
 
+.archive-controls button {
+  border: 1px solid #ded3e7;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .7);
+  color: #6f6479;
+  padding: 10px 18px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.archive-controls button.active {
+  border-color: #f77fae;
+  background: #ffe4ef;
+  color: #e2528a;
+  font-weight: 700;
+}
+
 .archive-controls select {
   appearance: none;
   -webkit-appearance: none;
@@ -4517,6 +4436,11 @@ html:has(body[data-page="home"]) {
   font-size: 13px;
   line-height: 1.3;
   cursor: pointer;
+}
+
+.archive-controls select:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 .archive-controls select:focus-visible {
@@ -4662,24 +4586,6 @@ html:has(body[data-page="home"]) {
   scale: 1.025;
 }
 
-
-.pin-label {
-  position: absolute;
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, .7);
-  background: rgba(255, 255, 255, .82);
-  backdrop-filter: blur(8px);
-}
-
-.pin-label {
-  top: 12px;
-  right: 12px;
-  border-radius: 999px;
-  padding: 8px 10px;
-  color: #ee6697;
-  font-size: 10px;
-  font-weight: 800;
-}
 
 .archive-card:hover .archive-placeholder {
   height: 100%;
@@ -4877,7 +4783,6 @@ html:has(body[data-page="home"]) {
   .home-work,
   .home-about,
   .home-career,
-  .home-skills,
   .home-contact {
     width: min(100% - 24px, 1280px);
   }
@@ -4899,10 +4804,6 @@ html:has(body[data-page="home"]) {
     max-width: 270px;
     line-height: 1.6;
     letter-spacing: .14em;
-  }
-
-  .skills-heading>p {
-    display: none;
   }
 
   /* 모바일: 소개 영역이 위로, 그 아래 동일 너비 카드 1열 세로 목록 */
@@ -4956,9 +4857,29 @@ html:has(body[data-page="home"]) {
 
   .home-about,
   .home-career,
-  .home-skills,
   .home-contact {
     padding-top: 54px;
+  }
+
+  /* 모바일: 라벨을 위로, 도구 목록은 아래에서 두 줄까지 자연스럽게 */
+  .tools-strip {
+    width: calc(100% - 32px);
+    min-height: 0;
+    margin-top: 32px;
+    padding: 16px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tools-strip-label {
+    flex: 0 0 auto;
+  }
+
+  .tools-strip-list {
+    width: 100%;
+    flex: 0 0 auto;
+    gap: 8px;
   }
 
   /* 모바일: 중앙 제목 아래 강점 1열, 구분선은 가로로 */
@@ -5051,14 +4972,6 @@ html:has(body[data-page="home"]) {
 
   .tl-card h3 {
     font-size: 17px;
-  }
-
-  .skills-grid {
-    padding: 30px 22px 22px;
-  }
-
-  .skills-note {
-    margin: 0 22px 34px;
   }
 
   .contact-body {
@@ -5174,7 +5087,12 @@ html:has(body[data-page="home"]) {
   font-weight: 500;
 }
 
+.native-dates label {
+  cursor: pointer;
+}
+
 .native-dates input {
+  cursor: pointer;
   width: 100%;
   min-height: 42px;
   padding: 9px 10px;
@@ -5257,38 +5175,6 @@ html:has(body[data-page="home"]) {
 
   .career-head h2 {
     font-size: 32px;
-  }
-
-  .skills-heading h2 {
-    font-size: 40px;
-  }
-
-  .skills-window {
-    grid-template-columns: 1fr auto;
-  }
-
-  .skills-window>span {
-    display: none;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    padding: 26px 16px 18px;
-  }
-
-  .skill-card {
-    min-height: 0;
-    padding: 22px;
-  }
-
-  .skills-note {
-    margin: 0 16px 28px;
-    flex-wrap: wrap;
-  }
-
-  .skills-note b {
-    width: 100%;
-    margin: 4px 0 0;
   }
 
   .contact-window {
