@@ -310,25 +310,83 @@
 
       <!-- Contact -->
       <section class="home-contact" id="contact">
-        <div class="contact-browser">
-          <div class="contact-window"><div><i></i><i></i><i></i></div><span>hello / let's-create-together</span><b>♡</b></div>
-          <div class="contact-body">
-            <span class="contact-kicker">LET'S MAKE SOMETHING SHINE</span>
-            <h2><span class="title-line">THANKS FOR VISITING</span><span class="title-last-line"><i>MY WORLD</i><svg class="h2-sparkle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#spShape" fill="currentColor"/></svg></span></h2>
-            <p>저의 작은 디자인 세계를 구경해주셔서 감사합니다.</p>
-            <p>함께 반짝이는 무언가를 만들고 싶다면<br>언제든지 편하게 연락해 주세요.</p>
-            <div class="contact-actions">
-              <span class="contact-action is-pink"><small>SEND A MESSAGE</small><strong>이메일 보내기</strong><b>↗</b></span>
-              <span class="contact-action is-purple"><small>VISIT GITHUB</small><strong>GitHub 보러가기</strong><b>↗</b></span>
-              <span class="contact-action is-mint"><small>DOWNLOAD RESUME</small><strong>PDF 이력서 다운로드</strong><b>↓</b></span>
+        <!-- 섹션 전용 장식: 빛무리 · 구름 · 별빛 궤적 · 반짝이 -->
+        <div class="contact-deco" aria-hidden="true">
+          <span class="contact-aura contact-aura-pink"></span>
+          <span class="contact-aura contact-aura-lav"></span>
+          <span class="contact-aura contact-aura-top"></span>
+          <img class="contact-cloud contact-cloud-l" src="assets/images/cloud-middle.webp" alt="">
+          <img class="contact-cloud contact-cloud-r" src="assets/images/cloud-front.webp" alt="">
+
+          <!-- 화면 최상단에서 제목까지 내려오는 별·오브제 궤적 -->
+          <div class="star-drop">
+            <span class="drop-beam"></span>
+            <svg class="sparkle sp-m sp-white drop-item drop-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+            <svg class="sparkle sp-s sp-lav drop-item drop-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+            <svg class="sparkle sp-s sp-white drop-item drop-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+            <svg class="sparkle sp-m sp-pink drop-item drop-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+            <span class="drop-item drop-heart">♥</span>
+            <svg class="sparkle sp-s sp-white drop-item drop-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          </div>
+
+          <!-- 티켓 아래 반짝이는 궤도 -->
+          <span class="star-trail star-trail-ring"></span>
+
+          <!-- 반짝이: 상단 중앙과 티켓 주변에만 불규칙하게 -->
+          <svg class="sparkle sp-m sp-white ct-sp-1" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-pink ct-sp-2" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-lav ct-sp-3" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-white ct-sp-4" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-m sp-lav ct-sp-5" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-m sp-pink ct-sp-6" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-white ct-sp-7" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-lav ct-sp-8" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-white ct-sp-9" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-m sp-white ct-sp-10" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-pink ct-sp-11" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+          <svg class="sparkle sp-s sp-white ct-sp-12" viewBox="0 0 100 100"><use href="#spShape" fill="currentColor"/><circle cx="50" cy="50" r="14" fill="url(#spCoreGlow)"/></svg>
+        </div>
+
+        <div class="contact-stage">
+          <!-- 리드: 작은 문구 · 메인 제목 · 설명 -->
+          <div class="contact-lead">
+            <span class="contact-kicker"><i>✦</i> THE NEXT STORY STARTS HERE <i>✦</i></span>
+            <h2 class="jelly-title contact-title">
+              <span class="title-line gradient-title" data-text="THANK YOU FOR"><span class="gradient-title-text" data-text="THANK YOU FOR">THANK YOU FOR</span></span>
+              <span class="title-last-line"><span class="gradient-title" data-text="EXPLORING MY WORLD"><span class="gradient-title-text" data-text="EXPLORING MY WORLD">EXPLORING MY WORLD</span></span><svg class="h2-sparkle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#spShape" fill="currentColor"/></svg></span>
+            </h2>
+            <p class="contact-desc">새로운 기회와 즐거운 협업을 기다리고 있습니다.</p>
+          </div>
+
+          <!-- 티켓형 Contact 카드 -->
+          <div class="contact-ticket-wrap">
+            <span class="ticket-label"><i>♡</i> LET’S CONNECT <i>♡</i></span>
+            <span class="ticket-notch ticket-notch-t" aria-hidden="true"><b>♥</b></span>
+            <span class="ticket-notch ticket-notch-b" aria-hidden="true"></span>
+            <div class="contact-ticket">
+              <span class="ticket-perf ticket-perf-l" aria-hidden="true"></span>
+              <span class="ticket-perf ticket-perf-r" aria-hidden="true"></span>
+              <span class="ticket-divider" aria-hidden="true"></span>
+
+              <a class="ticket-link is-pink" href="#">
+                <span class="ticket-icon" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#spShape" fill="currentColor"/></svg></span>
+                <span class="ticket-text"><small>SEND A MESSAGE</small><strong>EMAIL</strong></span>
+                <span class="ticket-go" aria-hidden="true">→</span>
+              </a>
+
+              <a class="ticket-link is-purple" href="#">
+                <span class="ticket-icon" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#spShape" fill="currentColor"/></svg></span>
+                <span class="ticket-text"><small>VISIT MY REPOSITORY</small><strong>GITHUB</strong></span>
+                <span class="ticket-go" aria-hidden="true">→</span>
+              </a>
             </div>
-            <small class="contact-link-note">연결 주소는 준비 중입니다.</small>
           </div>
-          <div class="contact-bottom">
-            <span>© 2026 Han Hyejin</span>
-            <b>Designed &amp; Published with ♡</b>
-            <a href="#top">BACK TO TOP ↑</a>
-          </div>
+        </div>
+
+        <a class="contact-top" href="#top">BACK TO TOP ↑</a>
+
+        <div class="contact-foot">
+          <span class="contact-copy">© 2026 Han Hyejin</span>
         </div>
       </section>
     </main>

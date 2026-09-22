@@ -3189,7 +3189,7 @@ html:has(body[data-page="home"]) {
 .home-work-intro h2,
 .about-head h2,
 .career-head h2,
-.contact-body h2,
+.contact-title,
 .archive-head h1,
 .archive-heading h2 {
   font-family: "Fredoka", "Pretendard Variable", sans-serif;
@@ -3990,251 +3990,516 @@ html:has(body[data-page="home"]) {
 .tl-item:nth-child(4n + 3) { --tl-color: #c583cf; }
 .tl-item:nth-child(4n)     { --tl-color: #8ba3e8; }
 
+/* ============================================================
+   Contact — 전체 화면 높이의 티켓형 연락 섹션
+   배경(고정 그라데이션·구름)은 그대로 비치게 두고,
+   섹션 전용 빛무리·구름·별빛 궤적만 얹어 흐름을 이어간다.
+   ============================================================ */
 .home-contact {
   width: min(1280px, calc(100% - 64px));
-  margin-inline: auto;
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding: 72px 0 70px;
-  border-top: 0;
+  min-height: 100svh;
+  /* 세로 리듬(합계 ≈ 100svh):
+     상단 별 낙하 공간 20svh → 리드 → 티켓까지 7svh → 티켓 → BACK TO TOP → 푸터(하단 고정)
+     상단 여백이 곧 제목 위치를 정한다: 제목 중심이 화면 높이의 약 35% 지점에 오도록 잡았다 */
+  padding: clamp(130px, 20svh, 230px) 0 clamp(18px, 2.6svh, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contact-browser {
-  position: relative;
+/* ---------- 장식 레이어 ---------- */
+.contact-deco {
+  position: absolute;
+  inset: 0 -12vw -20px;
+  z-index: 0;
+  pointer-events: none;
   overflow: hidden;
-  border: 1px solid #d5c5e4;
-  border-radius: 28px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, .88), rgba(255, 242, 249, .82) 50%, rgba(243, 240, 255, .86));
-  box-shadow: 0 30px 85px rgba(214, 140, 182, .2);
-  backdrop-filter: blur(20px);
 }
 
-.contact-browser::before,
-.contact-browser::after {
-  content: "";
+/* 은은한 빛무리 3종 */
+.contact-aura {
   position: absolute;
   border-radius: 50%;
-  filter: blur(3px);
+  filter: blur(10px);
+}
+
+.contact-aura-pink {
+  width: 620px;
+  height: 620px;
+  left: 4%;
+  bottom: 2%;
+  background: radial-gradient(circle, rgba(255, 179, 214, .4), rgba(255, 179, 214, 0) 66%);
+}
+
+.contact-aura-lav {
+  width: 640px;
+  height: 640px;
+  right: 2%;
+  top: 30%;
+  background: radial-gradient(circle, rgba(190, 176, 255, .34), rgba(190, 176, 255, 0) 66%);
+}
+
+/* 별이 내려오는 상단 중앙의 옅은 광원 */
+.contact-aura-top {
+  width: 820px;
+  height: 420px;
+  left: 50%;
+  top: -6%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 68%);
+}
+
+/* 좌우 하단에서 피어오르는 구름 — 중앙 하단은 낮게 비워 둔다 */
+.contact-cloud {
+  position: absolute;
+  height: auto;
+  opacity: .5;
+  filter: blur(1px);
+}
+
+.contact-cloud-l {
+  left: -17%;
+  bottom: -5%;
+  width: 58%;
+}
+
+.contact-cloud-r {
+  right: -17%;
+  bottom: -9%;
+  width: 54%;
+  transform: scaleX(-1);
+}
+
+/* ---------- 화면 최상단 → 제목으로 내려오는 별·오브제 궤적 ---------- */
+.star-drop {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 200px;
+  /* 섹션 상단 여백과 같은 높이 → 마지막 오브제가 작은 문구 바로 위에 닿는다 */
+  height: clamp(130px, 20svh, 230px);
+  transform: translateX(-50%);
+}
+
+.drop-beam {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 6%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, .8) 26%,
+      rgba(255, 226, 243, .62) 64%,
+      rgba(255, 255, 255, 0) 100%);
+  filter: blur(1.2px);
+  opacity: .75;
+}
+
+/* 좌우로 조금씩 흔들리며 내려오도록 중심선에서 일정하지 않게 어긋냄 */
+.star-drop .drop-item {
+  position: absolute;
+  left: 50%;
+}
+
+.drop-1 { top: 3%;  transform: translateX(calc(-50% + 3px)); }
+.drop-2 { top: 18%; transform: translateX(calc(-50% - 15px)); }
+.drop-3 { top: 32%; transform: translateX(calc(-50% + 12px)); }
+.drop-4 { top: 48%; transform: translateX(calc(-50% - 5px)); }
+.drop-heart { top: 68%; transform: translateX(calc(-50% + 10px)); }
+.drop-5 { top: 84%; transform: translateX(calc(-50% - 11px)); }
+
+.drop-heart {
+  color: #ff9cc2;
+  font-size: 14px;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 170, 205, .8));
+}
+
+/* 티켓 아래 반짝이는 타원 궤도 */
+.star-trail {
+  position: absolute;
   pointer-events: none;
 }
 
-.contact-browser::before {
-  width: 330px;
-  height: 330px;
-  left: -150px;
-  bottom: -170px;
-  background: radial-gradient(circle, rgba(255, 183, 212, .36), transparent 68%);
-}
-
-.contact-browser::after {
-  width: 360px;
-  height: 360px;
-  right: -150px;
-  top: 40px;
-  background: radial-gradient(circle, rgba(193, 181, 255, .34), transparent 68%);
-}
-
-.contact-window {
-  height: 52px;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  border-bottom: 1px solid #e4d8eb;
-  background: rgba(250, 245, 255, .72);
-}
-
-.contact-window>div {
-  display: flex;
-  gap: 7px;
-}
-
-.contact-window i {
-  width: 9px;
-  height: 9px;
+.star-trail-ring {
+  left: 50%;
+  top: 82%;
+  width: 300px;
+  height: 58px;
+  transform: translateX(-50%);
   border-radius: 50%;
-  background: #ff9ebe;
+  border: 1.5px dashed rgba(255, 255, 255, .72);
+  filter: blur(1px);
+  opacity: .65;
 }
 
-.contact-window i:nth-child(2) {
-  background: #c5b8ff;
-}
+/* 반짝이 배치 — 규칙적으로 흩뿌리지 않고 두 곳에만 모은다:
+   ① 상단 중앙(별이 내려오는 길 주변)  ② 티켓 좌우 주변 */
+.ct-sp-1  { top: 5%;   left: 46.5%; }
+.ct-sp-2  { top: 11%;  left: 54%; }
+.ct-sp-3  { top: 19.5%; left: 43.5%; }
+.ct-sp-4  { top: 2.5%; left: 56.5%; }
+.ct-sp-5  { top: 26%;  left: 52.5%; }
 
-.contact-window i:nth-child(3) {
-  background: #a9e9d9;
-}
+.ct-sp-6  { top: 54%;  left: 21%; }
+.ct-sp-7  { top: 62.5%; left: 14%; }
+.ct-sp-8  { top: 77%;  left: 26.5%; }
+.ct-sp-9  { top: 57%;  right: 17%; }
+.ct-sp-10 { top: 72%;  right: 12%; }
+.ct-sp-11 { top: 86%;  left: 41%; }
+.ct-sp-12 { top: 88.5%; right: 34%; }
 
-.contact-window span {
-  color: #9c91a7;
-  font-size: 10px;
-  letter-spacing: .06em;
-}
-
-.contact-window b {
-  justify-self: end;
-  color: var(--home-pink);
-  font-weight: 500;
-}
-
-.contact-body {
+/* ---------- 본문 (리드 + 티켓) ---------- */
+.contact-stage {
   position: relative;
   z-index: 1;
-  padding: 84px 54px 66px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.contact-lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 작은 문구 — 알약형 배지 */
 .contact-kicker {
-  margin-bottom: 22px;
-  color: var(--home-purple);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  height: 32px;
+  padding: 0 20px;
+  margin-bottom: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(214, 150, 190, .16), inset 0 1px 0 rgba(255, 255, 255, .9);
+  color: #8a72d4;
   font-size: 10px;
   font-weight: 850;
   letter-spacing: .2em;
 }
 
-.contact-body h2 {
-  position: relative;
-  margin: 0;
-  font-size: clamp(47px, 7.6vw, 92px);
-  line-height: .88;
-  letter-spacing: -.075em;
-}
-
-.contact-body h2 i {
-  color: transparent;
+.contact-kicker i {
+  color: var(--home-pink);
   font-style: normal;
-  -webkit-text-stroke: 1.4px var(--home-pink);
+  font-size: 9px;
 }
 
-.contact-body>p {
-  margin: 31px 0 0;
-  color: #716777;
-  font-size: 14px;
-  line-height: 1.75;
+/* 메인 제목 — 젤리 그라데이션 타이틀 (티켓보다 세지 않게 톤 조절) */
+.contact-title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+}
+
+.contact-title .title-last-line {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.contact-title .h2-sparkle {
+  width: 22px;
+  height: 22px;
+  transform: translateY(4px);
+}
+
+.contact-desc {
+  margin: 22px 0 0;
+  color: #6f6579;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
   word-break: keep-all;
 }
 
-.contact-body>p+p {
-  margin-top: 7px;
-  color: #897e90;
-  font-size: 13px;
+/* ---------- 티켓 ---------- */
+.contact-ticket-wrap {
+  position: relative;
+  width: min(880px, 100%);
+  /* 설명 문구와 충분히 떨어뜨려 티켓이 화면 중앙보다 조금 아래에 놓이게 */
+  margin-top: clamp(48px, 7svh, 96px);
+  /* 티켓 윗변에 걸친 라벨(높이 36px)의 절반만큼 위쪽 공간을 비워 둔다 */
+  padding-top: 18px;
 }
 
-.contact-actions {
-  width: 100%;
-  margin-top: 43px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.contact-action {
-  min-height: 96px;
-  padding: 19px 20px;
-  display: grid;
-  grid-template-columns: 1fr auto;
+/* 티켓 라벨 — 티켓 윗변에 살짝 걸치는 탭 */
+.ticket-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
   align-items: center;
-  border: 1px solid #ddd1e7;
-  border-radius: 17px;
-  text-align: left;
-  background: rgba(255, 255, 255, .74);
-}
-
-.contact-action small,
-.contact-action strong {
-  grid-column: 1;
-}
-
-.contact-action small {
-  margin-bottom: 5px;
-  font-size: 10px;
+  gap: 10px;
+  height: 36px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, .9);
+  background: linear-gradient(135deg, rgba(255, 233, 244, .95), rgba(238, 232, 255, .95));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 26px rgba(206, 138, 184, .22), inset 0 1px 0 rgba(255, 255, 255, .95);
+  color: #7d6ac9;
+  font-size: 11px;
   font-weight: 850;
-  letter-spacing: .12em;
+  letter-spacing: .2em;
 }
 
-.contact-action strong {
-  color: #554d60;
-  font-size: 13px;
+.ticket-label i {
+  color: var(--home-pink);
+  font-style: normal;
+  font-size: 11px;
 }
 
-.contact-action>b {
-  grid-column: 2;
-  grid-row: 1 / 3;
-  width: 34px;
-  height: 34px;
+/* 티켓 본체: 핑크·라벤더가 섞인 반투명 젤리 글래스 */
+.contact-ticket {
+  position: relative;
+  width: 100%;
+  min-height: 208px;
+  padding: 34px 62px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  border-radius: 34px;
+  background:
+    linear-gradient(150deg,
+      rgba(255, 255, 255, .78) 0%,
+      rgba(255, 221, 240, .62) 38%,
+      rgba(233, 223, 255, .62) 74%,
+      rgba(255, 255, 255, .7) 100%);
+  backdrop-filter: blur(22px) saturate(1.25);
+  -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  /* 안쪽 광택은 inset 으로, 바깥 그림자는 filter 로.
+     mask 로 파낸 홈 모양을 그림자가 그대로 따라가게 하려면 drop-shadow 여야 한다 */
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, .9),
+    inset 0 -26px 46px rgba(255, 186, 220, .2),
+    inset 0 0 0 1.5px rgba(255, 255, 255, .72);
+  filter:
+    drop-shadow(0 22px 40px rgba(198, 131, 180, .26))
+    drop-shadow(0 4px 14px rgba(160, 130, 220, .16));
+
+  /* 좌우 끝의 몽환적인 절취 홈: 가장자리를 부드럽게 파낸다 */
+  --notch: 30px;
+  -webkit-mask-image:
+    radial-gradient(circle var(--notch) at 0 50%, transparent 0, transparent 72%, rgba(0, 0, 0, .55) 90%, #000 100%),
+    radial-gradient(circle var(--notch) at 100% 50%, transparent 0, transparent 72%, rgba(0, 0, 0, .55) 90%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(circle var(--notch) at 0 50%, transparent 0, transparent 72%, rgba(0, 0, 0, .55) 90%, #000 100%),
+    radial-gradient(circle var(--notch) at 100% 50%, transparent 0, transparent 72%, rgba(0, 0, 0, .55) 90%, #000 100%);
+  mask-composite: intersect;
+}
+
+/* 좌우 절취선 — 실선 대신 흐릿한 바코드형 빛줄기 */
+.ticket-perf {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 92px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  background: repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, .95) 0 2px,
+      rgba(255, 168, 208, .55) 2px 4px,
+      rgba(255, 255, 255, 0) 4px 6px);
+  filter: blur(.7px);
+  opacity: .85;
+}
+
+/* 좌우 홈(반지름 30px)과 겹치지 않도록 안쪽으로 들여 배치 */
+.ticket-perf-l {
+  left: 44px;
+}
+
+.ticket-perf-r {
+  right: 44px;
+  background: repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, .95) 0 2px,
+      rgba(184, 168, 255, .55) 2px 4px,
+      rgba(255, 255, 255, 0) 4px 6px);
+}
+
+/* 중앙 절취선 — 위·아래 반원 홈과 점선 */
+.ticket-notch {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  font-size: 14px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, .96), rgba(255, 233, 245, .8) 62%, rgba(255, 233, 245, 0) 100%);
+  box-shadow: 0 0 18px rgba(255, 255, 255, .8);
+  filter: blur(.2px);
 }
 
-.contact-action.is-pink small {
-  color: #e76594;
+/* 티켓 윗변(= wrap 기준 18px)과 아랫변에 걸치는 반짝이는 홈 */
+.ticket-notch-t {
+  top: 18px;
 }
 
-.contact-action.is-pink>b {
-  color: #dc5e8d;
-  background: #ffe7f0;
+.ticket-notch-b {
+  top: 100%;
 }
 
-.contact-action.is-purple small {
-  color: #7e70d9;
+.ticket-notch b {
+  color: var(--home-pink);
+  font-size: 13px;
+  filter: drop-shadow(0 1px 2px rgba(255, 150, 195, .5));
 }
 
-.contact-action.is-purple>b {
-  color: #7667cf;
-  background: #eeeaff;
+.ticket-divider {
+  position: absolute;
+  left: 50%;
+  top: 34px;
+  bottom: 34px;
+  z-index: 1;
+  width: 0;
+  border-left: 1.5px dashed rgba(196, 172, 226, .75);
+  transform: translateX(-50%);
 }
 
-.contact-action.is-mint small {
-  color: #46a88f;
-}
-
-.contact-action.is-mint>b {
-  color: #3c9c84;
-  background: #e4f8f2;
-}
-
-.contact-link-note {
-  margin-top: 14px;
-  color: #aaa0ae;
-  font-size: 10px;
-}
-
-.contact-bottom {
-  min-height: 62px;
-  padding: 0 24px;
+/* ---------- 연락 메뉴 ---------- */
+.ticket-link {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  border-top: 1px solid #e4d8eb;
-  color: #817689;
-  background: rgba(255, 250, 253, .72);
-}
-
-.contact-bottom span,
-.contact-bottom b,
-.contact-bottom a {
-  font-size: 10px;
-}
-
-.contact-bottom b {
-  font-weight: 700;
-}
-
-.contact-bottom a {
-  justify-self: end;
-  color: #766c7f;
-  font-weight: 800;
+  gap: 18px;
+  padding: 18px 22px;
+  margin: 0 6px;
+  border-radius: 22px;
+  border: 1.5px solid transparent;
+  text-align: left;
   text-decoration: none;
-  letter-spacing: .07em;
+}
+
+.ticket-icon {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, .9);
+  background: rgba(255, 255, 255, .6);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, .95), 0 8px 20px rgba(206, 146, 190, .18);
+}
+
+.ticket-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.ticket-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket-text small {
+  font-size: 9.5px;
+  font-weight: 850;
+  letter-spacing: .16em;
+  color: #a294b0;
+}
+
+.ticket-text strong {
+  font-family: "Fredoka", "Pretendard Variable", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 1;
+}
+
+/* 화살표 버튼 — 클릭 가능한 형태가 분명하게 보이도록 */
+.ticket-go {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, .55), 0 10px 22px rgba(190, 120, 170, .28);
+}
+
+.ticket-link.is-pink .ticket-icon {
+  color: #ff8cb8;
+}
+
+.ticket-link.is-pink .ticket-text strong {
+  color: #e8548f;
+}
+
+.ticket-link.is-pink .ticket-go {
+  background: linear-gradient(160deg, #ffa3c8, #f56ba4);
+}
+
+.ticket-link.is-purple .ticket-icon {
+  color: #a99bf5;
+}
+
+.ticket-link.is-purple .ticket-text strong {
+  color: #6f5fd4;
+}
+
+.ticket-link.is-purple .ticket-go {
+  background: linear-gradient(160deg, #b3a6fb, #7b6ae4);
+}
+
+/* ---------- 하단 ---------- */
+.contact-top {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(26px, 3.6svh, 52px);
+  color: #7566b8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-decoration: none;
+}
+
+.contact-foot {
+  position: relative;
+  z-index: 1;
+  /* 남는 높이를 모두 밀어 푸터를 화면 아래쪽에 붙인다 */
+  margin-top: auto;
+  padding-top: clamp(22px, 3svh, 40px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-copy {
+  color: #7b7186;
+  font-size: 11px;
+  letter-spacing: .04em;
 }
 
 /* Public work archive */
@@ -4856,8 +5121,7 @@ html:has(body[data-page="home"]) {
   }
 
   .home-about,
-  .home-career,
-  .home-contact {
+  .home-career {
     padding-top: 54px;
   }
 
@@ -4974,24 +5238,9 @@ html:has(body[data-page="home"]) {
     font-size: 17px;
   }
 
-  .contact-body {
-    padding: 68px 28px 52px;
-  }
 
-  .contact-actions {
-    grid-template-columns: 1fr;
-  }
 
-  .contact-bottom {
-    grid-template-columns: 1fr auto 1fr;
-    gap: 6px;
-    padding: 14px 18px;
-  }
 
-  .contact-bottom b {
-    font-size: 11px;
-    text-align: center;
-  }
 
   .archive-works,
   .archive-footer {
@@ -5177,46 +5426,15 @@ html:has(body[data-page="home"]) {
     font-size: 32px;
   }
 
-  .contact-window {
-    grid-template-columns: 1fr auto;
-  }
 
-  .contact-window>span {
-    display: none;
-  }
 
-  .contact-body {
-    padding: 58px 18px 42px;
-  }
 
-  .contact-body h2 {
-    font-size: 41px;
-  }
 
-  .contact-body>p {
-    font-size: 13px;
-  }
 
-  .contact-body>p+p br {
-    display: none;
-  }
 
-  .contact-actions {
-    margin-top: 32px;
-  }
 
-  .contact-action {
-    min-height: 84px;
-  }
 
-  .contact-bottom {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 
-  .contact-bottom a {
-    justify-self: center;
-  }
 }
 
 /* ---------- 카테고리 배지 (메인·아카이브·상세 팝업 공통) ----------
