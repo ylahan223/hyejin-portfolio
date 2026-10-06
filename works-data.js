@@ -1,5 +1,5 @@
-// Supabase backup converted to static portfolio data.
-// Generated 2026-10-06. Add/edit projects here when updating the portfolio.
+// Static portfolio data. Managed by admin.html.
+// Migrated from Supabase backup on 2026-10-06.
 export const worksData = [
   {
     "id": "a8890d32-3787-4eac-afab-9faf6d43e3b8",
@@ -55,7 +55,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "인물 중심의 비주얼과 신뢰감 있는 블루 톤으로 표현한 SNS 콘텐츠\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "인물 중심의 비주얼과 신뢰감 있는 블루 톤으로 표현한 SNS 콘텐츠",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -95,7 +95,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -165,7 +165,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "블롭 그라데이션 활용 디자인\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "블롭 그라데이션 활용 디자인",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -207,7 +207,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"cover\",\"scale\":1,\"x\":0.5681818181818181,\"y\":50}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -234,7 +234,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -346,7 +346,7 @@ export const worksData = [
       "Illustrator"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -403,7 +403,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "AI를 사용해 모델 이미지 생성\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "AI를 사용해 모델 이미지 생성",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -444,7 +444,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -515,7 +515,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -575,7 +575,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -645,7 +645,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -716,7 +716,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -791,7 +791,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -861,7 +861,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1.6,\"x\":0.14204545454545456,\"y\":25.356239179651084}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -885,7 +885,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -955,7 +955,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1025,7 +1025,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1095,7 +1095,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1167,7 +1167,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1207,7 +1207,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1268,7 +1268,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1369,7 +1369,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1441,7 +1441,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1482,7 +1482,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1588,7 +1588,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1675,7 +1675,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1716,7 +1716,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1788,7 +1788,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1884,7 +1884,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1956,7 +1956,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "AI 활용하여 모델 이미지 수정\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "AI 활용하여 모델 이미지 수정",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -1997,7 +1997,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2088,7 +2088,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2159,7 +2159,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2231,7 +2231,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2272,7 +2272,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2298,7 +2298,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "필요한 이미지 ai 생성\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "필요한 이미지 ai 생성",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2369,7 +2369,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2450,7 +2450,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2520,7 +2520,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2556,7 +2556,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2582,7 +2582,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2659,7 +2659,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2741,7 +2741,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2808,7 +2808,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2875,7 +2875,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -2951,7 +2951,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3021,7 +3021,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3048,7 +3048,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "miricle ai를 활용해서 생성한 시안 바탕으로 B급 감성 디자인\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "miricle ai를 활용해서 생성한 시안 바탕으로 B급 감성 디자인",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3076,7 +3076,7 @@ export const worksData = [
     "endDate": "",
     "tools": [],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3118,7 +3118,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3185,7 +3185,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3261,7 +3261,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3332,7 +3332,7 @@ export const worksData = [
       "Illustrator"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3373,7 +3373,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3449,7 +3449,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3526,7 +3526,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3567,7 +3567,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3644,7 +3644,7 @@ export const worksData = [
       "Illustrator"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3685,7 +3685,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3723,7 +3723,7 @@ export const worksData = [
     "endDate": "",
     "tools": [],
     "role": "디자인 100%",
-    "description": "ai 로 아이콘, 배경 이미지 생성\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "ai 로 아이콘, 배경 이미지 생성",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3765,7 +3765,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3805,7 +3805,7 @@ export const worksData = [
       "Figma"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3886,7 +3886,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3938,7 +3938,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -3990,7 +3990,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4051,7 +4051,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4097,7 +4097,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4149,7 +4149,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4212,7 +4212,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "기획안 바탕으로 제작\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "기획안 바탕으로 제작",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4249,7 +4249,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4295,7 +4295,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4341,7 +4341,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4388,7 +4388,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4465,7 +4465,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4516,7 +4516,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4562,7 +4562,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4612,7 +4612,7 @@ export const worksData = [
       "Illustrator"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4683,7 +4683,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4761,7 +4761,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4804,7 +4804,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4847,7 +4847,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4890,7 +4890,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -4983,7 +4983,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5065,7 +5065,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5132,7 +5132,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5200,7 +5200,7 @@ export const worksData = [
       "Photoshop"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5277,7 +5277,7 @@ export const worksData = [
       "ChatGPT"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5354,7 +5354,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5431,7 +5431,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
@@ -5509,7 +5509,7 @@ export const worksData = [
       "Claude"
     ],
     "role": "디자인 100%",
-    "description": "\n\n<!--HYEJIN_THUMBNAIL:{\"mode\":\"contain\",\"scale\":1,\"x\":0,\"y\":0}-->",
+    "description": "",
     "thumbnail": {
       "mode": "contain",
       "scale": 1,
