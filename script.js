@@ -147,7 +147,7 @@ async function initArchive() {
     let selectedMonth = "all";
     let sort = "new";
     let visibleCount = PAGE_SIZE;
-    const CATEGORY_ORDER = ["콘텐츠 디자인", "광고·캠페인", "상세·랜딩페이지", "웹디자인", "퍼블리싱", "AI·그래픽"];
+    const CATEGORY_ORDER = ["콘텐츠 디자인", "광고·캠페인", "상세·랜딩페이지", "웹디자인", "퍼블리싱", "그래픽·인쇄물"];
     const cats = [...new Set(works.map((work) => work.category))].sort((a, b) => {
       const ai = CATEGORY_ORDER.indexOf(a), bi = CATEGORY_ORDER.indexOf(b);
       return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi);
