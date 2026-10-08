@@ -68,10 +68,14 @@ const homeThumbnailStyle = (thumbnail) => {
 const homeThumbnailHTML = (url, title, thumbnail) => !url ? `<span>IMAGE COMING SOON</span>` : `<img class="thumbnail-main home-thumb-cover" src="${url}" alt="${escapeHTML(title)}" style="${homeThumbnailStyle(thumbnail)}" loading="lazy">`;
 
 // ---------- 정적 작품 데이터 ----------
+function sortedTools(tools=[]){
+  const isAI=tool=>/\bai\b|chatgpt|claude|gemini|midjourney|firefly|copilot|dall[ -]?e|stable diffusion|ideogram|runway|sora|클로드|챗지피티|제미나이/i.test(tool);
+  return [...tools].sort((a,b)=>Number(isAI(a))-Number(isAI(b))||a.localeCompare(b,"en",{sensitivity:"base",numeric:true}));
+}
 function getPublicWorks(limit) {
   const works = worksData
     .filter((work) => work.isPublic)
-    .map((work) => ({ ...work, thumbnail: normalizeThumbnail(work.thumbnail), images: [...(work.images || [])].sort((a, b) => a.sortOrder - b.sortOrder) }))
+    .map((work) => ({ ...work, tools: sortedTools(work.tools||[]), thumbnail: normalizeThumbnail(work.thumbnail), images: [...(work.images || [])].sort((a, b) => a.sortOrder - b.sortOrder) }))
     .sort((a, b) => {
       if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
       if (a.isPinned && b.isPinned) {
