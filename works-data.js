@@ -1,6 +1,889 @@
 // Static portfolio data. Managed by admin.html.
 export const worksData = [
   {
+    "id": "d63a0d6e-25cc-4fb3-81d3-41235b1dc054",
+    "title": "메젠 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-20",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__cover-1792472175108-wt75o.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "93ec06fa-23f0-4334-9417-273e419a787b",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__93ec06fa-23f0-4334-9417-273e419a787b__detail-1792472175281-3qqjm.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "aac3f95c-5870-40fe-83ce-4e94ee23db5b",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__aac3f95c-5870-40fe-83ce-4e94ee23db5b__detail-1792472175418-qxo6a.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2533b12b-fa9a-48c6-a56b-567470619863",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__2533b12b-fa9a-48c6-a56b-567470619863__detail-1792472175570-8zryg.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "2b1c06d0-5e0b-4aac-90da-833e9e050da8",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__2b1c06d0-5e0b-4aac-90da-833e9e050da8__detail-1792472175699-zg2fl.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "79a43664-eec1-4194-94b1-7266dc6c1164",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__79a43664-eec1-4194-94b1-7266dc6c1164__detail-1792472175841-rsibe.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "a6c553a0-6868-4487-99a2-a3d5a73b6d56",
+        "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__a6c553a0-6868-4487-99a2-a3d5a73b6d56__detail-1792472176011-hyk2y.webp",
+        "sortOrder": 5
+      }
+    ]
+  },
+  {
+    "id": "d92c83c8-b8e8-4ba3-9043-c53e0ea87799",
+    "title": "골드제이의원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-19",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d92c83c8-b8e8-4ba3-9043-c53e0ea87799__cover-1792472149672-ghar0.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "8f5709da-759b-4f24-bc36-02708a19096d",
+        "url": "./assets/portfolio/details/d92c83c8-b8e8-4ba3-9043-c53e0ea87799__8f5709da-759b-4f24-bc36-02708a19096d__detail-1792472149821-2amh0.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "7b3b43a6-31f9-4ac9-872c-7f6085f725dc",
+        "url": "./assets/portfolio/details/d92c83c8-b8e8-4ba3-9043-c53e0ea87799__7b3b43a6-31f9-4ac9-872c-7f6085f725dc__detail-1792472149961-wss9o.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2dda51ab-c39e-4753-819b-49007d47caa2",
+        "url": "./assets/portfolio/details/d92c83c8-b8e8-4ba3-9043-c53e0ea87799__2dda51ab-c39e-4753-819b-49007d47caa2__detail-1792472150131-ztsy1.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "34f6bd96-9fd3-495b-925e-e865c193614f",
+    "title": "골드제이의원 필러 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-19",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/34f6bd96-9fd3-495b-925e-e865c193614f__cover-1792472134829-cwy28.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": []
+  },
+  {
+    "id": "9e426fc7-ecce-4f6d-b5ca-7ba75fca0136",
+    "title": "모델모아 SNS 11월 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/9e426fc7-ecce-4f6d-b5ca-7ba75fca0136__cover-1792472109280-9csxm.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "895d85b8-c409-4113-87f2-8b72a30bc370",
+        "url": "./assets/portfolio/details/9e426fc7-ecce-4f6d-b5ca-7ba75fca0136__895d85b8-c409-4113-87f2-8b72a30bc370__detail-1792472109499-fia8g.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "90e6e3e1-9ec8-4964-9b28-b26e8a625226",
+        "url": "./assets/portfolio/details/9e426fc7-ecce-4f6d-b5ca-7ba75fca0136__90e6e3e1-9ec8-4964-9b28-b26e8a625226__detail-1792472109755-tkrd3.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "e7e1c254-6647-4745-a7bf-42c5e38fae7e",
+        "url": "./assets/portfolio/details/9e426fc7-ecce-4f6d-b5ca-7ba75fca0136__e7e1c254-6647-4745-a7bf-42c5e38fae7e__detail-1792472109978-eevlf.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "543bb9ef-3ded-4f82-9f4e-511c0b91ca09",
+    "title": "모델모아 SNS 11월 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/543bb9ef-3ded-4f82-9f4e-511c0b91ca09__cover-1792472095596-quaad.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "a68526f3-bdd2-4103-b503-1c898b354259",
+        "url": "./assets/portfolio/details/543bb9ef-3ded-4f82-9f4e-511c0b91ca09__a68526f3-bdd2-4103-b503-1c898b354259__detail-1792472095832-lmkqr.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "91aba2f2-1caf-43be-a66a-44f61c019465",
+        "url": "./assets/portfolio/details/543bb9ef-3ded-4f82-9f4e-511c0b91ca09__91aba2f2-1caf-43be-a66a-44f61c019465__detail-1792472096055-6jge3.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "d3c4b7c6-b64e-4e64-95d9-a6e5c5624b2c",
+        "url": "./assets/portfolio/details/543bb9ef-3ded-4f82-9f4e-511c0b91ca09__d3c4b7c6-b64e-4e64-95d9-a6e5c5624b2c__detail-1792472096278-0213j.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "5fcbec1a-368e-4991-bd70-c4ff495c962e",
+    "title": "방지성에이스의원 11월 휴무 팝업 배너",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/5fcbec1a-368e-4991-bd70-c4ff495c962e__cover-1792472068647-lagkk.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": []
+  },
+  {
+    "id": "1caf8895-e778-40d0-9a9e-a64302b19b00",
+    "title": "골드제이의원 필러 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-15",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/1caf8895-e778-40d0-9a9e-a64302b19b00__cover-1792472044226-7h2vy.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "ff07e654-4bb8-41ef-b24b-013d266e7922",
+        "url": "./assets/portfolio/details/1caf8895-e778-40d0-9a9e-a64302b19b00__ff07e654-4bb8-41ef-b24b-013d266e7922__detail-1792472044379-9ezks.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "fed40ba1-8fbe-4101-88d9-d65fb8633679",
+        "url": "./assets/portfolio/details/1caf8895-e778-40d0-9a9e-a64302b19b00__fed40ba1-8fbe-4101-88d9-d65fb8633679__detail-1792472044542-clhyj.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "36508810-a7e7-4c94-8c9d-0cdb8d6d3f17",
+        "url": "./assets/portfolio/details/1caf8895-e778-40d0-9a9e-a64302b19b00__36508810-a7e7-4c94-8c9d-0cdb8d6d3f17__detail-1792472044709-i3916.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "ad474f78-58f3-4f68-a9f6-c64a42a7114b",
+    "title": "골드제이의원 필러 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-14",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/ad474f78-58f3-4f68-a9f6-c64a42a7114b__cover-1792472026846-gw9wg.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "98d959fb-522a-4ba5-aac2-4bfcb47a4794",
+        "url": "./assets/portfolio/details/ad474f78-58f3-4f68-a9f6-c64a42a7114b__98d959fb-522a-4ba5-aac2-4bfcb47a4794__detail-1792472027002-lnwhb.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "7773a2cf-0844-4db0-9436-1264f118218a",
+        "url": "./assets/portfolio/details/ad474f78-58f3-4f68-a9f6-c64a42a7114b__7773a2cf-0844-4db0-9436-1264f118218a__detail-1792472027164-tees0.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "9970fe87-4cbc-45d7-9e1e-927057126e3b",
+        "url": "./assets/portfolio/details/ad474f78-58f3-4f68-a9f6-c64a42a7114b__9970fe87-4cbc-45d7-9e1e-927057126e3b__detail-1792472027305-vq8f9.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4",
+    "title": "하늘안과 라식 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-13",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__cover-1792471934228-rllgx.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "3c5354c9-a99d-45f7-b019-9eb5be7c68ef",
+        "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__3c5354c9-a99d-45f7-b019-9eb5be7c68ef__detail-1792471934394-a536x.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "b20d76a7-34d9-48a1-80e1-45ddd3b8c23d",
+        "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__b20d76a7-34d9-48a1-80e1-45ddd3b8c23d__detail-1792471934551-5ptvw.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2a513c47-221f-4556-b3ab-f50c933406d9",
+        "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__2a513c47-221f-4556-b3ab-f50c933406d9__detail-1792471934721-96b1l.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "669b294c-85f1-4a68-ae74-4ac7829cb069",
+        "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__669b294c-85f1-4a68-ae74-4ac7829cb069__detail-1792471934889-yib9o.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "2f9dfbeb-f0f4-4246-9dd9-5fc2133b3ed7",
+        "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__2f9dfbeb-f0f4-4246-9dd9-5fc2133b3ed7__detail-1792471935056-1cjda.webp",
+        "sortOrder": 4
+      }
+    ]
+  },
+  {
+    "id": "90f34e93-635b-457c-82da-16457053183b",
+    "title": "치유한방병원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-14",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/90f34e93-635b-457c-82da-16457053183b__cover-1792471902899-zq46h.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "a23a443b-b49b-47b1-bb3b-9b7bd0e1e83c",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__a23a443b-b49b-47b1-bb3b-9b7bd0e1e83c__detail-1792471903052-sc6ru.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "e88f04d7-f177-483e-82c5-2f078707ad41",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__e88f04d7-f177-483e-82c5-2f078707ad41__detail-1792471903220-im39z.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "572768bb-d1cc-4046-ab03-462bd9cc23d2",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__572768bb-d1cc-4046-ab03-462bd9cc23d2__detail-1792471903397-mjz5b.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "f6594bce-85ee-430e-bb82-0d2339b28b75",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__f6594bce-85ee-430e-bb82-0d2339b28b75__detail-1792471903546-o0if6.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "c90c741d-6322-47f9-b250-3548e8cd93a1",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__c90c741d-6322-47f9-b250-3548e8cd93a1__detail-1792471903692-4onm0.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "5b78bdce-8687-4be9-af7c-c41082d84bc8",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__5b78bdce-8687-4be9-af7c-c41082d84bc8__detail-1792471903860-5a0ua.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "fb0fc4a0-7ea7-4d4a-8f96-5f7fde3ed72b",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__fb0fc4a0-7ea7-4d4a-8f96-5f7fde3ed72b__detail-1792471904062-hkf0z.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "3c123c00-d58e-48b1-bf9c-81acc33849a9",
+        "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__3c123c00-d58e-48b1-bf9c-81acc33849a9__detail-1792471904241-q5pfl.webp",
+        "sortOrder": 7
+      }
+    ]
+  },
+  {
+    "id": "99bc8faf-b901-42ba-907f-20b86ced0eaa",
+    "title": "치유한방병원 자궁경부암 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-13",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/99bc8faf-b901-42ba-907f-20b86ced0eaa__cover-1792471881673-bfxrw.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "f217cd96-5386-4e84-916c-999f322cb66c",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__f217cd96-5386-4e84-916c-999f322cb66c__detail-1792471881833-7stao.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "04ad0f0d-7c7d-46bf-becb-de8ca9b2bd99",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__04ad0f0d-7c7d-46bf-becb-de8ca9b2bd99__detail-1792471881998-sc15c.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "53a7fa3b-486b-46b1-8300-607c8930b16b",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__53a7fa3b-486b-46b1-8300-607c8930b16b__detail-1792471882168-zfb0e.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "c6f4bf85-8c97-4316-991f-abbca3e00387",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__c6f4bf85-8c97-4316-991f-abbca3e00387__detail-1792471882324-h8xq1.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "f316b0f4-4f55-493e-8388-9cb2c9ef8308",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__f316b0f4-4f55-493e-8388-9cb2c9ef8308__detail-1792471882457-6eny8.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "cedd46d2-3f61-45cf-9a22-94662d49080c",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__cedd46d2-3f61-45cf-9a22-94662d49080c__detail-1792471882630-onm9y.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "0b9ec905-8a86-4f6a-8b4f-7e5fae5f8c8d",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__0b9ec905-8a86-4f6a-8b4f-7e5fae5f8c8d__detail-1792471882824-kwiie.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "5b222cba-60c2-4980-a3f1-d19971133192",
+        "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__5b222cba-60c2-4980-a3f1-d19971133192__detail-1792471882995-cz4ny.webp",
+        "sortOrder": 7
+      }
+    ]
+  },
+  {
+    "id": "f4048217-1cb6-43d1-876b-cb74ab0a3d21",
+    "title": "신세계서울병원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-14",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f4048217-1cb6-43d1-876b-cb74ab0a3d21__cover-1792471854998-ue30q.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "b3c6c966-b578-4b9d-a046-8a7546ee0b98",
+        "url": "./assets/portfolio/details/f4048217-1cb6-43d1-876b-cb74ab0a3d21__b3c6c966-b578-4b9d-a046-8a7546ee0b98__detail-1792471855177-667x1.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "57fafc54-f128-4091-8e13-b64c0146f6e0",
+        "url": "./assets/portfolio/details/f4048217-1cb6-43d1-876b-cb74ab0a3d21__57fafc54-f128-4091-8e13-b64c0146f6e0__detail-1792471855367-tdw79.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "af2cc439-31f8-4d65-9c47-da5c0103fcc3",
+        "url": "./assets/portfolio/details/f4048217-1cb6-43d1-876b-cb74ab0a3d21__af2cc439-31f8-4d65-9c47-da5c0103fcc3__detail-1792471855538-r0afy.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "462bfe43-ae45-4719-92c7-693e2e225a18",
+        "url": "./assets/portfolio/details/f4048217-1cb6-43d1-876b-cb74ab0a3d21__462bfe43-ae45-4719-92c7-693e2e225a18__detail-1792471855708-c9abz.webp",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "id": "b3198ece-f244-4b2c-928b-f4e3dcef29d8",
+    "title": "신세계서울병원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-14",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/b3198ece-f244-4b2c-928b-f4e3dcef29d8__cover-1792471823468-zgtub.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "475e7adc-82c0-4cd2-8bf0-5e208ce9780c",
+        "url": "./assets/portfolio/details/b3198ece-f244-4b2c-928b-f4e3dcef29d8__475e7adc-82c0-4cd2-8bf0-5e208ce9780c__detail-1792471823657-vnv43.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "df9adef7-9ddb-4354-84a6-90bed38065b5",
+        "url": "./assets/portfolio/details/b3198ece-f244-4b2c-928b-f4e3dcef29d8__df9adef7-9ddb-4354-84a6-90bed38065b5__detail-1792471823843-p2ny4.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "4978236b-39a3-4476-8b6d-9de232464f40",
+        "url": "./assets/portfolio/details/b3198ece-f244-4b2c-928b-f4e3dcef29d8__4978236b-39a3-4476-8b6d-9de232464f40__detail-1792471824029-126le.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "c531a8a0-ec10-4fad-9d7e-229758b82acf",
+    "title": "신세계서울병원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/c531a8a0-ec10-4fad-9d7e-229758b82acf__cover-1792471800608-mgwy9.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "88eddd7a-56a3-4018-bb68-d9a7d9c1a7c1",
+        "url": "./assets/portfolio/details/c531a8a0-ec10-4fad-9d7e-229758b82acf__88eddd7a-56a3-4018-bb68-d9a7d9c1a7c1__detail-1792471800812-tzwku.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "5b297761-1d1a-4d41-af7e-8cd186b293eb",
+        "url": "./assets/portfolio/details/c531a8a0-ec10-4fad-9d7e-229758b82acf__5b297761-1d1a-4d41-af7e-8cd186b293eb__detail-1792471800991-jfe98.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "e4b8e32d-1c9f-411f-8c9c-48e6dcb6a0a6",
+        "url": "./assets/portfolio/details/c531a8a0-ec10-4fad-9d7e-229758b82acf__e4b8e32d-1c9f-411f-8c9c-48e6dcb6a0a6__detail-1792471801179-z6n1h.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "62aaa64c-209c-4805-89d2-7dbb3187fe0b",
+    "title": "루트테마피부과 11월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/62aaa64c-209c-4805-89d2-7dbb3187fe0b__cover-1792471770693-c8br7.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "6a93962d-6f2e-460c-b832-ec7eb568c3fd",
+        "url": "./assets/portfolio/details/62aaa64c-209c-4805-89d2-7dbb3187fe0b__6a93962d-6f2e-460c-b832-ec7eb568c3fd__detail-1792471771010-mlkmq.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "65d551de-9389-408c-8b78-df446d651221",
+        "url": "./assets/portfolio/details/62aaa64c-209c-4805-89d2-7dbb3187fe0b__65d551de-9389-408c-8b78-df446d651221__detail-1792471771237-6s0th.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "d9a82f91-3598-4994-93a6-4942d14f0657",
+        "url": "./assets/portfolio/details/62aaa64c-209c-4805-89d2-7dbb3187fe0b__d9a82f91-3598-4994-93a6-4942d14f0657__detail-1792471771475-1lepq.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "ecfdff51-c841-493f-9d3c-214179d7a68a",
+    "title": "루트테마피부과 11월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/ecfdff51-c841-493f-9d3c-214179d7a68a__cover-1792471757616-dbxtq.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "0e6b0b95-ac4a-46c3-bd92-f63105d5c356",
+        "url": "./assets/portfolio/details/ecfdff51-c841-493f-9d3c-214179d7a68a__0e6b0b95-ac4a-46c3-bd92-f63105d5c356__detail-1792471757862-0b244.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "d16f7f29-e398-4e67-a37d-31e1eeed03c6",
+        "url": "./assets/portfolio/details/ecfdff51-c841-493f-9d3c-214179d7a68a__d16f7f29-e398-4e67-a37d-31e1eeed03c6__detail-1792471758079-nz0ad.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "53d512b2-c6ae-4e8f-b6ae-63ad30a4addc",
+        "url": "./assets/portfolio/details/ecfdff51-c841-493f-9d3c-214179d7a68a__53d512b2-c6ae-4e8f-b6ae-63ad30a4addc__detail-1792471758299-hihgk.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "e7dfd15d-8d15-4647-8915-f67e3266f34b",
+    "title": "루트테마피부과 11월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/e7dfd15d-8d15-4647-8915-f67e3266f34b__cover-1792471746058-mp82r.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "73e8b54e-8d76-4a6c-8665-1e99c55a4f35",
+        "url": "./assets/portfolio/details/e7dfd15d-8d15-4647-8915-f67e3266f34b__73e8b54e-8d76-4a6c-8665-1e99c55a4f35__detail-1792471746322-a63l8.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "952046ee-340f-404a-8d7b-c6fa8ae9e676",
+        "url": "./assets/portfolio/details/e7dfd15d-8d15-4647-8915-f67e3266f34b__952046ee-340f-404a-8d7b-c6fa8ae9e676__detail-1792471746548-p5mwb.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "12eeeea8-ac5f-4a0f-b11b-60f1b1f563a8",
+        "url": "./assets/portfolio/details/e7dfd15d-8d15-4647-8915-f67e3266f34b__12eeeea8-ac5f-4a0f-b11b-60f1b1f563a8__detail-1792471746781-urqm7.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "8c0ab57f-2558-4db8-ba82-7c49b0e27f1c",
+    "title": "루트테마피부과 11월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/8c0ab57f-2558-4db8-ba82-7c49b0e27f1c__cover-1792471733958-ce38k.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "e723f21a-b1d7-4c83-8d7e-f9862c40777d",
+        "url": "./assets/portfolio/details/8c0ab57f-2558-4db8-ba82-7c49b0e27f1c__e723f21a-b1d7-4c83-8d7e-f9862c40777d__detail-1792471734218-sk5ub.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "e17d3f97-c429-42b8-b93c-fcf9e4cda733",
+        "url": "./assets/portfolio/details/8c0ab57f-2558-4db8-ba82-7c49b0e27f1c__e17d3f97-c429-42b8-b93c-fcf9e4cda733__detail-1792471734428-qhwru.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "15e039dc-f4cd-4132-9e08-19db7cb10648",
+        "url": "./assets/portfolio/details/8c0ab57f-2558-4db8-ba82-7c49b0e27f1c__15e039dc-f4cd-4132-9e08-19db7cb10648__detail-1792471734614-vscw4.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "50ade840-8c6b-46af-b4bf-f16b6fe51e11",
+    "title": "신세계서울병원 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-08",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/50ade840-8c6b-46af-b4bf-f16b6fe51e11__cover-1792471167270-m0k97.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "5d8fdeee-fd76-49ac-a25f-20077329bb3a",
+        "url": "./assets/portfolio/details/50ade840-8c6b-46af-b4bf-f16b6fe51e11__5d8fdeee-fd76-49ac-a25f-20077329bb3a__detail-1792471167438-ip36l.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "d4fa77c8-e403-4560-8f66-f557aaa9d0a6",
+        "url": "./assets/portfolio/details/50ade840-8c6b-46af-b4bf-f16b6fe51e11__d4fa77c8-e403-4560-8f66-f557aaa9d0a6__detail-1792471167606-amqrn.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "edb23a3c-75bb-4c2f-ba89-037775854cb1",
+        "url": "./assets/portfolio/details/50ade840-8c6b-46af-b4bf-f16b6fe51e11__edb23a3c-75bb-4c2f-ba89-037775854cb1__detail-1792471167776-gq35b.webp",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "id": "251e2f68-fe3a-4bdd-b0e2-1d727c70d67c",
+    "title": "MELLOW SKIN | 세럼 웹 배너 디자인",
+    "category": "광고·캠페인",
+    "startDate": "2026-10-20",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT"
+    ],
+    "role": "디자인 100%",
+    "description": "AI 활용: 제품 비주얼 또는 이미지 소재 제작\n직접 수행: 레이아웃, 타이포그래피, 컬러 적용, CTA 설계 및 최종 편집\n프로젝트 유형: 개인 연습 프로젝트 (가상 브랜드)\n\n콘셉트\n깨끗하고 편안한 수분 진정 이미지를 전달하는 미니멀 세럼 배너로 기획했습니다.\n\n레이아웃 설계 이유\n좌측에는 제품 비주얼을 크게 배치해 무엇을 광고하는지 즉시 인지되도록 하고, 우측에는 브랜드명·메인 카피·서브 카피·CTA를 순차적으로 정리해 정보 위계를 명확히 구성했습니다.\n\nCTA 설계 이유\n브랜드 메인 컬러를 활용한 버튼으로 배너 내 통일감을 유지하면서도, 흰 배경과의 대비를 통해 행동 유도 요소가 분명하게 보이도록 설계했습니다.\n\n기존 모델 중심의 비주얼에서 제품 중심의 구성으로 변경하여, 세럼의 시각적 주목도를 높이고 제품의 특징이 더욱 직관적으로 전달되도록 개선했습니다.",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/251e2f68-fe3a-4bdd-b0e2-1d727c70d67c__cover-1792465887347-huuos.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "81a2730b-99d0-43f2-b458-df73cd94adc3",
+        "url": "./assets/portfolio/details/251e2f68-fe3a-4bdd-b0e2-1d727c70d67c__81a2730b-99d0-43f2-b458-df73cd94adc3__detail-1792466110399-fe40n.webp",
+        "sortOrder": 0
+      }
+    ]
+  },
+  {
     "id": "4f369073-10f8-4064-be4a-0a2ce12ada62",
     "title": "메젠 블로그 콘텐츠",
     "category": "콘텐츠 디자인",
@@ -3736,65 +4619,65 @@ export const worksData = [
       "x": 0,
       "y": 0
     },
-    "coverUrl": "./assets/portfolio/covers/d6138c35-1e02-4683-b11d-90fef9230ac1__cover-1791429368477-he2c9.webp",
+    "coverUrl": "./assets/portfolio/covers/d6138c35-1e02-4683-b11d-90fef9230ac1__cover-1792472003239-am7id.webp",
     "isPublic": true,
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
     "images": [
       {
-        "id": "ecf44668-517f-4d89-aa77-7cb44f41542f",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__ecf44668-517f-4d89-aa77-7cb44f41542f__detail-1791429368664-45pg8.webp",
+        "id": "5ae6585c-bb90-4b4b-a65a-1933df9f092a",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__5ae6585c-bb90-4b4b-a65a-1933df9f092a__detail-1792472003441-suox5.webp",
         "sortOrder": 0
       },
       {
-        "id": "45667dbb-1af1-488b-924a-31669580dbc8",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__45667dbb-1af1-488b-924a-31669580dbc8__detail-1791429368832-aisrx.webp",
+        "id": "c8d7ca18-b03e-49bb-b67e-71cbd21bd0b5",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__c8d7ca18-b03e-49bb-b67e-71cbd21bd0b5__detail-1792472003609-x0dzk.webp",
         "sortOrder": 1
       },
       {
-        "id": "86bb5aed-6c12-4326-8f02-5a924e8adc57",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__86bb5aed-6c12-4326-8f02-5a924e8adc57__detail-1791429368989-5f0ur.webp",
+        "id": "f9e50581-6f10-468f-91a8-b69b66068934",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__f9e50581-6f10-468f-91a8-b69b66068934__detail-1792472003762-u2qzf.webp",
         "sortOrder": 2
       },
       {
-        "id": "98d81d27-3f52-451f-96e4-6757f7374a07",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__98d81d27-3f52-451f-96e4-6757f7374a07__detail-1791429369130-itcc5.webp",
+        "id": "3f68364a-d0c7-4e34-9ec3-7d870e75302d",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__3f68364a-d0c7-4e34-9ec3-7d870e75302d__detail-1792472003911-mtdqi.webp",
         "sortOrder": 3
       },
       {
-        "id": "4ae0a501-56f8-48a2-9d7e-7467e8d1a45e",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__4ae0a501-56f8-48a2-9d7e-7467e8d1a45e__detail-1791429369321-zg0bv.webp",
+        "id": "f5d3a807-7aed-49e8-bdfc-5f735e4405cb",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__f5d3a807-7aed-49e8-bdfc-5f735e4405cb__detail-1792472004092-c25u6.webp",
         "sortOrder": 4
       },
       {
-        "id": "22eb50e9-70a2-42bf-9bd1-ba8c0c75514b",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__22eb50e9-70a2-42bf-9bd1-ba8c0c75514b__detail-1791429369520-7tti0.webp",
+        "id": "979f7d6e-49ae-42d5-b43a-edda86629504",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__979f7d6e-49ae-42d5-b43a-edda86629504__detail-1792472004272-31rwf.webp",
         "sortOrder": 5
       },
       {
-        "id": "b3cf8a15-8a8a-462c-a067-0909c988c7fd",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__b3cf8a15-8a8a-462c-a067-0909c988c7fd__detail-1791429369678-nngio.webp",
+        "id": "6cc314d6-19a3-489f-9e77-391bdd01af15",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__6cc314d6-19a3-489f-9e77-391bdd01af15__detail-1792472004424-ixn8q.webp",
         "sortOrder": 6
       },
       {
-        "id": "f5b016e3-9b11-423e-9e54-633dafdb5ab7",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__f5b016e3-9b11-423e-9e54-633dafdb5ab7__detail-1791429369855-wqevu.webp",
+        "id": "65644119-14f4-4405-b6df-7f1413dd6a3f",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__65644119-14f4-4405-b6df-7f1413dd6a3f__detail-1792472004593-mcd6p.webp",
         "sortOrder": 7
       },
       {
-        "id": "e71cab52-a99b-4146-9265-8b86c61215e7",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__e71cab52-a99b-4146-9265-8b86c61215e7__detail-1791429370042-ot7q9.webp",
+        "id": "8bdc4e72-fff8-4fac-85a7-3a29d7cc306a",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__8bdc4e72-fff8-4fac-85a7-3a29d7cc306a__detail-1792472004782-az0ne.webp",
         "sortOrder": 8
       },
       {
-        "id": "682e35f3-a143-41bb-988b-9b0acc6f1e1b",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__682e35f3-a143-41bb-988b-9b0acc6f1e1b__detail-1791429370238-l1m3j.webp",
+        "id": "978b8b6f-5ad7-43bc-bdca-3ed087859424",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__978b8b6f-5ad7-43bc-bdca-3ed087859424__detail-1792472005003-j302q.webp",
         "sortOrder": 9
       },
       {
-        "id": "579c8a48-2cd3-4fae-aaf8-4954efbf0ad2",
-        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__579c8a48-2cd3-4fae-aaf8-4954efbf0ad2__detail-1791429370378-kpt8a.webp",
+        "id": "39500241-1de5-4c81-9de8-81c02772dffc",
+        "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__39500241-1de5-4c81-9de8-81c02772dffc__detail-1792472005145-8xhr4.webp",
         "sortOrder": 10
       }
     ]
