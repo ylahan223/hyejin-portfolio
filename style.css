@@ -5551,3 +5551,37 @@ body[data-page="admin"] #project-tags button,body[data-page="admin"] #project-ta
 body[data-page="admin"] #tag-suggestions button{font-size:13px;min-height:34px}
 .bulk-clear-option{display:flex;align-items:center;gap:8px;font-size:14px;margin:16px 0}.bulk-clear-option input{width:18px;height:18px}
 .project-tag.type-tag{font-size:12px}
+
+/* Keep badge groups spaced and align modal tags with the content column. */
+.archive-card-copy > .card-badges,
+.home-work-overlay > .card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+}
+.archive-card-copy > .card-badges { margin: 0 0 4px; }
+.card-badges > .cat-badge,
+.card-badges > .project-tag {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 4px 10px;
+  font-size: 11px;
+  line-height: 1.35;
+  border-radius: 999px;
+}
+.card-badges > .project-tag { border: 1px solid transparent; }
+.archive-detail > .detail-tags {
+  margin: 18px 60px 0;
+  gap: 12px;
+  align-items: center;
+}
+.archive-detail > .detail-tags > div { gap: 8px; }
+.archive-detail > .detail-tags + .detail-description { margin-top: 20px; }
+.archive-detail > .detail-tags:not([hidden]):has(+ .detail-description[hidden]) { margin-bottom: 24px; }
+@media (max-width: 720px) {
+  .archive-detail > .detail-tags { margin: 16px 24px 0; }
+  .archive-card-copy > .card-badges { gap: 6px; }
+}
