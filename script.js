@@ -1,3 +1,4 @@
+import { normalizeTags, workType } from "./tags.js";
 import { worksData } from "./works-data.js";
 
 // ---------- 로컬 작업용 탭 위장 ----------
@@ -132,7 +133,7 @@ function initHome() {
   getPublicWorks(4).then((works) => {
     const grid = document.querySelector("#home-work-grid");
     grid.className = "home-work-grid";
-    grid.innerHTML = works.map((work) => `<button type="button" class="home-work-card" data-id="${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<div class="home-work-overlay"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3></div></div></button>`).join("");
+    grid.innerHTML = works.map((work) => `<button type="button" class="home-work-card" data-id="${work.id}"><div class="home-work-image">${homeThumbnailHTML(work.coverUrl, work.title, work.thumbnail)}<div class="home-work-overlay"><span class="card-badges"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span>${workType(work.tags)?`<span class="project-tag type-tag">${escapeHTML(workType(work.tags))}</span>`:""}</span><h3>${escapeHTML(work.title)}</h3></div></div></button>`).join("");
     grid.querySelectorAll(".home-work-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
   }).catch((error) => {
     console.error(error);
@@ -190,7 +191,7 @@ async function initArchive() {
       const visible = filtered.slice(0, visibleCount);
       countBox.textContent = `${filtered.length} PROJECTS`;
       grid.className = visible.length ? "archive-grid" : "archive-state";
-      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}</div><div class="archive-card-copy"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "조건에 맞는 작업이 아직 없어요.";
+      grid.innerHTML = visible.length ? visible.map((work) => `<button class="archive-card" data-id="${work.id}"><div class="archive-image">${thumbnailHTML(work.coverUrl, work.title, work.thumbnail)}</div><div class="archive-card-copy"><span class="card-badges"><span class="${categoryBadgeClass(work.category)}">${escapeHTML(work.category)}</span>${workType(work.tags)?`<span class="project-tag type-tag">${escapeHTML(workType(work.tags))}</span>`:""}</span><h3>${escapeHTML(work.title)}</h3><p>${formatMonthPeriod(work.startDate, work.endDate)} · ${escapeHTML(work.tools.join(" · ") || "DESIGN")}</p></div></button>`).join("") : "조건에 맞는 작업이 아직 없어요.";
       grid.querySelectorAll(".archive-card").forEach((card) => card.addEventListener("click", () => openArchiveModal(works.find((work) => work.id === card.dataset.id))));
       moreWrap.style.display = visibleCount < filtered.length ? "" : "none";
     };
@@ -245,6 +246,10 @@ function openArchiveModal(work) {
   modal.querySelector("#detail-period").textContent = formatMonthPeriod(work.startDate, work.endDate);
   modal.querySelector("#detail-role").textContent = work.role || "DESIGN";
   modal.querySelector("#detail-tools").textContent = work.tools.join(" · ") || "-";
+  let tagArea=modal.querySelector(".detail-tags");
+  if(!tagArea){tagArea=document.createElement("div");tagArea.className="detail-tags";modal.querySelector("#detail-description").before(tagArea);}
+  const tags=normalizeTags(work.tags);tagArea.hidden=!tags.length;
+  tagArea.innerHTML=tags.length?`<b>TAGS</b><div>${tags.map(t=>`<span class="project-tag ${t===workType(tags)?"type-tag":""}">${escapeHTML(t)}</span>`).join("")}</div>`:"";
   const description = modal.querySelector("#detail-description");
   description.textContent = work.description || "";
   description.hidden = !work.description;

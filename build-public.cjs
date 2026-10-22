@@ -1,7 +1,7 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
 
-const siteFiles = ['index.html', 'archive.html', 'script.js', 'style.css', 'favicon.svg', 'og-image.png', 'admin.html', 'admin-local.js'];
+const siteFiles = ['index.html', 'archive.html', 'script.js', 'style.css', 'favicon.svg', 'og-image.png', 'admin.html', 'admin-local.js', 'tags.js'];
 
 async function buildPublic(root = __dirname) {
   root = await fs.realpath(root);

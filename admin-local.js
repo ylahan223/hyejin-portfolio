@@ -1,3 +1,4 @@
+import { WORK_TYPES, QUICK_TAGS, normalizeTags, workType, freeTags, editTags } from "./tags.js";
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const ROOT_DATA_FILE = "works-data.js";
@@ -20,6 +21,8 @@ let page = 1;
 let pageSize = 10;
 let query = "";
 let categoryFilter = "전체";
+let typeFilter = "전체";
+let selectionScope = "개별·현재 페이지";
 let sortMode = "registered-new";
 let pinPreviewUrls = [];
 let dragPinId = null;
@@ -44,7 +47,7 @@ function cleanDescription(v = "") { return v.replace(/\n\n<!--HYEJIN_THUMBNAIL:[
 function normalizeThumb(t) { return { mode:["contain","cover","auto"].includes(t?.mode)?t.mode:"contain", scale:Math.min(3,Math.max(1,Number(t?.scale)||1)), x:Math.min(50,Math.max(-50,Number(t?.x)||0)), y:Math.min(50,Math.max(-50,Number(t?.y)||0)) }; }
 function formatPeriod(start,end){ if(!start)return "제작일 미입력"; return end && end!==start ? `${start} – ${end}` : start; }
 function showNotice(message) { const box=$("#admin-notice"); box.innerHTML=`<button class="notice">${escapeHTML(message)}<span>닫기 ×</span></button>`; box.querySelector("button")?.addEventListener("click",()=>box.innerHTML=""); }
-function blankForm(){ return {title:"",category:CATEGORIES[0],date:today(),endDate:"",tools:[...(works[0]?.tools||[])],role:"디자인 100%",description:"",isPublic:true,isFeatured:false,isPinned:false,thumbnail:{...DEFAULT_THUMB}}; }
+function blankForm(){ return {tags:[],title:"",category:CATEGORIES[0],date:today(),endDate:"",tools:[...(works[0]?.tools||[])],role:"디자인 100%",description:"",isPublic:true,isFeatured:false,isPinned:false,thumbnail:{...DEFAULT_THUMB}}; }
 
 async function openDB(){ return new Promise((resolve,reject)=>{ const req=indexedDB.open(DB_NAME,1); req.onupgradeneeded=()=>{ if(!req.result.objectStoreNames.contains(DB_STORE)) req.result.createObjectStore(DB_STORE); }; req.onsuccess=()=>resolve(req.result); req.onerror=()=>reject(req.error); }); }
 async function saveHandle(handle){ try{ const db=await openDB(); const tx=db.transaction(DB_STORE,"readwrite"); tx.objectStore(DB_STORE).put(handle,DB_KEY); }catch{} }
@@ -82,14 +85,14 @@ function sortedWorks(){
   });
   return rows;
 }
-function filteredWorks(){ const q=query.trim().toLowerCase(); return sortedWorks().filter(w=>(categoryFilter==="전체"||w.category===categoryFilter)&&(!q||`${w.title} ${w.category} ${(w.tools||[]).join(" ")} ${w.description||""}`.toLowerCase().includes(q))); }
+function filteredWorks(){ const q=query.trim().toLowerCase(); return sortedWorks().filter(w=>(categoryFilter==="전체"||w.category===categoryFilter)&&(typeFilter==="전체"||(typeFilter==="미설정"?!workType(w.tags):workType(w.tags)===typeFilter))&&(!q||`${(w.tags||[]).join(" ")} ${w.title} ${w.category} ${(w.tools||[]).join(" ")} ${w.description||""}`.toLowerCase().includes(q))); }
 
 async function renderTable(){
   $("#works-count").textContent=works.length;
   selected=new Set([...selected].filter(id=>works.some(w=>w.id===id)));
   const rows=filteredWorks(); const size=pageSize||Math.max(rows.length,1); const pages=Math.max(1,Math.ceil(rows.length/size)); page=Math.min(page,pages);
   const visible=pageSize===0?rows:rows.slice((page-1)*size,page*size);
-  const tbody=$("#works-table"); tbody.innerHTML=visible.map(w=>`<tr data-row="${w.id}"><td><input type="checkbox" data-check="${w.id}" ${selected.has(w.id)?"checked":""}></td><td><div class="work-name"><div class="mini-thumb" data-mini="${w.id}">IMG</div><strong>${escapeHTML(w.title)}</strong></div></td><td><span class="table-category">${escapeHTML(w.category)}</span></td><td>${escapeHTML(formatPeriod(w.startDate,w.endDate))}</td>${[["isPublic","공개"],["isFeatured","메인"],["isPinned","중요"]].map(([k,l])=>`<td><button type="button" class="toggle ${w[k]?"on":""}" data-toggle="${k}" data-id="${w.id}" aria-label="${l}"><i></i></button></td>`).join("")}<td><div class="row-actions"><button type="button" data-edit="${w.id}">수정</button><button type="button" class="danger" data-delete="${w.id}">삭제</button></div></td></tr>`).join("");
+  const tbody=$("#works-table"); tbody.innerHTML=visible.map(w=>`<tr data-row="${w.id}"><td><input type="checkbox" data-check="${w.id}" ${selected.has(w.id)?"checked":""}></td><td><div class="work-name"><div class="mini-thumb" data-mini="${w.id}">IMG</div><strong>${escapeHTML(w.title)}</strong></div></td><td><span class="table-category">${escapeHTML(w.category)}</span></td><td>${escapeHTML(workType(w.tags)||"미설정")}</td><td>${escapeHTML(formatPeriod(w.startDate,w.endDate))}</td>${[["isPublic","공개"],["isFeatured","메인"],["isPinned","중요"]].map(([k,l])=>`<td><button type="button" class="toggle ${w[k]?"on":""}" data-toggle="${k}" data-id="${w.id}" aria-label="${l}"><i></i></button></td>`).join("")}<td><div class="row-actions"><button type="button" data-edit="${w.id}">수정</button><button type="button" class="danger" data-delete="${w.id}">삭제</button></div></td></tr>`).join("");
   $("#works-empty").textContent=rows.length?"":"등록된 작업이 없어요.";
   for(const box of tbody.querySelectorAll("[data-mini]")){
     const button=document.createElement("button");
@@ -111,7 +114,7 @@ async function renderTable(){
   renderBulk();
   for(const w of visible){ if(!w.coverUrl)continue; const box=tbody.querySelector(`[data-mini="${CSS.escape(w.id)}"]`); const u=await objectURL(w.coverUrl); if(box&&u){if(box.isConnected)box.innerHTML=`<img src="${u}" alt="">`;else URL.revokeObjectURL(u);} }
 }
-function renderBulk(){ $("#bulk-count").textContent=selected.size; $("#bulk-bar").hidden=false; $$("button",$("#bulk-bar")).forEach(button=>button.disabled=selected.size===0); }
+function renderBulk(){ $("#selection-scope").textContent=`${selectionScope} 선택 · ${selected.size}개 (현재 조건 ${filteredWorks().length}개)`; $("#bulk-count").textContent=selected.size; $("#bulk-bar").hidden=false; $$("button",$("#bulk-bar")).forEach(button=>button.disabled=selected.size===0); }
 async function renderPins(){
   pinPreviewUrls.forEach(url=>URL.revokeObjectURL(url));pinPreviewUrls=[];
   const pinned=works.filter(w=>w.isPinned).sort((a,b)=>(a.pinOrder??999999)-(b.pinOrder??999999));
@@ -125,7 +128,7 @@ async function renderPins(){
     else if(url)URL.revokeObjectURL(url);
   }
 }
-function renderAll(){ renderTable(); renderPins(); renderToolSuggestions(); }
+function renderAll(){ renderTable(); renderPins(); renderToolSuggestions(); renderTagSuggestions(); }
 
 function revokePreviews(){ if(coverState.previewUrl?.startsWith("blob:"))URL.revokeObjectURL(coverState.previewUrl); detailState.forEach(x=>{if(x.previewUrl?.startsWith("blob:"))URL.revokeObjectURL(x.previewUrl);}); }
 function setTools(tags){ formState.tools=[...new Set(tags.map(x=>x.trim()).filter(Boolean))]; $("#tool-tags").innerHTML=formState.tools.map(t=>`<button type="button" data-remove-tool="${escapeHTML(t)}">${escapeHTML(t)} <span>×</span></button>`).join(""); $("#tool-hint").hidden=!!editingId||!formState.tools.some(t=>(works[0]?.tools||[]).includes(t)); }
@@ -138,14 +141,14 @@ async function openWork(id=null){
   coverState={existingUrl:w?.coverUrl||"",file:null,previewUrl:await objectURL(w?.coverUrl||"")};
   detailState=await Promise.all([...(w?.images||[])].sort((a,b)=>a.sortOrder-b.sortOrder).map(async img=>({...img,kind:"existing",file:null,previewUrl:await objectURL(img.url)})));
   form.elements.title.value=formState.title||""; form.elements.category.value=formState.category||CATEGORIES[0]; form.elements.date.value=formState.startDate||formState.date||today(); form.elements.endDate.value=formState.endDate||""; form.elements.role.value=formState.role||"디자인 100%"; form.elements.description.value=cleanDescription(formState.description||""); form.elements.isPublic.checked=!!formState.isPublic; form.elements.isFeatured.checked=!!formState.isFeatured; form.elements.isPinned.checked=!!formState.isPinned;
-  setTools(formState.tools||[]); $("#form-mode-title").textContent=id?"작업 수정":"새 작업 등록"; $("#submit-work").textContent=id?"수정 내용 저장":"작업 등록하기"; $("#cancel-edit").style.display=id?"":"none";
+  setProjectTags(formState.tags); setTools(formState.tools||[]); $("#form-mode-title").textContent=id?"작업 수정":"새 작업 등록"; $("#submit-work").textContent=id?"수정 내용 저장":"작업 등록하기"; $("#cancel-edit").style.display=id?"":"none";
   updateCover(); renderDetails(); updatePreview(); renderToolSuggestions(); window.scrollTo({top:0,behavior:"smooth"});
 }
-function resetForm(){ editingId=null; formState=blankForm(); form.reset(); form.elements.category.value=CATEGORIES[0]; form.elements.date.value=today(); form.elements.role.value="디자인 100%"; form.elements.isPublic.checked=true; setTools(formState.tools); coverState={existingUrl:"",file:null,previewUrl:""}; detailState=[]; removedPaths=[]; $("#form-mode-title").textContent="새 작업 등록"; $("#submit-work").textContent="작업 등록하기"; $("#cancel-edit").style.display="none"; updateCover(); renderDetails(); updatePreview(); renderToolSuggestions(); }
+function resetForm(){ editingId=null; formState=blankForm(); form.reset(); form.elements.category.value=CATEGORIES[0]; form.elements.date.value=today(); form.elements.role.value="디자인 100%"; form.elements.isPublic.checked=true; setProjectTags([]); setTools(formState.tools); coverState={existingUrl:"",file:null,previewUrl:""}; detailState=[]; removedPaths=[]; $("#form-mode-title").textContent="새 작업 등록"; $("#submit-work").textContent="작업 등록하기"; $("#cancel-edit").style.display="none"; updateCover(); renderDetails(); updatePreview(); renderToolSuggestions(); }
 
 function thumbStyle(t){ if(t.mode==="auto")return "object-fit:cover;object-position:50% 50%;transform:none"; if(t.mode==="cover")return `object-fit:cover;object-position:${50-t.x}% ${50-t.y}%;transform:scale(${t.scale})`; return `object-fit:contain;transform:translate(${t.x*t.scale}%,${t.y*t.scale}%) scale(${t.scale})`; }
 function updateCover(){ const crop=$("#thumbnail-crop"), card=$("#card-thumbnail"), u=coverState.previewUrl; const t=formState.thumbnail; $$(".thumbnail-mode button").forEach(b=>b.classList.toggle("active",b.dataset.mode===t.mode)); $("#zoom-range").value=t.scale; const html=u?`${t.mode==="contain"?`<img class="thumbnail-blur" src="${u}" alt="">`:""}<img class="thumbnail-main" src="${u}" alt="" style="${thumbStyle(t)}">`:`<span>IMAGE COMING SOON</span>`; crop.innerHTML=html; card.innerHTML=html; $("#cover-preview").innerHTML=u?`<img src="${u}" alt="대표 이미지 미리보기">`:`<div><strong>대표 이미지 선택</strong><span>JPG·PNG·WebP · 최대 20MB</span></div>`; $("#remove-cover").style.display=u?"":"none"; }
-function updatePreview(){ $("#preview-category").textContent=form.elements.category.value||CATEGORIES[0]; $("#preview-title").textContent=form.elements.title.value||"작업 제목"; $("#preview-meta").textContent=`${(form.elements.date.value||"").slice(0,7).replace("-",".")} · ${(formState.tools||[]).join(" · ")||"DESIGN"}`; updateCover(); }
+function updatePreview(){ $("#preview-type").textContent=workType(formState.tags);$("#preview-type").hidden=!workType(formState.tags); $("#preview-category").textContent=form.elements.category.value||CATEGORIES[0]; $("#preview-title").textContent=form.elements.title.value||"작업 제목"; $("#preview-meta").textContent=`${(form.elements.date.value||"").slice(0,7).replace("-",".")} · ${(formState.tools||[]).join(" · ")||"DESIGN"}`; updateCover(); }
 function renderDetails(){ const box=$("#detail-grid"); box.innerHTML=detailState.map((x,i)=>`<div class="detail-item" draggable="true" data-detail-index="${i}"><img src="${x.previewUrl}" alt="" draggable="false"><span>${i+1}</span><button type="button" data-remove-detail="${i}" aria-label="삭제">×</button><div class="img-order"><button type="button" data-move-detail="${i}" data-dir="-1" aria-label="앞으로" ${i===0?"disabled":""}>◀</button><button type="button" data-move-detail="${i}" data-dir="1" aria-label="뒤로" ${i===detailState.length-1?"disabled":""}>▶</button></div></div>`).join(""); }
 
 async function optimizeImage(file){ if(file.size>20_000_000)throw new Error("이미지는 한 장당 20MB 이하로 올려 주세요."); const bitmap=await createImageBitmap(file); const isLong=bitmap.height/bitmap.width>3; const ratio=Math.min(1,(isLong?1600:1920)/bitmap.width,isLong?1:1920/bitmap.height); const c=document.createElement("canvas"); c.width=Math.max(1,Math.round(bitmap.width*ratio)); c.height=Math.max(1,Math.round(bitmap.height*ratio)); c.getContext("2d",{alpha:true}).drawImage(bitmap,0,0,c.width,c.height); bitmap.close?.(); return await new Promise((res,rej)=>c.toBlob(b=>b?res(b):rej(new Error("이미지 변환 실패")),"image/webp",0.9)); }
@@ -154,12 +157,14 @@ async function saveImage(file,folder,stem){ const blob=await optimizeImage(file)
 async function saveForm(e){
   e.preventDefault(); if(!rootHandle)return showNotice("먼저 포트폴리오 폴더를 연결해주세요.");
   if(!form.elements.title.value.trim()){showNotice("작업 제목을 입력해주세요.");form.elements.title.focus();return;}
+  addProjectTag($("#tag-input").value);
+  if(!editingId&&!workType(formState.tags))return showNotice("작업 유형을 선택해주세요.");
   return withSaving(async()=>{
     const original=editingId?works.find(w=>w.id===editingId):null,id=original?.id||uid(); let coverUrl=coverState.existingUrl||"";
     if(coverState.file){ const old=coverUrl; coverUrl=await saveImage(coverState.file,"covers",`${id}__cover`); if(old)removedPaths.push(old); }
     const images=[]; for(let i=0;i<detailState.length;i++){ const item=detailState[i],imageId=item.id||uid(); let url=item.url||""; if(item.kind==="new")url=await saveImage(item.file,"details",`${id}__${imageId}__detail`); images.push({id:imageId,url,sortOrder:i}); }
     const isPinned=form.elements.isPinned.checked; let pinOrder=original?.pinOrder??null; if(isPinned&&pinOrder==null){ const nums=works.filter(w=>w.isPinned&&w.pinOrder!=null).map(w=>w.pinOrder); pinOrder=nums.length?Math.max(...nums)+1:0; } if(!isPinned)pinOrder=null;
-    const item={id,title:form.elements.title.value.trim(),category:form.elements.category.value,startDate:form.elements.date.value,endDate:form.elements.endDate.value,tools:[...formState.tools],role:form.elements.role.value.trim(),description:form.elements.description.value.trim(),thumbnail:normalizeThumb(formState.thumbnail),coverUrl,isPublic:form.elements.isPublic.checked,isFeatured:form.elements.isFeatured.checked,isPinned,pinOrder,images};
+    const item={...original,tags:normalizeTags(formState.tags),id,title:form.elements.title.value.trim(),category:form.elements.category.value,startDate:form.elements.date.value,endDate:form.elements.endDate.value,tools:[...formState.tools],role:form.elements.role.value.trim(),description:form.elements.description.value.trim(),thumbnail:normalizeThumb(formState.thumbnail),coverUrl,isPublic:form.elements.isPublic.checked,isFeatured:form.elements.isFeatured.checked,isPinned,pinOrder,images};
     const next=original?works.map(w=>w.id===id?item:w):[item,...works];
     await persist(next);
     for(const p of [...new Set(removedPaths)])if(!works.some(w=>w.coverUrl===p||(w.images||[]).some(x=>x.url===p)))await deletePath(p);
@@ -242,8 +247,8 @@ let cropStart=null; $("#thumbnail-crop").addEventListener("pointerdown",e=>{if(!
 
 $("#work-search").addEventListener("input",e=>{query=e.target.value;page=1;$("#work-search-clear").hidden=!query;renderTable();}); $("#work-search-clear").addEventListener("click",()=>{$("#work-search").value="";query="";page=1;$("#work-search-clear").hidden=true;renderTable();}); $("#work-filter").addEventListener("change",e=>{categoryFilter=e.target.value;page=1;renderTable();}); $("#work-page-size").addEventListener("change",e=>{pageSize=Number(e.target.value);page=1;renderTable();});
 $("#works-pagination").addEventListener("click",e=>{const b=e.target.closest("button");if(!b||b.disabled)return;if(b.dataset.page)page=Number(b.dataset.page);else if(b.dataset.move)page+=Number(b.dataset.move);renderTable();});
-$("#works-table").addEventListener("change",e=>{const c=e.target.closest("[data-check]");if(!c)return;c.checked?selected.add(c.dataset.check):selected.delete(c.dataset.check);renderBulk();});
-$("#select-all").addEventListener("change",e=>{const rows=filteredWorks(),size=pageSize||rows.length,visible=pageSize===0?rows:rows.slice((page-1)*size,page*size);visible.forEach(w=>e.target.checked?selected.add(w.id):selected.delete(w.id));renderTable();});
+$("#works-table").addEventListener("change",e=>{const c=e.target.closest("[data-check]");if(!c)return;selectionScope="개별·현재 페이지";c.checked?selected.add(c.dataset.check):selected.delete(c.dataset.check);renderBulk();});
+$("#select-all").addEventListener("change",e=>{selectionScope="현재 페이지";const rows=filteredWorks(),size=pageSize||rows.length,visible=pageSize===0?rows:rows.slice((page-1)*size,page*size);visible.forEach(w=>e.target.checked?selected.add(w.id):selected.delete(w.id));renderTable();});
 $("#works-table").addEventListener("click",e=>{const edit=e.target.closest("[data-edit]"),del=e.target.closest("[data-delete]"),tog=e.target.closest("[data-toggle]");if(edit)return openWork(edit.dataset.edit);if(del)return deleteWork(del.dataset.delete);if(tog)return toggleWork(tog.dataset.id,tog.dataset.toggle);});
 $("#bulk-clear").addEventListener("click",()=>{selected.clear();renderTable();}); $("#bulk-apply").addEventListener("click",()=>bulkUpdate({category:$("#bulk-category").value})); $("#bulk-public").addEventListener("click",()=>bulkUpdate({isPublic:true})); $("#bulk-private").addEventListener("click",()=>bulkUpdate({isPublic:false}));
 
@@ -257,6 +262,60 @@ pinList.addEventListener("click",e=>{
   if(from<0||to<0||to>=order.length)return;
   order.splice(to,0,order.splice(from,1)[0]);
   withSaving(async()=>{await persist(works.map(w=>order.includes(w.id)?{...w,pinOrder:order.indexOf(w.id)}:w));renderAll();});
+});
+
+
+
+function setProjectTags(tags){
+ formState.tags=normalizeTags(tags);
+ for(const radio of form.querySelectorAll('[name="workType"]'))radio.checked=radio.value===workType(formState.tags);
+ $("#project-tags").innerHTML=formState.tags.map(t=>WORK_TYPES.includes(t)?`<span class="project-tag type-tag">${escapeHTML(t)}</span>`:`<button type="button" data-remove-tag="${escapeHTML(t)}">${escapeHTML(t)} <span>×</span></button>`).join("");
+ renderTagSuggestions();updatePreview();
+}
+function renderTagSuggestions(){
+ const suggestions=[...new Set([...QUICK_TAGS,...works.flatMap(w=>freeTags(w.tags))])];
+ $("#tag-options").innerHTML=suggestions.map(t=>`<option value="${escapeHTML(t)}"></option>`).join("");
+ const q=$("#tag-input").value.trim().toLowerCase();
+ $("#tag-suggestions").innerHTML=suggestions.filter(t=>!formState.tags?.includes(t)&&t.toLowerCase().includes(q)).slice(0,12).map(t=>`<button type="button" data-add-tag="${escapeHTML(t)}">+ ${escapeHTML(t)}</button>`).join("");
+}
+function addProjectTag(raw){
+ const parts=raw.split(",").map(t=>t.trim()).filter(Boolean);
+ if(parts.some(t=>WORK_TYPES.includes(t)))showNotice("작업 유형은 위의 선택 버튼으로 지정해주세요.");
+ setProjectTags(editTags(formState.tags,{add:parts}));$("#tag-input").value="";renderTagSuggestions();
+}
+form.querySelectorAll('[name="workType"]').forEach(r=>r.addEventListener("change",()=>setProjectTags(editTags(formState.tags,{type:r.value}))));
+$("#tag-input").addEventListener("keydown",e=>{if(!e.isComposing&&(e.key==="Enter"||e.key===",")){e.preventDefault();addProjectTag(e.target.value);}});
+$("#tag-input").addEventListener("input",renderTagSuggestions);
+$("#tag-input").addEventListener("blur",e=>addProjectTag(e.target.value));
+$("#add-tag").addEventListener("click",()=>addProjectTag($("#tag-input").value));
+$("#tag-suggestions").addEventListener("click",e=>{const b=e.target.closest("[data-add-tag]");if(b)addProjectTag(b.dataset.addTag);});
+$("#project-tags").addEventListener("click",e=>{const b=e.target.closest("[data-remove-tag]");if(b)setProjectTags(editTags(formState.tags,{remove:[b.dataset.removeTag]}));});
+$("#type-filter").addEventListener("change",e=>{typeFilter=e.target.value;page=1;renderTable();});
+$("#select-results").addEventListener("click",()=>{selected=new Set(filteredWorks().map(w=>w.id));selectionScope="검색·필터 결과 전체";renderTable();});
+let bulkTagPlan=null;
+$("#bulk-tags").addEventListener("click",()=>{if(!selected.size)return;$("#bulk-tag-form").reset();bulkTagPlan=null;$("#bulk-tag-preview").innerHTML="";$("#bulk-tag-error").textContent="";$("#bulk-tag-submit").textContent="미리보기";$("#bulk-tag-count").textContent=`${selectionScope} · ${selected.size}개 선택됨`;$("#bulk-tag-dialog").showModal();});
+$("#bulk-tag-cancel").addEventListener("click",()=>$("#bulk-tag-dialog").close());
+$("#bulk-tag-dialog").addEventListener("cancel",e=>{if(saving)e.preventDefault();});
+$("#bulk-tag-form").addEventListener("input",()=>{bulkTagPlan=null;$("#bulk-tag-preview").innerHTML="";$("#bulk-tag-submit").textContent="미리보기";});
+$("#bulk-tag-form").addEventListener("submit",async e=>{
+ e.preventDefault();if(saving)return;
+ const error=$("#bulk-tag-error");error.textContent="";
+ if(!bulkTagPlan){
+  const type=$("#bulk-type").value,add=$("#bulk-tag-add").value.split(",").map(t=>t.trim()).filter(Boolean),remove=$("#bulk-tag-remove").value.split(",").map(t=>t.trim()).filter(Boolean);
+  if([...add,...remove].some(t=>WORK_TYPES.includes(t))){error.textContent="작업 유형은 작업 유형 선택에서 변경해주세요.";return;}
+  if(!type&&!add.length&&!remove.length){error.textContent="변경할 내용을 입력해주세요.";return;}
+  bulkTagPlan=works.filter(w=>selected.has(w.id)).map(w=>({id:w.id,title:w.title,before:normalizeTags(w.tags),after:editTags(w.tags,{type,add,remove})}));
+  $("#bulk-tag-preview").innerHTML=bulkTagPlan.map(w=>`<p><strong>${escapeHTML(w.title)}</strong><br>${escapeHTML(w.before.join(" · ")||"태그 없음")} → ${escapeHTML(w.after.join(" · ")||"태그 없음")}</p>`).join("");
+  $("#bulk-tag-submit").textContent=`확인 · ${bulkTagPlan.length}개 적용`;return;
+ }
+ const plan=bulkTagPlan;const button=$("#bulk-tag-submit");button.disabled=true;
+ try{await withSaving(async()=>{
+  const patches=new Map(plan.map(w=>[w.id,w.after]));
+  try{await persist(works.map(w=>patches.has(w.id)?{...w,tags:patches.get(w.id)}:w));}
+  catch(err){error.textContent=`전체 ${plan.length}개 저장 실패. 파일 단위 저장으로 일부만 적용되지 않습니다. 대상: ${plan.map(w=>w.title).join(", ")}. ${err.message}`;throw err;}
+  if(patches.has(editingId))setProjectTags(patches.get(editingId));
+  $("#bulk-tag-dialog").close();bulkTagPlan=null;renderAll();showNotice(`${plan.length}개 성공 · 실패 0개. Commit → Push 해주세요.`);
+ });}finally{button.disabled=false;}
 });
 
 (async()=>{ resetForm(); renderAll(); if(!("showDirectoryPicker" in window)){ showNotice("최신 Whale/Chrome/Edge에서 열어주세요."); return; } const h=await loadHandle(); if(h){ rootHandle=h; try{ if(await h.queryPermission({mode:"readwrite"})==="granted")await connectFolder(false); else $("#folder-status").textContent="이전 폴더 기억됨 · 연결 버튼을 눌러주세요"; }catch{} } })();
