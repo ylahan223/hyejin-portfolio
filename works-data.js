@@ -1,6 +1,68 @@
 // Static portfolio data. Managed by admin.html.
 export const worksData = [
   {
+    "id": "bbfd518a-6e95-4c17-bd55-7757a1a406d7",
+    "title": "MORI DEW 데일리 수분 세럼(반응형 웹 배너)",
+    "category": "웹디자인",
+    "startDate": "2026-10-22",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT"
+    ],
+    "role": "디자인 100%",
+    "description": "브랜드 가이드라인을 기반으로 데일리 수분 세럼의 웹 메인 배너를 제작했습니다. PC에서는 제품과 텍스트를 좌우로 배치하고, 모바일에서는 세로형으로 재구성하여 화면 크기에 따른 가독성과 정보 전달력을 고려했습니다.",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/bbfd518a-6e95-4c17-bd55-7757a1a406d7__cover-1792659084030-bw6uo.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "f2f045c0-a144-4279-9d11-81357784e2e3",
+        "url": "./assets/portfolio/details/bbfd518a-6e95-4c17-bd55-7757a1a406d7__f2f045c0-a144-4279-9d11-81357784e2e3__detail-1792659084141-4l4z1.webp",
+        "sortOrder": 0
+      }
+    ]
+  },
+  {
+    "id": "a30ba257-c618-4bd0-830f-3710c2677846",
+    "title": "LUMI DERM 수분 진정 케어 프로모션(웹 배너)",
+    "category": "광고·캠페인",
+    "startDate": "2026-10-21",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT"
+    ],
+    "role": "디자인 100%",
+    "description": "피부과 프로모션 배너를 타이틀 강조형(A안)과 혜택 강조형(B안)으로 제작했습니다. 동일한 컬러와 비주얼을 유지하면서 타이포그래피와 정보 위계를 다르게 설계해, 강조하는 메시지에 따른 시각적 차이를 표현했습니다.",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/a30ba257-c618-4bd0-830f-3710c2677846__cover-1792659044750-omck3.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "528d3dac-b324-4c11-a92c-276bc1675b3e",
+        "url": "./assets/portfolio/details/a30ba257-c618-4bd0-830f-3710c2677846__528d3dac-b324-4c11-a92c-276bc1675b3e__detail-1792659044920-vrqla.webp",
+        "sortOrder": 0
+      }
+    ]
+  },
+  {
     "id": "d63a0d6e-25cc-4fb3-81d3-41235b1dc054",
     "title": "메젠 블로그 콘텐츠",
     "category": "콘텐츠 디자인",
@@ -854,7 +916,7 @@ export const worksData = [
   },
   {
     "id": "251e2f68-fe3a-4bdd-b0e2-1d727c70d67c",
-    "title": "MELLOW SKIN | 세럼 웹 배너 디자인",
+    "title": "MELLOW SKIN 세럼 웹 배너 디자인",
     "category": "광고·캠페인",
     "startDate": "2026-10-20",
     "endDate": "",
