@@ -1,6 +1,6 @@
 const { chromium }=require('playwright');const fs=require('node:fs');const assert=require('node:assert/strict');
 (async()=>{const browser=await chromium.launch({headless:true});const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
-const original=fs.readFileSync('works-data.js','utf8');
+const fixture=JSON.parse(fs.readFileSync('works-data.js','utf8').match(/=\s*([\s\S]*);\s*$/)[1]);fixture.forEach(w=>delete w.tags);const original='export const worksData = '+JSON.stringify(fixture)+';';
 await page.addInitScript(({source})=>{
  let content=localStorage.getItem('test-data')||source;
  const handle={name:'test-repo',queryPermission:async()=> 'granted',requestPermission:async()=> 'granted',getDirectoryHandle:async()=>handle,getFileHandle:async(name)=>({getFile:async()=>new File([name==='works-data.js'?content:''],'test'),createWritable:async()=>({write:async(text)=>{content=text},close:async()=>localStorage.setItem('test-data',content),abort:async()=>{}})})};window.showDirectoryPicker=async()=>handle;

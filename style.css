@@ -5535,3 +5535,19 @@ span.cat-default {
 #bulk-tag-dialog{border:1px solid #e8ddeb;border-radius:16px;padding:24px;width:min(600px,94vw);max-height:85vh;overflow:auto;font-family:inherit}#bulk-tag-dialog::backdrop{background:#28202d66}#bulk-tag-dialog h2{font-size:18px}#bulk-tag-dialog .field{margin:12px 0}#bulk-tag-dialog input,#bulk-tag-dialog select{padding:9px;max-width:100%}#bulk-tag-preview{max-height:30vh;overflow:auto;font-size:12px;overflow-wrap:anywhere}#bulk-tag-error{color:#b94e70;font-size:12px}.bulk-bar{flex-wrap:wrap}#project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 
 .project-tag[hidden]{display:none}
+
+/* Comfortable project type controls and compact tag editor */
+body[data-page="admin"] .type-options{gap:12px;padding:14px 16px}
+body[data-page="admin"] .type-options legend{font-size:14px;font-weight:600;padding:0 6px}
+body[data-page="admin"] .type-options label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border:1px solid #e5dbea;border-radius:10px;background:#faf7fc;font-size:15px;line-height:1.5;cursor:pointer}
+body[data-page="admin"] .type-options label:has(input:checked){background:#f4e5f0;border-color:#cd91b5;color:#794664}
+body[data-page="admin"] .type-options input{width:20px;height:20px;margin:0;flex:0 0 20px;accent-color:#c879a4}
+body[data-page="admin"] .project-tag-entry{display:flex;gap:8px;width:min(100%,460px);margin:12px 0 8px}
+body[data-page="admin"] #tag-input{min-width:0;flex:1;width:auto;min-height:40px;border:1px solid #dfd6e4;border-radius:8px;padding:8px 12px;font:inherit;font-size:14px}
+body[data-page="admin"] #add-tag,.tag-clear-button{border:1px solid #dfd6e4;border-radius:8px;background:#faf7fc;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer}
+body[data-page="admin"] #project-tags{width:fit-content;max-width:100%;min-height:0;height:auto;border:0;background:transparent;padding:0;margin:10px 0;gap:8px}
+body[data-page="admin"] #project-tags:empty{display:none}
+body[data-page="admin"] #project-tags button,body[data-page="admin"] #project-tags .project-tag{font-size:13px;padding:6px 10px}
+body[data-page="admin"] #tag-suggestions button{font-size:13px;min-height:34px}
+.bulk-clear-option{display:flex;align-items:center;gap:8px;font-size:14px;margin:16px 0}.bulk-clear-option input{width:18px;height:18px}
+.project-tag.type-tag{font-size:12px}

@@ -287,13 +287,16 @@ form.querySelectorAll('[name="workType"]').forEach(r=>r.addEventListener("change
 $("#tag-input").addEventListener("keydown",e=>{if(!e.isComposing&&(e.key==="Enter"||e.key===",")){e.preventDefault();addProjectTag(e.target.value);}});
 $("#tag-input").addEventListener("input",renderTagSuggestions);
 $("#tag-input").addEventListener("blur",e=>addProjectTag(e.target.value));
+$("#clear-free-tags").addEventListener("click",()=>{setProjectTags([workType(formState.tags)]);$("#tag-input").value="";renderTagSuggestions();});
 $("#add-tag").addEventListener("click",()=>addProjectTag($("#tag-input").value));
 $("#tag-suggestions").addEventListener("click",e=>{const b=e.target.closest("[data-add-tag]");if(b)addProjectTag(b.dataset.addTag);});
 $("#project-tags").addEventListener("click",e=>{const b=e.target.closest("[data-remove-tag]");if(b)setProjectTags(editTags(formState.tags,{remove:[b.dataset.removeTag]}));});
 $("#type-filter").addEventListener("change",e=>{typeFilter=e.target.value;page=1;renderTable();});
 $("#select-results").addEventListener("click",()=>{selected=new Set(filteredWorks().map(w=>w.id));selectionScope="검색·필터 결과 전체";renderTable();});
 let bulkTagPlan=null;
-$("#bulk-tags").addEventListener("click",()=>{if(!selected.size)return;$("#bulk-tag-form").reset();bulkTagPlan=null;$("#bulk-tag-preview").innerHTML="";$("#bulk-tag-error").textContent="";$("#bulk-tag-submit").textContent="미리보기";$("#bulk-tag-count").textContent=`${selectionScope} · ${selected.size}개 선택됨`;$("#bulk-tag-dialog").showModal();});
+function openBulkTags(clearAll=false){if(!selected.size)return;$("#bulk-tag-form").reset();bulkTagPlan=null;$("#bulk-tag-preview").innerHTML="";$("#bulk-tag-error").textContent="";$("#bulk-tag-submit").textContent="미리보기";$("#bulk-tag-count").textContent=`${selectionScope} · ${selected.size}개 선택됨`;$("#bulk-remove-all-tags").checked=clearAll;$("#bulk-tag-dialog").showModal();}
+$("#bulk-tags").addEventListener("click",()=>openBulkTags());
+$("#bulk-clear-tags").addEventListener("click",()=>openBulkTags(true));
 $("#bulk-tag-cancel").addEventListener("click",()=>$("#bulk-tag-dialog").close());
 $("#bulk-tag-dialog").addEventListener("cancel",e=>{if(saving)e.preventDefault();});
 $("#bulk-tag-form").addEventListener("input",()=>{bulkTagPlan=null;$("#bulk-tag-preview").innerHTML="";$("#bulk-tag-submit").textContent="미리보기";});
@@ -303,8 +306,9 @@ $("#bulk-tag-form").addEventListener("submit",async e=>{
  if(!bulkTagPlan){
   const type=$("#bulk-type").value,add=$("#bulk-tag-add").value.split(",").map(t=>t.trim()).filter(Boolean),remove=$("#bulk-tag-remove").value.split(",").map(t=>t.trim()).filter(Boolean);
   if([...add,...remove].some(t=>WORK_TYPES.includes(t))){error.textContent="작업 유형은 작업 유형 선택에서 변경해주세요.";return;}
-  if(!type&&!add.length&&!remove.length){error.textContent="변경할 내용을 입력해주세요.";return;}
-  bulkTagPlan=works.filter(w=>selected.has(w.id)).map(w=>({id:w.id,title:w.title,before:normalizeTags(w.tags),after:editTags(w.tags,{type,add,remove})}));
+  const clearAll=$("#bulk-remove-all-tags").checked;
+  if(!type&&!add.length&&!remove.length&&!clearAll){error.textContent="변경할 내용을 입력해주세요.";return;}
+  bulkTagPlan=works.filter(w=>selected.has(w.id)).map(w=>({id:w.id,title:w.title,before:normalizeTags(w.tags),after:editTags(clearAll?[workType(w.tags)]:w.tags,{type,add,remove})}));
   $("#bulk-tag-preview").innerHTML=bulkTagPlan.map(w=>`<p><strong>${escapeHTML(w.title)}</strong><br>${escapeHTML(w.before.join(" · ")||"태그 없음")} → ${escapeHTML(w.after.join(" · ")||"태그 없음")}</p>`).join("");
   $("#bulk-tag-submit").textContent=`확인 · ${bulkTagPlan.length}개 적용`;return;
  }

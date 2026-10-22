@@ -29,6 +29,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bbfd518a-6e95-4c17-bd55-7757a1a406d7__f2f045c0-a144-4279-9d11-81357784e2e3__detail-1792659084141-4l4z1.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -60,6 +63,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a30ba257-c618-4bd0-830f-3710c2677846__528d3dac-b324-4c11-a92c-276bc1675b3e__detail-1792659044920-vrqla.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -117,6 +123,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d63a0d6e-25cc-4fb3-81d3-41235b1dc054__a6c553a0-6868-4487-99a2-a3d5a73b6d56__detail-1792472176011-hyk2y.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -159,6 +168,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d92c83c8-b8e8-4ba3-9043-c53e0ea87799__2dda51ab-c39e-4753-819b-49007d47caa2__detail-1792472150131-ztsy1.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -185,7 +197,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "9e426fc7-ecce-4f6d-b5ca-7ba75fca0136",
@@ -227,6 +242,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9e426fc7-ecce-4f6d-b5ca-7ba75fca0136__e7e1c254-6647-4745-a7bf-42c5e38fae7e__detail-1792472109978-eevlf.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -269,6 +287,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/543bb9ef-3ded-4f82-9f4e-511c0b91ca09__d3c4b7c6-b64e-4e64-95d9-a6e5c5624b2c__detail-1792472096278-0213j.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -295,7 +316,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "1caf8895-e778-40d0-9a9e-a64302b19b00",
@@ -337,6 +361,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/1caf8895-e778-40d0-9a9e-a64302b19b00__36508810-a7e7-4c94-8c9d-0cdb8d6d3f17__detail-1792472044709-i3916.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -379,6 +406,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ad474f78-58f3-4f68-a9f6-c64a42a7114b__9970fe87-4cbc-45d7-9e1e-927057126e3b__detail-1792472027305-vq8f9.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -431,6 +461,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6cc9bcfd-7a3c-4ffd-aa64-77da3c89d4d4__2f9dfbeb-f0f4-4246-9dd9-5fc2133b3ed7__detail-1792471935056-1cjda.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -499,6 +532,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/90f34e93-635b-457c-82da-16457053183b__3c123c00-d58e-48b1-bf9c-81acc33849a9__detail-1792471904241-q5pfl.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -567,6 +603,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/99bc8faf-b901-42ba-907f-20b86ced0eaa__5b222cba-60c2-4980-a3f1-d19971133192__detail-1792471882995-cz4ny.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -614,6 +653,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f4048217-1cb6-43d1-876b-cb74ab0a3d21__462bfe43-ae45-4719-92c7-693e2e225a18__detail-1792471855708-c9abz.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -656,6 +698,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b3198ece-f244-4b2c-928b-f4e3dcef29d8__4978236b-39a3-4476-8b6d-9de232464f40__detail-1792471824029-126le.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -698,6 +743,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c531a8a0-ec10-4fad-9d7e-229758b82acf__e4b8e32d-1c9f-411f-8c9c-48e6dcb6a0a6__detail-1792471801179-z6n1h.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -741,6 +789,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/62aaa64c-209c-4805-89d2-7dbb3187fe0b__d9a82f91-3598-4994-93a6-4942d14f0657__detail-1792471771475-1lepq.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -784,6 +835,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ecfdff51-c841-493f-9d3c-214179d7a68a__53d512b2-c6ae-4e8f-b6ae-63ad30a4addc__detail-1792471758299-hihgk.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -827,6 +881,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e7dfd15d-8d15-4647-8915-f67e3266f34b__12eeeea8-ac5f-4a0f-b11b-60f1b1f563a8__detail-1792471746781-urqm7.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -870,6 +927,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8c0ab57f-2558-4db8-ba82-7c49b0e27f1c__15e039dc-f4cd-4132-9e08-19db7cb10648__detail-1792471734614-vscw4.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -912,6 +972,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/50ade840-8c6b-46af-b4bf-f16b6fe51e11__edb23a3c-75bb-4c2f-ba89-037775854cb1__detail-1792471167776-gq35b.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -943,6 +1006,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/251e2f68-fe3a-4bdd-b0e2-1d727c70d67c__81a2730b-99d0-43f2-b458-df73cd94adc3__detail-1792466110399-fe40n.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1000,6 +1066,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4f369073-10f8-4064-be4a-0a2ce12ada62__bdeec9fd-4694-4ff0-a423-d2a52f054040__detail-1791437697517-8siud.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1052,6 +1121,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8174f958-dca6-4f7c-91e5-3c0874f31d2a__886e4802-ea31-4712-ac3c-d275cf9b89a2__detail-1791437675158-g1gzi.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1109,6 +1181,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/1d28f5a2-b39d-414e-92a1-78a2ee2d0c67__9d8873c8-b11f-4a60-bdc2-a87c723a82ed__detail-1791437639336-vci5y.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1166,6 +1241,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/df37efe3-b5e5-4af2-975b-f8a00070bc8c__77b19646-dcd8-48e3-ae7d-fbb4165f9548__detail-1791437617701-97f1t.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1233,6 +1311,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a4f06e98-ac56-4b42-83cd-71fde682cb08__e4412bae-bccd-4c7b-83f9-484b5e2ba11a__detail-1791437582106-vn8bo.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1300,6 +1381,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c33e4940-f8c4-41de-8f97-a7f53a416aee__6241499d-6164-42ea-961f-5a7a787d1e9e__detail-1791437548170-m2tbi.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1392,6 +1476,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/361c9a52-82e0-4abc-840f-cd2ede47afaf__298ea4ec-c173-4119-bb16-62563eb5d660__detail-1791437521253-967zt.webp",
         "sortOrder": 12
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1459,6 +1546,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/24c75782-f62b-474f-be73-71775c73a1ef__7755e260-b312-4cba-9cba-4b3d34c4fef4__detail-1791437471094-ffkhj.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1526,6 +1616,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f37ad67d-7e75-4bd4-b675-0c95d16dd878__379e1c7a-14d2-4073-b036-8fcb43d83f11__detail-1791437453381-s2ia8.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1583,6 +1676,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6b6b8d0d-7357-4468-8801-7af64349edd9__aa863c91-d2ae-494c-bfa4-d17cbdcd7312__detail-1791437418429-jepv9.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1625,6 +1721,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/94a49d1d-f64f-4d43-b9df-7ef305e1469a__48b5ec16-6123-4e54-a818-05af2eae8ac6__detail-1791437382476-z9uy7.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1667,6 +1766,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/69a0b6ca-4cb7-416d-b0d9-40d0925b3d10__6a8b4712-1da0-4402-9c08-29cc8419f222__detail-1791437331553-zde52.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1709,6 +1811,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0c169ad1-6d46-4d82-a333-cbbadf62e0b0__6d15ce55-e9a3-499d-9d05-9f09b7f9df13__detail-1791437316457-qw6i3.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1751,6 +1856,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6d6d7192-b5d6-4b2f-9ba8-d8e048f20577__2dd3038b-0610-4a27-a459-9a672bc396fa__detail-1791437302226-fbjd3.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1793,6 +1901,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/efc5e5b9-c126-450a-9105-55f3d064da29__cff1fb68-2f63-4355-a675-c2a7f1cb0981__detail-1791437277443-cwck6.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1850,6 +1961,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fe10772e-00fe-4efe-a942-9b1bd9401a38__c85514e6-6e01-4d5f-b678-c4a7b5d6f8c0__detail-1791437243702-fe10u.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1907,6 +2021,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b0e1e8af-d679-43f0-9a65-4a523c29e70d__dc6541fc-d5da-44b5-8ec2-e96cf7a0e535__detail-1791437213825-qii5o.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -1964,6 +2081,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/69946ac6-c90f-4db1-973f-f0149791d83c__e7cdc2f5-b982-4088-921c-fbc017161300__detail-1791437194966-o9c9d.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2031,6 +2151,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e48a6f3a-248f-49fc-8ff8-e337d341f8c3__9a5e35ff-44ec-4240-bd46-9af03f231c90__detail-1791437162190-2jd8x.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2098,6 +2221,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a4bbcf59-c957-4809-9ca3-4bbbb2e6c9d0__d743ff6c-9c77-44f7-b404-3f794fba2556__detail-1791437114899-ahngs.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2165,6 +2291,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/98bff7df-567a-4c38-8ba2-ba4164932263__f2d56ed8-fddb-43e3-9722-b837203a2bf1__detail-1791437093121-fbnlu.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2232,6 +2361,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/51286466-998e-4101-85e8-543906fb9404__30ef94d2-833b-4f87-a009-a9872faf2873__detail-1791437066488-x96h7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2299,6 +2431,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f82b662b-a2f2-42c2-9f0e-e47b26ea5cb4__a4f11565-4749-446b-a609-89eb2a550dfa__detail-1791436996356-wuste.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2356,6 +2491,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/544fb135-38d4-4e21-b604-e7788a4fb4c2__8b71ed32-d524-49ad-8ee7-825227e84845__detail-1791436966127-3xt74.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2408,6 +2546,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f724cad0-e2fd-4fad-a82e-b07834b5cbeb__ae1ebbc9-2b55-4a52-8697-f7df20e7973c__detail-1791436919543-sin6e.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2455,6 +2596,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a5060f47-a7ba-481e-9113-1b631ce961b6__3e79b55a-c7a7-45d2-8e00-5e85de1e0406__detail-1791436893149-d4zj5.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2481,7 +2625,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "5c65a320-c0d7-4439-b42c-f7ad7346a792",
@@ -2528,6 +2675,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5c65a320-c0d7-4439-b42c-f7ad7346a792__34750d1f-69b1-48b2-b9a8-bf0af81d165b__detail-1791436787177-usx96.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2570,6 +2720,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ec6bd10a-8d03-4ec8-9226-d33f50ce3b22__38ed973f-81e9-45c0-a924-d08660ba34f8__detail-1791436756630-hl57k.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2627,6 +2780,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0bc097c6-81ee-4f8e-8006-4ad4019f24e7__52e897a5-13a2-48a8-9a7e-2155f622a5a6__detail-1791436729165-aryqn.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2679,6 +2835,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/95f525d4-4a5f-4f20-b29a-778057bc7322__241bcb51-0c5b-40fa-bfe9-15c828051f19__detail-1791436681507-rvbus.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2731,6 +2890,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/720217ce-b204-404f-b999-6969ff80c53a__39188610-c224-4169-a696-e9fea0685b32__detail-1791436701349-lf0hn.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2799,6 +2961,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/34e414e6-f6bf-4aff-a929-4acc70cb5183__1aff358a-159a-4623-aab8-989cc5193e1f__detail-1791436619866-mlgql.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2842,6 +3007,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a286554a-461f-4e8e-8b73-ebafe7f84044__967a1c91-feb6-49ff-ac1e-00ff91c5b771__detail-1791436557381-xiex6.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2885,6 +3053,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/eba3a899-6951-410a-9346-a80125e7573e__15751182-7629-41d0-b26a-21325cbbae6d__detail-1791436541307-u6usz.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2942,6 +3113,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/db8ac406-ba28-4553-85b4-5cb460529b8f__0124323f-1a42-4188-ba4c-051fd172e491__detail-1791436506488-qtjkx.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -2985,6 +3159,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/00223b5e-7c7c-4533-ae7a-70f01c055b0d__e9cf0360-1689-40c5-aab1-7a90bbbc1ff2__detail-1791436475641-ukfyu.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3037,6 +3214,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/798100e9-d12a-42b5-a9d2-f43b3b99b400__46445745-2646-4bf9-9166-71060bbf9d93__detail-1791436441810-rj7wc.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3105,6 +3285,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bfa741ef-b699-40dc-ac6a-be070adfa714__9ec436e1-9436-4285-b281-ca791b986dd0__detail-1791436412671-7ongz.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3173,6 +3356,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/69e3df28-f569-4f6d-9ee9-317ce844acac__083baba2-06a0-45a4-b27b-4f32382f6d5b__detail-1791436349154-mpgpr.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3230,6 +3416,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bf1c93d3-dd5b-433b-aefb-18e4e895ab2b__ffe306bf-8f2a-4872-8721-c3f6411530b1__detail-1791436284316-qspe2.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3278,6 +3467,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fb9d6fce-3c72-4998-8631-404157fcd081__4287ef83-7320-4c22-8fed-461a91aefa33__detail-1791436253099-qz3xf.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3346,6 +3538,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a3ca06a1-6978-4ff4-bbc0-4dc7f8711a4c__02c293c1-56d0-48cc-8787-98db98d5e76c__detail-1791436188405-royot.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3389,6 +3584,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fa6f7f69-d10e-4538-ad07-40d6b878f8ab__08526e3c-8abf-4094-bb2c-92a3457f3c13__detail-1791436070752-ak5cw.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3432,6 +3630,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/af088800-6614-4bc4-acef-c4205b794e41__f4a08f3e-4b2c-4d0b-adc9-2c4939725b54__detail-1791435949587-qzig2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3475,6 +3676,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/26944fd5-d6b7-4752-837e-a1850fff52f7__eb24ecb4-178e-4027-b65b-3ecc9feac43e__detail-1791435930934-97n3y.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3518,6 +3722,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c6269550-8e59-4490-808f-f5ce5e59bcf5__e15f956e-0d1f-4832-9686-a2028edc5623__detail-1791435874966-ks11j.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3570,6 +3777,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/595edb94-5870-4a6d-b809-42a2c54a4c3c__b2e7a69e-37f0-4e57-b475-6355ca3549e6__detail-1791435637681-cextz.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3637,6 +3847,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a87f9d6c-9e6d-48c3-bfa6-04f01862f578__7cd13043-7dbb-4c13-8460-7270ee1f6e16__detail-1791435587993-zjp45.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3704,6 +3917,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/393a3d99-3658-4d27-b2b4-aff2e9efe7f4__1e8e7c24-f37d-42a5-9025-3b0f7b6f1ccc__detail-1791435522468-fhri9.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3761,6 +3977,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bec13d74-8200-4afa-afbc-930716c125df__f92c070e-cd58-412b-b975-51cbef2b0577__detail-1791435448816-lune4.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3813,6 +4032,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/dab61385-a193-4448-bfb4-b6b27d578b95__393e1620-d780-41cf-a1ef-3b4e9a29e1ed__detail-1791435177851-6wurj.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3855,6 +4077,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/119ab888-2c97-4da4-8743-e76baffbf5d3__935e171d-f5ea-426d-847d-ce6f3dd8e18c__detail-1791435117008-guak0.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3903,6 +4128,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/50788a81-379f-4463-bb25-ce3acc9c4814__947584b9-d9f3-491c-a1e3-04b248bda0c9__detail-1791435075342-hv4o7.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -3971,6 +4199,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/23e4642a-024f-4f19-be64-3aa8254ebbfb__b02410a7-30d0-4dc9-b0e7-1fdcd577acfa__detail-1791435045893-z6ngc.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4018,6 +4249,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c4ce57d6-b8d6-4737-bf67-c8240542e586__f6df3e4a-8924-43f5-93bf-8b5a1fc62fcf__detail-1791435013408-yyqvl.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4075,6 +4309,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3c65d52e-a68d-4208-81ef-5cd302f35b74__8b371ee5-f34d-47ac-b3d5-f5ff9dde427d__detail-1791434243365-czixp.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4108,6 +4345,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a61bf40a-ebcf-47e7-8c93-47e8af6d75b5__77154052-5162-4a56-89aa-06b108b17fb0__detail-1791430203437-e1dpg.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4160,6 +4400,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d09cea57-a9b8-4054-9cc2-4f70e4704822__d99c4cd0-37b2-463e-aa1e-1382ada4a011__detail-1791430012434-i1cyj.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4228,6 +4471,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c06eb4df-0e8a-49bb-958a-464983c0df54__3d30652d-5762-430a-834e-7ac4ab59f900__detail-1791429802041-eud18.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4276,6 +4522,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/759ba9ae-09f6-481f-991c-b56167e8e2f5__3112f371-250d-413f-a263-2e036dc10288__detail-1791429741405-9todv.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4318,6 +4567,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fbf975ae-e9b9-484f-9fb4-0ae48d8dc663__460fba3d-aeb5-4844-a066-8364ecb61186__detail-1791429698116-cf1kh.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4360,6 +4612,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/1890d3e8-e051-4e32-af48-af8f4ae546ee__bce058b6-ba16-4499-a386-a9c9b2924bb3__detail-1791429678138-bilg1.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4413,6 +4668,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ca220976-b00b-45c3-8cb0-0535312500d0__d18baca7-dd80-469a-9d2d-21497673363d__detail-1791429617322-271v7.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4481,6 +4739,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/50592251-ef42-46ec-8cab-42f9bf898196__9cb97323-bb55-4ccf-8469-66c1178056db__detail-1791429550154-h4wcp.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4533,6 +4794,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b8a6984a-0429-42ae-99a7-92b8b848136f__d8c084d0-b28a-421f-bf86-9287fcbbbfc4__detail-1791429516494-1rr9i.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4601,6 +4865,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8dfb7dd0-7a6d-485d-be03-81bd5229efcd__0535277a-4db4-45ee-aecb-5d311cad85fb__detail-1791429473283-1powa.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4659,6 +4926,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/648daa83-382b-4d5c-9236-813e15aab22c__f89d3620-18fb-4c45-b5fc-8546248420d2__detail-1791429405045-5uzym.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4742,6 +5012,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d6138c35-1e02-4683-b11d-90fef9230ac1__39500241-1de5-4c81-9de8-81c02772dffc__detail-1792472005145-8xhr4.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4784,6 +5057,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9fdf4eaf-bc6d-4da7-9a9b-3bf8432a7fff__c957a787-f4ab-4369-aa34-253964cf6596__detail-1791429016143-w2cln.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4826,6 +5102,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/37765e5a-cd0d-4cd9-898b-5b10f22627ba__17453a6b-57d1-4b5e-9686-c8c9dc2885af__detail-1791428921291-47wcz.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4904,6 +5183,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8240d988-5ee3-4b86-a35b-13155ba407d5__580ff65c-ef11-4772-aafe-51be9c6af2dd__detail-1791428890530-d3f5z.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -4972,6 +5254,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3ebafa53-81c1-4e28-b8ca-453d8da37b1b__00ea4190-c60f-4234-b091-681cd75f589d__detail-1791428869704-267x0.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5040,6 +5325,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0e24ea46-273a-44b9-ac4a-ea82d5da368a__d63490c2-ef65-44b2-a696-b5cfcea553a3__detail-1791428846509-4np8n.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5123,6 +5411,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0eeeb552-b2fb-48c5-9f9c-fc79ab39d798__e3328851-324b-4a84-a3f7-2132703be51f__detail-1791428819811-wv5zh.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5201,6 +5492,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/37b00b22-a9db-4662-9b41-ce41d5d4d81c__a09ccc10-2cd8-4c1e-8be3-8fa738430642__detail-1791428794541-f78mh.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5258,6 +5552,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/1784b800-39ec-4aa4-9ced-5431e3a78468__f4f455e9-5312-4d0a-958b-4085ebc965f2__detail-1791428734981-09i87.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5300,6 +5597,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a3831e9a-f33c-488c-a013-f358526eb347__8863873f-2d4d-41d5-ba3a-8df1af6304d4__detail-1791428696357-dlcdg.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5342,6 +5642,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8086fd28-8ee6-40f7-9a3a-682fb7d10369__ed31e582-6b90-4d57-ad56-53a5b25ae4ba__detail-1791428676096-pt417.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5384,6 +5687,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/432679a6-592b-47ee-8a00-04d653852001__566599da-8e02-40f0-b546-121fb32012da__detail-1791428642362-ycpo5.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5436,6 +5742,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/60238577-a900-4bcd-ae18-fa8c022cb00f__f6299b8a-6b91-4455-9239-516098cc86b5__detail-1791428597049-agq8k.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5488,6 +5797,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/03836741-8818-4ae8-b678-a6daea28559e__96275cda-a40b-4b65-a7ce-de79ffa4938a__detail-1791428570905-eb69o.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5530,6 +5842,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a8890d32-3787-4eac-afab-9faf6d43e3b8__4576e35a-ff21-4bdf-9ce9-84e390c0f649__detail-1785921098979-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5572,6 +5887,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/cc55e03c-c0ec-4095-b3c4-af939da6b832__abfb6b2c-e010-4af0-9ae6-0dff9020b07b__detail-1785912283227-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5642,6 +5960,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e937f364-6972-4305-a75f-fd1b0d42fa09__795e2dc5-f3f9-42d7-b0b5-c6e51d46cf62__detail-1785915849052-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5682,6 +6003,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/93307bda-c90a-480a-a680-c0890605adbd__0470589e-c91b-4bfe-af81-f98988fc1743__detail-1785916043409-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5708,7 +6032,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "5ca3b2c8-9f39-4a84-a59d-e65176d48cb6",
@@ -5821,6 +6148,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5ca3b2c8-9f39-4a84-a59d-e65176d48cb6__cfd865c5-c1b4-4299-a029-88d7b09c01a5__detail-1785918349105-16.webp",
         "sortOrder": 16
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5878,6 +6208,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3500d2bd-cee8-4ec7-9264-33e36c511977__ee68c4ed-235d-4b04-8413-e6eb417e59b3__detail-1785918505780-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5920,6 +6253,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a9aa6825-2865-4eef-ac2c-3bb09222bda1__9261243a-53ea-45cf-a568-ec5647db28e1__detail-1785919299100-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -5991,6 +6327,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d3241ad1-0184-4c3d-beb9-9e110069b91b__10a75465-2970-472d-b55d-33eeb8578491__detail-1785918706784-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6052,6 +6391,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/cf5493c9-f0b8-48c5-bbfb-5c3417a91518__28ef6bda-1a35-4e16-a61f-fac413414c17__detail-1785918819307-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6122,6 +6464,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5d27709d-cc39-4b0c-991d-8f054d8eb76b__e357291b-f726-4898-876c-80e2e2c08808__detail-1785919013110-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6192,6 +6537,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5aa57ec4-ba72-4ddf-b301-635b86873cec__4d00f17c-bea3-4e3b-bcf6-c8d51d762411__detail-1785919196579-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6268,6 +6616,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5f66ecb8-50f4-4133-b812-f360d22fabd2__61ff5613-aedd-412e-9af8-dbab00f948bf__detail-1785982651554-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6338,6 +6689,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bcce553a-b95c-4116-a2ff-0d969fc1a18a__74ca1912-3604-4ce0-bc4e-e5643e7751c8__detail-1785982808915-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6362,7 +6716,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "aa633fad-5265-4fd3-9577-d1da0305a353",
@@ -6432,6 +6789,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/aa633fad-5265-4fd3-9577-d1da0305a353__9e2d0669-e448-4664-a09a-2105572ac6b0__detail-1785982906296-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6502,6 +6862,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f32d4e17-72e2-4529-bf4a-5c0105251ce1__2764b369-f88b-4d4c-aa94-d86a92c7a09e__detail-1785982969737-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6572,6 +6935,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/43c745a0-d713-43f2-a1cc-f434cf069aea__770c96d9-2d53-4071-ac67-6135229f8709__detail-1785983029703-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6642,6 +7008,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/181b5687-9013-42c6-9676-3162a6d13aa8__36f6100a-6af6-4e30-afb6-7b4985ef4517__detail-1785983073787-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6684,6 +7053,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/1d4b50b0-8615-4b4b-8e4c-f13ab5438baf__70281419-b951-4a54-80ad-0deb94b80ee1__detail-1785983126855-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6744,6 +7116,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8cc415e7-85e5-4d33-b34b-50d41503fc0f__bbc00a7f-3fff-4799-b815-f02b2598ba74__detail-1785983177700-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6845,6 +7220,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/dc8bcd64-b365-4c30-8a36-c783cddb0ee5__3c030c4d-4f58-4f07-aaed-bba9fe45e399__detail-1785983219739-14.webp",
         "sortOrder": 14
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6916,6 +7294,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b084a77b-9d74-4578-8155-5feaf4870933__59df9c89-f9ab-4929-8c0c-b3e1d9e8503f__detail-1785983329042-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -6958,6 +7339,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b10f1917-12f8-40d3-b41c-fb937e1ce357__d08e9290-34d0-45ae-8983-1611bf6fa603__detail-1785983376272-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7064,6 +7448,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ea136804-7405-47ce-a1d6-4cfe0c538957__5a4f9131-8326-413e-92a8-89d7a00ffe7c__detail-1785983496217-15.webp",
         "sortOrder": 15
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7150,6 +7537,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/57b14d79-bad0-40c8-8430-2cf7311b9774__c041d98a-60c0-4b3d-a2f3-a46cc08d772c__detail-1785983535862-11.webp",
         "sortOrder": 11
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7192,6 +7582,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6634b4bb-8ea8-44ac-bdb1-7389ca9b0005__c0a08e59-c6bd-41d2-89df-91c21b96b62b__detail-1785983987539-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7263,6 +7656,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b0122a37-81f1-4b77-bb1c-289c91f08f1e__9f1853a7-29cb-4ad3-b77f-7c52410e043b__detail-1785984137549-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7360,6 +7756,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b4992dbd-069c-4a1c-8ba3-de0ca624fa7f__c58fad0e-648b-43c5-984e-b126c459b32a__detail-1785984217910-13.webp",
         "sortOrder": 13
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7431,6 +7830,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3831d86c-53c4-4556-968b-6d79171c3923__89054a0a-30a3-44be-ab5d-18c30afc8053__detail-1785984320230-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7473,6 +7875,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5c54d1c3-9e10-42b8-9a17-1f473bc11819__84925bfc-29a9-41f3-874c-94624d1ce0e4__detail-1785984382575-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7564,6 +7969,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e4c4946e-29de-43d8-84f0-2b59e0397ffa__5a8916d9-e536-4b50-921e-27d44d244239__detail-1785984471860-12.webp",
         "sortOrder": 12
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7635,6 +8043,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d67226c4-e4e5-4581-8f13-cd7fce47e17a__fe3dfdf4-7d8e-463e-81d9-94496e63a465__detail-1785984535912-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7706,6 +8117,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c5937a3a-a02c-46ec-b635-0224652bfd62__8243e338-76f2-4848-a439-daf859dc4c1d__detail-1785984579849-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7748,6 +8162,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c2e2bdb2-b3de-4f8a-8763-ea46a28f1f78__18babfd9-09d1-4a77-a88e-771287a830ae__detail-1785984617858-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7773,7 +8190,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "b3d71947-0568-4cde-a117-f9f9317557d7",
@@ -7845,6 +8265,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b3d71947-0568-4cde-a117-f9f9317557d7__64fff675-2ddc-4f6d-847c-c5f23d7e267b__detail-1785985646214-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7926,6 +8349,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8c16af40-c12a-4bc3-a242-196ac66ec214__6563192b-8a06-4582-ad9b-dd7f5ff838de__detail-1785985734180-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -7997,6 +8423,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c505c042-309f-4193-a968-493245cae5c0__c1d15163-7942-454a-a7d1-393266076359__detail-1785985774818-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8032,6 +8461,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/74afbdb1-8542-4cf2-9e21-42af258fd7bc__6cdca843-982a-4b28-8006-ed88e37f0f47__detail-1785985875509-1.webp",
         "sortOrder": 1
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8057,7 +8489,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "ff603297-755d-409b-a413-ca629f19de63",
@@ -8134,6 +8569,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ff603297-755d-409b-a413-ca629f19de63__8fd6d059-a031-4a06-a224-21931d884280__detail-1785986935116-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8216,6 +8654,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7a6d75fb-bbe9-4c12-b2fb-b2d34516f5f6__accde709-3d71-40b6-ab68-16dde6f58697__detail-1785986993538-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8283,6 +8724,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0858d802-87e5-4e71-8aa6-e88ad1447e28__74dfe373-8e06-4425-8302-e9d5618073b1__detail-1785997875134-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8350,6 +8794,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4e8d89f1-4cca-4cd6-aeb9-fb0982e9b77d__9cb2638e-b73e-457a-8575-8b59eb2316cc__detail-1785997936457-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8427,6 +8874,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/83cb28f1-0a31-4f3a-94c7-f320971da5e3__1948461c-90f0-45c5-9018-bc1006eeabb6__detail-1785997974231-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8498,6 +8948,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6a1c3e9e-f3e9-46b8-963c-8bfeb218969b__d34cf831-f3e8-4d34-8a48-cd70e581d872__detail-1785998058492-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8522,7 +8975,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "4c783409-44b1-418a-8a16-8a866d4ed471",
@@ -8555,6 +9011,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4c783409-44b1-418a-8a16-8a866d4ed471__c6b24168-7c8e-45aa-be40-3460e334811b__detail-1785998266411-0.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8593,6 +9052,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6dc8e72e-8f08-4544-b7d7-1a09024bc249__7798833e-54d7-45d6-90bf-522f9ea96740__detail-1785998319852-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8660,6 +9122,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d11441fa-4adf-47cd-9369-7641afcd6904__e1b1eb2c-638f-4a8c-9a24-1c5d0c74faef__detail-1785998401901-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8737,6 +9202,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f021175a-d094-4851-84e5-05b04aa60f75__9db40d6a-309b-466b-8b26-ee1d1490fd71__detail-1785998467088-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8808,6 +9276,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/2ffd84d8-0f03-4352-8a89-e63aa25fad3f__df3f1744-601f-49c6-a90d-ca99059889db__detail-1785998529590-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8849,6 +9320,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8a3ad57f-9222-4e9d-b8e5-0ec9531e1955__908b2a15-289b-4265-a0fe-453c5a66fa30__detail-1785998631904-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -8925,6 +9399,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f3ae66eb-894d-4b17-8cae-a3ae7b553fae__c02382b2-7d9e-4a1b-a768-981409b19479__detail-1785998687857-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9001,6 +9478,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9466d011-3621-4cb4-8f91-e6d56f552b92__7c8343ec-89b1-448e-bd3c-a673b690582c__detail-1785998724933-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9043,6 +9523,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5e389c4f-11fb-4e85-8bb8-b7e75e2700a5__d3e8f630-9000-4281-8f87-da61167574d9__detail-1785998772107-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9119,6 +9602,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/06d92317-bc28-455e-bef2-cba8fce16897__ed1a1982-161a-403b-b5ad-f94cb6570de2__detail-1785998818828-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9161,6 +9647,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6cd7cad2-07ae-4789-b6f7-6f499e2450df__5c136d0c-658b-439f-af7d-4f0b8df7cc83__detail-1785998859524-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9202,6 +9691,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/86fcd2e2-38cb-4497-87a1-b66286177666__2e595f9a-0c8f-4bf6-8f8f-ade89d686413__detail-1785998942295-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9240,6 +9732,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/01928db3-b386-4a00-a427-a7ae29089606__5b419e52-5d43-435f-a697-823dad2d910b__detail-1785998974962-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9282,6 +9777,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/effbd6e9-0eda-44d4-9b44-ab8224536c51__f2aba380-55b4-44de-82e3-5f41ef0a2c19__detail-1785999020590-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9362,6 +9860,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/876db49a-c729-4625-87c4-29eadc07e463__3c9fe7f4-551e-43e6-9b4d-cde4b12a55fa__detail-1785999064351-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9413,6 +9914,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/831b50c5-ba27-495c-a270-a39c9fa97023__de623945-e376-4f07-9df8-33884249b7c4__detail-1785999127526-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9465,6 +9969,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/de1cd654-0269-4e6b-8023-abb104745ae5__3a7f2130-05ae-438f-bf70-7ecfee97283c__detail-1785999160479-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9527,6 +10034,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e7abb9d5-c322-478d-afd7-d6002c380bcd__4c62e1e4-7886-4845-895e-d54c9b400228__detail-1785999219344-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9573,6 +10083,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b48e087c-213f-42aa-9af9-0ada7bd20a87__3bfbf936-24e3-4cf5-bb1b-0c5375c8e25f__detail-1785999278219-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9624,6 +10137,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/12371ece-fecb-4d87-8308-9eaf88c40e9f__2477baca-3d3b-4746-8ba9-b01f29787980__detail-1785999307888-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9686,6 +10202,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7c2167a9-e94a-4896-b845-188d86d3ce42__2aa896f3-f451-4c1e-9559-e934266ad87b__detail-1786066105162-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9724,6 +10243,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/bd1b71ed-0eac-4b3b-a472-84bc49df698f__62d7ab52-66af-4738-ac34-1bdf6d052db8__detail-1786065767844-1.webp",
         "sortOrder": 1
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9771,6 +10293,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b1b32705-3894-4374-bb16-1bcaeab89d67__6afc5f15-d80c-41f5-8db4-bb3b8217b6a6__detail-1786065830879-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9817,6 +10342,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/de10377a-82d8-4ae6-85e5-dcb74bd6a79e__96a272ea-1e06-400f-8fbb-c00185cc3079__detail-1786065902813-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9863,6 +10391,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/11873e6a-6da8-410d-882b-637e50d1f18e__220f1efa-f113-40b2-947d-a27438d067b8__detail-1786065932179-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9940,6 +10471,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/91cdaae4-2f50-43a3-8cad-3fa16c2b0e72__fb36dc1e-003a-4ba1-8b05-bd18bc22161b__detail-1786065977454-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -9992,6 +10526,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d1101612-2ec5-4db6-bb2e-45bfe292b198__7f2f59df-da9e-43f2-9345-18d00730cc7d__detail-1786066172204-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10038,6 +10575,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6d3cb340-60cd-4a51-8c70-5a0dd40e697b__6613a756-1bcd-4a5f-8ccf-4c4a7bd1227c__detail-1786066243280-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10084,6 +10624,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/39df068a-d1c7-459c-bee4-08a4fd69a839__6a32fe13-9c49-4ffb-8170-fc738fd8552e__detail-1786066331261-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10159,6 +10702,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d0165a9c-cbf5-4d82-9998-c44111fc98c0__bc9fa410-f78c-40b6-83b8-ce828516f67e__detail-1786066450959-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10235,6 +10781,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/eb52a85c-1eed-473a-bba7-f373496c9e35__d53e3f58-cd07-41cd-9c3b-1319eeca1798__detail-1786066524261-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10278,6 +10827,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3433ed6d-864c-47f7-9926-c0695f01bbb0__4e020fad-c2f5-4d1e-864b-2303940e1b95__detail-1786066607582-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10321,6 +10873,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4e2a042e-0df3-4640-91ea-d95aec37a4bd__07d00359-fee7-4ce5-b664-de8f093753c9__detail-1786066644875-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10364,6 +10919,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5adbe1e6-8a93-4da1-9ab6-d13ff21867b1__69b738e3-7119-4c76-a452-697357ebc9a2__detail-1786066677463-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10407,6 +10965,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/680e266a-8ed8-4b17-97c0-64b7159158ca__3a519300-3bf8-442e-8bf5-7e59537b77f5__detail-1786066701573-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10458,6 +11019,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/288a801b-fcc6-4a9d-b9ac-7f0742165c5b__659e351d-0a0a-4722-a600-b7c1fcb008da__detail-1786066877011-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10540,6 +11104,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/620862f8-3194-4146-86e4-d5f69776118f__7a8160b1-b86e-4470-810e-5d22c0b496b2__detail-1786066989428-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10607,6 +11174,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/392356e4-acdb-4643-bc94-4ca68a12f3f7__bd7a7067-b61f-4bb5-b1af-f562f06f04c7__detail-1786067035590-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10674,6 +11244,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c76ce925-a47d-47bc-86c6-d53ca57e5186__c243c018-552b-47d8-ac65-63d558ee21c5__detail-1786067078432-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10752,6 +11325,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b97da67a-6a3f-4791-bc6f-14ed95e0a003__d66689e7-38ef-4fad-a39d-d72d1689793e__detail-1786067117218-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10829,6 +11405,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6cf4738e-d0b8-4cee-aeea-ea3bce5b1c47__bafea572-afa0-4aa3-aefa-5b798f0c608f__detail-1786067169540-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10906,6 +11485,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d2e4adba-f61e-44ea-93c6-5f93e7d2cc53__bbda047f-2e1f-49d4-9920-676ef0df3050__detail-1786067513236-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -10983,6 +11565,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5452a70e-b5d5-43df-8b17-840877fc6a32__eeb5c28e-bc54-480c-b0bb-8392b2eebc97__detail-1786067755663-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11046,6 +11631,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0473b1e9-6fd5-40bb-ae9c-bd38a2159cf0__1530fb5f-2cc7-41a0-ad4b-7f6c6b329e22__detail-1786067808142-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11102,6 +11690,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d164d82c-8e18-4a98-9e5d-96bc7144c0cb__007b921d-e78f-4b1b-ab97-cf0232ec6bee__detail-1786068506472-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11175,6 +11766,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5b1ddcef-6998-4d0e-b820-4bb9a9c0f6ec__5a5634ff-ec81-41dd-bf5f-e68abcba3d60__detail-1786068629118-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11253,6 +11847,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/88898a69-066d-47c6-baf7-4c33d34eb1e9__e7346f8c-c544-4d82-8b31-c06712d9bc01__detail-1786069013024-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11280,7 +11877,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "e8496396-45af-4f0d-9766-742107ba9d59",
@@ -11333,6 +11933,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e8496396-45af-4f0d-9766-742107ba9d59__796091c1-62a5-4bbc-93b2-8f16cdcd0a46__detail-1786069179333-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11400,6 +12003,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0aca9b83-efe6-46c9-8a0e-10bf398c9599__537381d4-aba8-4ab1-9170-cba238aad7f4__detail-1786069256032-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11446,6 +12052,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d76d0e61-f0ea-4cbd-9f69-bf5cca077a57__631bbb4c-c649-4b2a-a5f3-ecbcc2e2a854__detail-1786069318355-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11477,6 +12086,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d6488208-86d1-4b74-b160-08f55ed66122__4ddb2729-4575-40df-8ae7-485208db8a45__detail-1786069486934-0.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11553,6 +12165,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/aac162da-61b8-4339-beb9-ac65a38d0ae0__c986ed71-f877-4fa6-8e2f-7c92471df104__detail-1786069599264-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11624,6 +12239,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b00f1c52-a3bd-445b-9acb-cfe435b8be5b__c44b13e7-0f1a-45bf-b9ff-4135cbd1082c__detail-1786069660278-9.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11701,6 +12319,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5cfeef34-d1f3-4e3b-8b8d-4e2b07319b5d__2df8a67a-1202-473a-a811-018c8d46ade5__detail-1786069825717-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11779,6 +12400,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e5030558-5d25-47e4-b780-90c06b5c1f0f__31e693ed-ea0b-45c5-81a3-0b8d7f43dfa5__detail-1786069894744-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11804,7 +12428,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "fe901901-0115-4fd5-8db6-30e799e41aa7",
@@ -11850,6 +12477,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fe901901-0115-4fd5-8db6-30e799e41aa7__2a2cb44b-e714-4221-b716-b3406e235748__detail-1786070083625-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11896,6 +12526,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5d7dadf6-8d5d-4d49-8643-aede198a31f0__70129527-48ca-432d-a395-578fb6ac86ac__detail-1786071106627-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -11942,6 +12575,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/cf6a3327-a828-4ed0-a56c-48b3ce1b77d4__23bc7043-f998-481b-a697-23686ce34c87__detail-1786071154864-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12019,6 +12655,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4faf912c-67cc-4622-bf2c-ec648bfc18bf__1b00a817-c372-476a-925e-50d390975c62__detail-1786071203639-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12060,6 +12699,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ab07afbc-2fad-4d16-bab3-1e62f28cb2cf__c996cf50-f67d-49b9-9cb0-a7327c040e7a__detail-1786071273256-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12107,6 +12749,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a0519eb6-1864-4ee0-a341-b4558a7dee21__f60a68a3-a499-47ce-be70-0bb2986b7360__detail-1786071483853-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12179,6 +12824,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/2439447a-dc25-4fbd-9ffa-d174226033f8__811bc4ae-cf7d-449c-92b6-16d5bc003f11__detail-1786071558573-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12221,6 +12869,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/aa9d2b4f-cda1-4b4b-8469-9074622a4409__33bce110-8c80-4e56-acd2-0b489d1a07b5__detail-1786071704557-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12294,6 +12945,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9be76dc0-2f65-46e5-b758-fd36ad1d1652__cffe26dd-2336-4fca-9829-66627dfd76f2__detail-1786071772966-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12327,6 +12981,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/83c7bb1b-a9ce-402d-86a5-70558da91975__9601d378-6659-414c-ad03-1e9331a0f07c__detail-1786071897156-0.webp",
         "sortOrder": 0
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12405,6 +13062,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/83d343fc-a654-4388-874f-df8985d3a05e__7155b22c-2210-4e6c-9c9b-3f5e3ec14124__detail-1786071933661-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12451,6 +13111,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/11bf5e6b-8b79-4aca-a5d8-260033c102b4__d159b2ed-7397-4d00-94c0-b124328c5cb7__detail-1786072073335-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12498,6 +13161,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/886d3444-a30e-411a-8a87-e90e38ef50d7__1683c833-0dd5-455b-8e6a-a346aa0bd6c0__detail-1786072141712-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12540,6 +13206,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3dfe8761-9169-4fbd-85fe-eab3e67aab20__21a63ad6-a54b-40d1-83f7-63398c4b958b__detail-1786072298723-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12581,6 +13250,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e0436f24-bc6c-4aa5-8f08-61aae63ec855__f7a0b776-14e7-453a-915c-7b1428a8253c__detail-1786072333698-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12664,6 +13336,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/50f218c7-5447-468d-9e28-56991d278104__3cbf30e3-871c-45b3-b450-49515a64cb7b__detail-1786072449583-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12742,6 +13417,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fb316f3a-1a4d-4ef9-9537-3c58d169bd97__3305ffb9-596d-4669-8f34-ab680dbb9471__detail-1786072485374-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12810,6 +13488,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/796edd91-3916-4395-aaaa-067e331f68a8__f5099a1a-8ed7-42e5-a846-fe52c69f4322__detail-1786072515658-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12862,6 +13543,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5cf4a3ab-7e31-4298-9ed7-77cf66b5c5b7__fbf0fa8b-a3f4-431c-be75-72eb3bcd1858__detail-1786072586298-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -12934,6 +13618,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/35f348a7-0c66-4bce-a8d7-7e3b83f90abf__b7bdea41-8e37-4378-a18a-1285783af38c__detail-1786076909622-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13011,6 +13698,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0f8ba7e0-6ff2-4b15-822f-e446ba3f134d__e3ae4a0c-fbeb-4d97-9be9-06ebb034cfcf__detail-1786076945682-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13063,6 +13753,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/346f397e-c2d2-4de6-bf5e-6da065362897__2866b417-d3a7-4dd9-810a-ffe50bcef7e2__detail-1786076986343-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13115,6 +13808,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/46bdec6f-4d3b-46bb-a92c-c06e32973770__f0bbd857-f1d5-4a9f-b194-cff18a41d342__detail-1786077049247-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13167,6 +13863,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/097fa2be-1fb6-463c-b0d9-a71c25e0d118__348bf7bb-c2a6-47d1-b483-e4cb3143f09f__detail-1786077097039-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13255,6 +13954,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9904f59d-8ec6-4218-b785-7c817267e7ec__40b6497c-6458-4769-bad8-f403f14c6b86__detail-1786077231528-11.webp",
         "sortOrder": 11
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13332,6 +14034,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a1a221d7-4533-4cba-9424-146e3a6869b1__52dd7f18-bc11-4605-a6cb-474a9d57e293__detail-1786077263433-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13384,6 +14089,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3280e698-7048-413b-b0e8-e88af2d630f8__6e59b8f1-101f-4802-91d7-f05bd4727908__detail-1786077477610-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13461,6 +14169,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/87f9ae2b-c413-43e9-b8bc-02bce09764d1__ea802c7d-9e10-44af-a483-e99471002dff__detail-1786077518696-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13529,6 +14240,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e40e1e30-1e8e-44ea-830e-16d689a83ecd__103152ae-180e-4ac6-8849-6e3b3c9b553e__detail-1786077568792-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13611,6 +14325,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/11f178fd-7a85-4515-825e-e9b1e8db84d6__eca87a1d-8b80-4647-a27c-43633ec3a250__detail-1786077616503-10.webp",
         "sortOrder": 10
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13719,6 +14436,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e72b2c87-2401-468b-a220-a6561e57606b__52181f71-579d-4b14-9c81-586e78b5e92b__detail-1786077739209-15.webp",
         "sortOrder": 15
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13771,6 +14491,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3cfd67d5-1e7b-40de-be0a-6ae7738054b1__809646b3-1180-46cf-bbdd-e49b72e1225d__detail-1786077779288-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13848,6 +14571,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c21d5b5f-1751-414b-892a-65bc3762b857__d42062eb-347e-4ad8-b276-ea7ebc54b84c__detail-1786077815861-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13894,6 +14620,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/51503b85-842f-4432-b4d2-ab382f8f5c80__e57a582f-8d22-479c-803e-08b1abb78042__detail-1786077963116-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -13971,6 +14700,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ef14ab42-73e0-4c11-9958-4497a8538539__368bf04b-d9b0-475d-b1bd-ceeec692b84c__detail-1786078005673-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14034,6 +14766,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ed50d722-ac9a-4c98-b133-b5d3003be47b__3b6775fe-5e4c-4891-8ef0-65cd92d77ed5__detail-1786078102191-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14091,6 +14826,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7db79415-ecbe-4779-bb70-e7ed60f77d3a__2801e7a9-8b30-4ebc-b0a4-603ecd0208f9__detail-1786090200288-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14144,6 +14882,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c2d3cea6-958c-409c-89c8-78a2451d2566__a2701756-0757-4b7c-91a7-7eeaeb13eb5a__detail-1786078509492-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14202,6 +14943,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8a9522c1-a3c4-4745-a9d5-40bd22e34ea8__565eb1da-40b7-4183-b3a6-a4818123d297__detail-1786090183657-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14279,6 +15023,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8e525283-4637-42ff-b045-22263bc30e76__dfb844c9-0426-451b-a22b-fe11f35b0c46__detail-1786078729821-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14356,6 +15103,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b9925815-d8bf-4fff-aa42-1f9f1386ed05__0b172b0b-b554-47d8-9332-58cf65240ae0__detail-1786078792801-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14418,6 +15168,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/438f5442-53fe-4c4a-b305-e0a2a1effa76__3b72e188-fc34-43ba-a54f-48c49ca927f5__detail-1786078924962-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14480,6 +15233,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/67e9a603-b81e-494c-a354-3cfdece7ebd0__eedc8776-2fa4-4954-836d-f6e7ea28ec12__detail-1786078953799-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14542,6 +15298,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/196fe0db-5e5e-4003-9b97-52e0b5c49dbe__3bd7c6aa-9f24-4d0e-9fb6-2cdcfd5f42cd__detail-1786079007553-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14585,6 +15344,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/50282861-1702-4836-b7ae-bb9df79e43e9__6cdd46fb-bbb0-48a3-a4b9-563c48302476__detail-1786079106136-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14628,6 +15390,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/65af003f-8fc3-4881-adb2-9b3472d500de__4be2adff-4b00-448c-b9a9-b44b3a2276a4__detail-1786079128872-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14672,6 +15437,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e6dfad59-3d29-4494-aa03-906c983cca33__8c86a6c2-7164-410e-ba2a-3ace66e12456__detail-1786079149260-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14715,6 +15483,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0210b63a-9bcf-4569-80ee-b3789804461f__73e91f78-8bb6-4a46-b085-7ba1d7a6ea46__detail-1786079180142-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14792,6 +15563,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8bcc838f-97ea-454b-a0f7-75b6bb9cd1cf__ee27b25e-d5b5-48bd-baf6-a0f70941e024__detail-1786079218652-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14869,6 +15643,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/35f1f956-b5df-4113-8e17-bc03c27156f0__99269ba1-b5a1-4198-aa36-7ef802e18cc5__detail-1786079243167-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -14936,6 +15713,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ce4ce2b7-1e3b-4f56-aa81-237ff78fefef__850ed953-8865-47d4-8f50-ec9779339098__detail-1786079340677-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15003,6 +15783,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6bf38279-eccf-4d32-95b6-c826ee5b78c0__b6f6b2e6-0340-4f5c-9dcd-91d9f8af6342__detail-1786079378936-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15065,6 +15848,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/54d98c89-6690-4657-b0f5-e8b780f30e2c__cf7ebf3f-3a0a-4418-b560-34962002be4d__detail-1786079436216-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15117,6 +15903,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/4d7700b2-50fe-4ba8-b8e6-8010991480a5__52782598-b182-4e81-a2c4-103e8a273a81__detail-1786079705693-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15142,7 +15931,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "f1bb68c6-a290-4258-af0b-6efcea5d121e",
@@ -15168,7 +15960,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "9f3c3fb5-15ed-4468-bee8-246502972aa0",
@@ -15205,6 +16000,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9f3c3fb5-15ed-4468-bee8-246502972aa0__92f34f30-4bfb-42eb-81d3-e07692c27f3c__detail-1786079940449-1.webp",
         "sortOrder": 1
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15246,6 +16044,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/eca39f25-ae61-4c7b-9176-4c3156c5749b__5429a161-5a02-45d4-b56d-251ce4c17da2__detail-1786080033235-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15287,6 +16088,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/664862ee-2e46-4d09-8891-c1b9a1ab28b3__14eeff7c-d36e-4cf2-8eab-932e42d71a9d__detail-1786080059717-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15328,6 +16132,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d855031b-f88d-446e-95fb-c007ee51975a__fb581f20-d07d-4ae2-82e2-8d971cd0befd__detail-1786080085589-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15390,6 +16197,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/cb3e4d1f-b52a-4ad2-b5cd-73f4a7459592__c1e5fe6f-a8d9-42d9-b009-10c4c7942d43__detail-1786080121566-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15467,6 +16277,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/5c4079e2-95f7-47c3-a837-68b1cba726d2__237a304c-c87f-476e-85be-f7b8ca7fc6e3__detail-1786080167313-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15507,6 +16320,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7d9b38a6-94de-4b8b-aa84-52ed4f92e232__1c68f944-06a7-4868-ad80-223feb73cd14__detail-1786080271002-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15548,6 +16364,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e1febb49-cd8d-457d-a282-cce25b59e2e1__ce87c8e9-0b82-4869-9d19-552d3df714df__detail-1786080301411-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15594,6 +16413,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/80fdaa17-1332-4861-abef-36925bf71d3c__b25e19fe-dfd9-4773-90b9-db275df38c00__detail-1786080322007-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15656,6 +16478,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/731e837d-cff8-457e-91f2-3aced6d66369__f88f944c-7450-46b0-9069-79852ea2cc98__detail-1786080355429-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15718,6 +16543,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f5b8a747-6a84-4148-8a75-319fda46f1c5__f83dbd65-625f-4631-a1b6-ba8c037aaf14__detail-1786080381521-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15795,6 +16623,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a3ebd8c9-a6fa-4c66-aeae-b06204c54087__3667f5c2-bb48-4ac2-9910-100ddaa47b57__detail-1786080420199-9.webp",
         "sortOrder": 9
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15857,6 +16688,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/ec44a960-c95b-4789-9a17-ee866d8db760__ff104229-fe5e-44de-94c4-5e844c12a329__detail-1787721873897-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15924,6 +16758,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7e3e0ea1-3890-4597-8e06-ebc77b3d3e6b__c9ce9647-9afa-4d7a-b234-4ffb27342ee1__detail-1787721955235-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -15976,6 +16813,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/b5b65f9c-62f7-4bf8-9715-4f746444c9fd__04e64cef-73dc-433f-9548-402a0a35b6f7__detail-1787722090749-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16023,6 +16863,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/fb77b0c1-b40f-4e16-a24f-ecf3041c123b__cd6b09d8-57ee-4d59-91b5-3e0f37cd0a61__detail-1787722134956-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16049,7 +16892,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "0b0fcae2-9e68-4b15-be91-87d957c1f8e3",
@@ -16117,6 +16963,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/0b0fcae2-9e68-4b15-be91-87d957c1f8e3__0ca7c98a-1e09-4884-8599-8b5518de460b__detail-1787722353214-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16160,6 +17009,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/e3845a62-1a06-4e84-b000-1fd6d2e22130__d299329a-a1f2-43fa-82a7-ecd6f7964b7f__detail-1787722440692-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16227,6 +17079,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7d2c0ada-1ae7-4f61-9c6c-46116eb04e7b__a84083d0-d9a5-4e58-a0e9-e4eef2eae3d6__detail-1787722597189-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16279,6 +17134,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/d60f2091-ef88-4d19-8391-1f5799910e6f__ac99e23a-c565-4543-9e72-2516d47f1f39__detail-1787722688402-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16346,6 +17204,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/f845556e-4ecc-4404-8678-9bd0161a6969__89b7158d-7b4e-433a-80e3-7426449190a7__detail-1787722760211-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16388,6 +17249,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/43dc51d6-701f-4620-b631-cd0176bbd6aa__6a771a3a-448b-48ec-95f7-740cff6a70bd__detail-1787722796697-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16431,6 +17295,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c05f333e-3921-47d7-8e38-93593c4e83de__d622665c-2366-4d5e-b262-2205c807cc0a__detail-1787723005254-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16474,6 +17341,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6c48b11a-ee10-4c2a-9d18-437c23251066__ae36a2d0-67d6-4a2a-8498-6157ee1c9445__detail-1787723034073-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16518,6 +17388,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/75d04279-181f-467d-88d8-0788be5d68b2__eb1fd428-7f02-4b25-8f3b-762d942ca7d9__detail-1787723104020-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16562,6 +17435,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/37e7fb20-6f08-486c-93de-0c7bef0edd7f__762e36c4-73e5-4003-82f7-ac22f4f97939__detail-1787723165094-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16614,6 +17490,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/49978224-a3f6-4f8a-aaad-c9cf7ec89c08__a3b1d742-e668-4976-a1e7-101c0d1e5731__detail-1787723583105-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16686,6 +17565,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/368b1eaa-bb57-4873-b2c9-7f29cf9d1849__6f397eb0-018f-4e8a-a8c0-a87ae35910c8__detail-1787723645793-8.webp",
         "sortOrder": 8
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16753,6 +17635,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/8f4fb365-0b42-4450-9cd0-96d284b8f5f0__d0146d8a-72f1-40e0-91df-ed5731cc87c1__detail-1787723687420-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16779,7 +17664,10 @@ export const worksData = [
     "isFeatured": false,
     "isPinned": false,
     "pinOrder": null,
-    "images": []
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
   },
   {
     "id": "3c304ee9-f671-4f37-a214-c6e5186e6630",
@@ -16837,6 +17725,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/3c304ee9-f671-4f37-a214-c6e5186e6630__becb394c-ca78-40c3-b486-4b4dd11dfe10__detail-1787723802938-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16904,6 +17795,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9c213f65-46d3-4d7a-bc0c-61c4cbb143f5__b3d048d9-17ab-4b29-b18e-fc717b90d93f__detail-1787723849181-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -16951,6 +17845,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/c7564e3f-ff47-4fb3-bd76-020c87c7cf4f__723c48f0-edf1-4162-94e6-6554109902af__detail-1787723880970-3.webp",
         "sortOrder": 3
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17003,6 +17900,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/760d3f07-285a-4800-b240-ea23be0bab60__c2ee5ef7-ba01-4439-8c4d-ed1e933bdde8__detail-1788942787103-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17045,6 +17945,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/6ad88fde-3a30-4972-ac31-23632939f95d__3d866be7-4f0a-49fa-ac02-f85c4a7d5518__detail-1788942861575-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17088,6 +17991,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/eae7857e-7015-46ca-a703-073baf30e664__3f24acc3-1da1-4ea2-a723-3f1b91793b63__detail-1788942905728-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17131,6 +18037,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/989d954c-c4cb-4eab-b12d-c104acd7a1b3__855c2889-18b5-499c-b3e3-86a19f87a4c1__detail-1788942946694-2.webp",
         "sortOrder": 2
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17194,6 +18103,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/9a648c04-068a-4ded-a26d-6faedd8fd87c__d0f5d8cb-80d6-4d66-8810-21cdc2617af3__detail-1788943073165-6.webp",
         "sortOrder": 6
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17246,6 +18158,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/a6a2dca0-b8b7-4390-8c85-f61547c59472__95d86779-b2ee-4474-9c54-e55b19e05aa7__detail-1788943259902-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17314,6 +18229,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/12ffdd86-6961-4334-8502-5733a593b861__2c62b359-e80b-4608-b15a-f9e764871d12__detail-1788943320688-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17372,6 +18290,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/31651593-e6c7-4ed3-8aae-2dd06749df5b__96b6371e-5062-417f-b757-c4ad42b7f39f__detail-1788943356370-5.webp",
         "sortOrder": 5
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17424,6 +18345,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/7cbafe9f-6bde-44bf-98ad-af5ec26ec6ac__e0487708-a11b-4e88-9e47-fc6d5b0c1cde__detail-1788943402773-4.webp",
         "sortOrder": 4
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   },
   {
@@ -17492,6 +18416,9 @@ export const worksData = [
         "url": "./assets/portfolio/details/448f6aef-61c2-41cb-9f5b-911b59af0310__099c0d50-f078-4095-85a3-2ee21d29077f__detail-1788943438842-7.webp",
         "sortOrder": 7
       }
+    ],
+    "tags": [
+      "실무 프로젝트"
     ]
   }
 ];

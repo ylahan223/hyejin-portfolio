@@ -60,8 +60,8 @@
             <div class="form-section">
               <h3>태그</h3>
               <fieldset class="type-options"><legend>작업 유형 · 신규 등록 필수</legend><label><input type="radio" name="workType" value="실무 프로젝트"> 실무 프로젝트</label><label><input type="radio" name="workType" value="개인 프로젝트"> 개인 프로젝트</label></fieldset>
-              <div class="tool-entry"><input id="tag-input" list="tag-options" aria-label="자유 태그" placeholder="자유 태그 · 쉼표 또는 Enter"><button type="button" id="add-tag">추가</button></div>
-              <datalist id="tag-options"></datalist><div id="project-tags" class="tool-tags"></div><div id="tag-suggestions" class="tool-suggestions"></div>
+              <div class="tool-entry project-tag-entry"><input id="tag-input" list="tag-options" aria-label="자유 태그" placeholder="자유 태그 · 쉼표 또는 Enter"><button type="button" id="add-tag">추가</button></div>
+              <button type="button" id="clear-free-tags" class="tag-clear-button">자유 태그 전체 제거</button><datalist id="tag-options"></datalist><div id="project-tags" class="tool-tags"></div><div id="tag-suggestions" class="tool-suggestions"></div>
             </div><div class="form-section"><h3>이미지</h3>
               <div class="image-fields">
                 <div>
@@ -133,7 +133,7 @@
           <strong><span id="bulk-count">0</span>개 선택됨</strong>
           <select id="bulk-category" aria-label="일괄 변경할 카테고리"><option>콘텐츠 디자인</option><option>광고·캠페인</option><option>상세·랜딩페이지</option><option>웹디자인</option><option>퍼블리싱</option><option>그래픽·인쇄물</option></select>
           <button type="button" id="bulk-apply">카테고리 변경</button><i class="bulk-sep" aria-hidden="true"></i>
-          <button type="button" id="bulk-tags">유형·태그 변경</button><button type="button" id="bulk-dates">제작일 변경</button><i class="bulk-sep" aria-hidden="true"></i>
+          <button type="button" id="bulk-tags">유형·태그 변경</button><button type="button" id="bulk-clear-tags">자유 태그 일괄 제거</button><button type="button" id="bulk-dates">제작일 변경</button><i class="bulk-sep" aria-hidden="true"></i>
           <button type="button" id="bulk-public">공개</button><button type="button" class="ghost" id="bulk-private">비공개</button><i class="bulk-sep" aria-hidden="true"></i>
           <button type="button" class="ghost" id="bulk-clear">선택 해제</button>
         </div>
@@ -154,7 +154,7 @@
         <div class="bulk-date-actions"><button type="button" id="bulk-date-cancel">취소</button><button type="submit">변경 저장</button></div>
       </form>
     </dialog>
-    <dialog id="bulk-tag-dialog" aria-labelledby="bulk-tag-title"><form id="bulk-tag-form"><h2 id="bulk-tag-title">작업 유형·자유 태그 일괄 변경</h2><p id="bulk-tag-count"></p><label class="field"><span>작업 유형</span><select id="bulk-type"><option value="">기존 유형 유지</option><option>실무 프로젝트</option><option>개인 프로젝트</option></select></label><label class="field"><span>추가할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-add" list="tag-options"></label><label class="field"><span>제거할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-remove" list="tag-options"></label><p>카테고리와 다른 정보는 유지됩니다.</p><div id="bulk-tag-preview" aria-live="polite"></div><p id="bulk-tag-error" role="alert"></p><div class="bulk-date-actions"><button type="button" id="bulk-tag-cancel">취소</button><button type="submit" id="bulk-tag-submit">미리보기</button></div></form></dialog>
+    <dialog id="bulk-tag-dialog" aria-labelledby="bulk-tag-title"><form id="bulk-tag-form"><h2 id="bulk-tag-title">작업 유형·자유 태그 일괄 변경</h2><p id="bulk-tag-count"></p><label class="field"><span>작업 유형</span><select id="bulk-type"><option value="">기존 유형 유지</option><option>실무 프로젝트</option><option>개인 프로젝트</option></select></label><label class="field"><span>추가할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-add" list="tag-options"></label><label class="field"><span>제거할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-remove" list="tag-options"></label><label class="bulk-clear-option"><input type="checkbox" id="bulk-remove-all-tags"> 선택 작업의 자유 태그 전체 제거 · 작업 유형 유지</label><p>카테고리와 다른 정보는 유지됩니다.</p><div id="bulk-tag-preview" aria-live="polite"></div><p id="bulk-tag-error" role="alert"></p><div class="bulk-date-actions"><button type="button" id="bulk-tag-cancel">취소</button><button type="submit" id="bulk-tag-submit">미리보기</button></div></form></dialog>
     <script type="module" src="admin-local.js"></script>
   </body>
 </html>
