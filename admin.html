@@ -31,7 +31,7 @@
         <section class="panel form-panel">
           <div class="panel-heading">
             <div><span class="step">01</span><h2 id="form-mode-title">새 작업 등록</h2></div>
-            <p>필수 항목은 제목 하나뿐이에요.</p>
+            <p>신규 작업은 제목과 작업 유형을 선택해주세요.</p>
           </div>
           <form id="work-form">
             <div class="form-section">
@@ -58,7 +58,11 @@
               </div>
             </div>
             <div class="form-section">
-              <h3>이미지</h3>
+              <h3>태그</h3>
+              <fieldset class="type-options"><legend>작업 유형 · 신규 등록 필수</legend><label><input type="radio" name="workType" value="실무 프로젝트"> 실무 프로젝트</label><label><input type="radio" name="workType" value="개인 프로젝트"> 개인 프로젝트</label></fieldset>
+              <div class="tool-entry"><input id="tag-input" list="tag-options" aria-label="자유 태그" placeholder="자유 태그 · 쉼표 또는 Enter"><button type="button" id="add-tag">추가</button></div>
+              <datalist id="tag-options"></datalist><div id="project-tags" class="tool-tags"></div><div id="tag-suggestions" class="tool-suggestions"></div>
+            </div><div class="form-section"><h3>이미지</h3>
               <div class="image-fields">
                 <div>
                   <span class="sub-label">대표 이미지</span>
@@ -104,7 +108,7 @@
               <div class="zoom-control"><button type="button" id="zoom-out" aria-label="축소">−</button><label><span>확대·축소</span><input id="zoom-range" type="range" min="1" max="3" step=".05"></label><button type="button" id="zoom-in" aria-label="확대">＋</button></div>
               <button type="button" class="thumbnail-reset" id="thumb-reset">위치·확대 초기화</button>
             </div>
-            <article class="work-card preview-card"><div class="thumbnail" id="card-thumbnail"></div><div class="card-copy"><span class="category" id="preview-category"></span><h3 id="preview-title"></h3><p id="preview-meta"></p></div></article>
+            <article class="work-card preview-card"><div class="thumbnail" id="card-thumbnail"></div><div class="card-copy"><span class="card-badges"><span class="category" id="preview-category"></span><span class="project-tag type-tag" id="preview-type" hidden></span></span><h3 id="preview-title"></h3><p id="preview-meta"></p></div></article>
             <p class="save-note">전체 보기는 같은 이미지를 흐린 배경으로 채워 빈 공간을 자연스럽게 보여줘요.</p>
           </section>
         </aside>
@@ -121,19 +125,19 @@
           <div class="filters">
             <div class="search-box"><input id="work-search" placeholder="제목·도구·설명 검색" aria-label="작업 검색"><button type="button" id="work-search-clear" aria-label="검색어 지우기" hidden>×</button></div>
             <select id="work-filter"><option>전체</option><option>콘텐츠 디자인</option><option>광고·캠페인</option><option>상세·랜딩페이지</option><option>웹디자인</option><option>퍼블리싱</option><option>그래픽·인쇄물</option></select>
-            <select id="work-sort" aria-label="작업 정렬"><option value="registered-new">등록순 · 최신</option><option value="registered-old">등록순 · 오래된</option><option value="date-new">제작일 · 최신</option><option value="date-old">제작일 · 오래된</option><option value="title">작업명순</option></select>
+            <select id="type-filter" aria-label="작업 유형 필터"><option value="전체">유형 전체</option><option value="미설정">유형 미설정</option><option>실무 프로젝트</option><option>개인 프로젝트</option></select><select id="work-sort" aria-label="작업 정렬"><option value="registered-new">등록순 · 최신</option><option value="registered-old">등록순 · 오래된</option><option value="date-new">제작일 · 최신</option><option value="date-old">제작일 · 오래된</option><option value="title">작업명순</option></select>
             <select id="work-page-size" aria-label="한 페이지에 보여줄 개수"><option value="10">10개씩</option><option value="20">20개씩</option><option value="50">50개씩</option><option value="100">100개씩</option><option value="0">전체 보기</option></select>
           </div>
         </div>
-        <div class="bulk-bar" id="bulk-bar">
+        <div class="selection-tools"><button type="button" id="select-results">검색·필터 결과 전체 선택</button><span id="selection-scope" aria-live="polite"></span></div><div class="bulk-bar" id="bulk-bar">
           <strong><span id="bulk-count">0</span>개 선택됨</strong>
           <select id="bulk-category" aria-label="일괄 변경할 카테고리"><option>콘텐츠 디자인</option><option>광고·캠페인</option><option>상세·랜딩페이지</option><option>웹디자인</option><option>퍼블리싱</option><option>그래픽·인쇄물</option></select>
           <button type="button" id="bulk-apply">카테고리 변경</button><i class="bulk-sep" aria-hidden="true"></i>
-          <button type="button" id="bulk-dates">제작일 변경</button><i class="bulk-sep" aria-hidden="true"></i>
+          <button type="button" id="bulk-tags">유형·태그 변경</button><button type="button" id="bulk-dates">제작일 변경</button><i class="bulk-sep" aria-hidden="true"></i>
           <button type="button" id="bulk-public">공개</button><button type="button" class="ghost" id="bulk-private">비공개</button><i class="bulk-sep" aria-hidden="true"></i>
           <button type="button" class="ghost" id="bulk-clear">선택 해제</button>
         </div>
-        <div class="table-wrap"><table><thead><tr><th class="check-col"><input type="checkbox" id="select-all" aria-label="현재 페이지 전체 선택"></th><th>작업</th><th>카테고리</th><th>제작일</th><th>공개</th><th>메인</th><th>중요</th><th>관리</th></tr></thead><tbody id="works-table"></tbody></table><div id="works-empty" class="empty"></div></div>
+        <div class="table-wrap"><table><thead><tr><th class="check-col"><input type="checkbox" id="select-all" aria-label="현재 페이지 전체 선택"></th><th>작업</th><th>카테고리</th><th>작업 유형</th><th>제작일</th><th>공개</th><th>메인</th><th>중요</th><th>관리</th></tr></thead><tbody id="works-table"></tbody></table><div id="works-empty" class="empty"></div></div>
         <div class="table-pagination" id="works-pagination" hidden></div>
       </section>
     </main>
@@ -150,6 +154,7 @@
         <div class="bulk-date-actions"><button type="button" id="bulk-date-cancel">취소</button><button type="submit">변경 저장</button></div>
       </form>
     </dialog>
+    <dialog id="bulk-tag-dialog" aria-labelledby="bulk-tag-title"><form id="bulk-tag-form"><h2 id="bulk-tag-title">작업 유형·자유 태그 일괄 변경</h2><p id="bulk-tag-count"></p><label class="field"><span>작업 유형</span><select id="bulk-type"><option value="">기존 유형 유지</option><option>실무 프로젝트</option><option>개인 프로젝트</option></select></label><label class="field"><span>추가할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-add" list="tag-options"></label><label class="field"><span>제거할 자유 태그 · 쉼표 구분</span><input id="bulk-tag-remove" list="tag-options"></label><p>카테고리와 다른 정보는 유지됩니다.</p><div id="bulk-tag-preview" aria-live="polite"></div><p id="bulk-tag-error" role="alert"></p><div class="bulk-date-actions"><button type="button" id="bulk-tag-cancel">취소</button><button type="submit" id="bulk-tag-submit">미리보기</button></div></form></dialog>
     <script type="module" src="admin-local.js"></script>
   </body>
 </html>
