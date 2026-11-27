@@ -1,6 +1,3256 @@
 // Static portfolio data. Managed by admin.html.
 export const worksData = [
   {
+    "id": "2b093dee-10d2-5e71-9f03-d7eed999d9c0",
+    "title": "티원클리닉 12월 크리스마스 이벤트",
+    "category": "광고·캠페인",
+    "startDate": "2026-11-26",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/2b093dee-10d2-5e71-9f03-d7eed999d9c0__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "d0016d0d-998d-5f1e-9bfc-3905da766f13",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__d0016d0d-998d-5f1e-9bfc-3905da766f13__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "a1214ded-0b9f-5e57-8049-d376dad47242",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__a1214ded-0b9f-5e57-8049-d376dad47242__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "30080f65-5a33-5feb-8ec3-92a314cdb57f",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__30080f65-5a33-5feb-8ec3-92a314cdb57f__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "367d4967-755f-5c46-a1b7-bf0631db158d",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__367d4967-755f-5c46-a1b7-bf0631db158d__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "5fca7b39-c2bf-536d-a0f7-d7e4ff449a68",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__5fca7b39-c2bf-536d-a0f7-d7e4ff449a68__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "f2c5de54-9de3-5c25-8d1a-f3813cda2f78",
+        "url": "./assets/portfolio/details/2b093dee-10d2-5e71-9f03-d7eed999d9c0__f2c5de54-9de3-5c25-8d1a-f3813cda2f78__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "347ba6f2-aaec-5b18-90d3-018855fce52e",
+    "title": "치유한방병원 폐암수술 후 관리 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-25",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/347ba6f2-aaec-5b18-90d3-018855fce52e__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "9e9b8b9e-dc71-5966-94a0-f12a50c4fcb9",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__9e9b8b9e-dc71-5966-94a0-f12a50c4fcb9__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "26472646-681b-5a00-a3d3-68bc98e2aaf8",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__26472646-681b-5a00-a3d3-68bc98e2aaf8__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "f1edb61a-35f3-553d-9269-7ccbf142e65b",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__f1edb61a-35f3-553d-9269-7ccbf142e65b__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "3ca8ac66-4cc4-5834-892b-8f9e7134b175",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__3ca8ac66-4cc4-5834-892b-8f9e7134b175__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "209f56cb-cdbb-5858-bac5-2060d5a52722",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__209f56cb-cdbb-5858-bac5-2060d5a52722__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "8651568a-7cc4-5da3-aab6-54358f6389fc",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__8651568a-7cc4-5da3-aab6-54358f6389fc__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "0b696427-f70b-55a4-b600-6481d61e1f6e",
+        "url": "./assets/portfolio/details/347ba6f2-aaec-5b18-90d3-018855fce52e__0b696427-f70b-55a4-b600-6481d61e1f6e__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "57d097af-9eec-539c-ac1d-8df2ba2c6b62",
+    "title": "순천척병원 무릎인공관절수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-25",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/57d097af-9eec-539c-ac1d-8df2ba2c6b62__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "5a33987e-0107-50ae-b761-025365e06152",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__5a33987e-0107-50ae-b761-025365e06152__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "42d0d8ca-03f0-557a-a18a-ebe5f447207d",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__42d0d8ca-03f0-557a-a18a-ebe5f447207d__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "0c2b70de-95de-561c-8ca5-5b1f5f79efbe",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__0c2b70de-95de-561c-8ca5-5b1f5f79efbe__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "10c3ebc0-aada-53f2-affb-5ea617b16d6f",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__10c3ebc0-aada-53f2-affb-5ea617b16d6f__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "911692ba-4984-514d-a532-3825f9799149",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__911692ba-4984-514d-a532-3825f9799149__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "27ac7bd4-d427-5ba0-b7d1-ad54b2612be1",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__27ac7bd4-d427-5ba0-b7d1-ad54b2612be1__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "baf7d37d-89b8-5e18-9d80-5533d2d55e61",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__baf7d37d-89b8-5e18-9d80-5533d2d55e61__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "5a23e0f2-06ee-5a8e-a1d4-ef13ab34244e",
+        "url": "./assets/portfolio/details/57d097af-9eec-539c-ac1d-8df2ba2c6b62__5a23e0f2-06ee-5a8e-a1d4-ef13ab34244e__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "a0b64228-786c-54ac-b3a5-1abbdbef646d",
+    "title": "순천척병원 척추내시경수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-24",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/a0b64228-786c-54ac-b3a5-1abbdbef646d__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "a374efc4-53ab-59a1-9f81-87c0a5c04348",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__a374efc4-53ab-59a1-9f81-87c0a5c04348__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "5bc30873-e912-5a97-a49f-a8acb71a9d5c",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__5bc30873-e912-5a97-a49f-a8acb71a9d5c__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "55603588-cc18-537a-967b-c7879fcc6baa",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__55603588-cc18-537a-967b-c7879fcc6baa__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "68648257-87f6-5cf9-84e9-2f8cca03f534",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__68648257-87f6-5cf9-84e9-2f8cca03f534__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "335173c6-d46e-5b33-afeb-0ca7b1b6218e",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__335173c6-d46e-5b33-afeb-0ca7b1b6218e__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "f0a1e3b9-4079-5c7b-85ba-4736ab49a1f5",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__f0a1e3b9-4079-5c7b-85ba-4736ab49a1f5__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "2ebdbb80-2e20-5a27-bc45-fadc5eaea6ef",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__2ebdbb80-2e20-5a27-bc45-fadc5eaea6ef__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "13494209-db38-5198-8811-408bdf2b77e9",
+        "url": "./assets/portfolio/details/a0b64228-786c-54ac-b3a5-1abbdbef646d__13494209-db38-5198-8811-408bdf2b77e9__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "c5a2e600-923e-52cc-b9ca-679bd33953fe",
+    "title": "치유한방병원 간암초기증상 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-23",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/c5a2e600-923e-52cc-b9ca-679bd33953fe__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "6a4d9423-ea09-5660-9349-50e641685c16",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__6a4d9423-ea09-5660-9349-50e641685c16__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "2c785298-34f5-5df6-811b-7d17f6514039",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__2c785298-34f5-5df6-811b-7d17f6514039__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "580ec399-3514-5561-97fd-b03c580fa244",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__580ec399-3514-5561-97fd-b03c580fa244__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "d4632e43-0906-5ab0-8adc-76883e507c75",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__d4632e43-0906-5ab0-8adc-76883e507c75__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "368fdaff-b3cd-5613-b0d2-a7cbcf3f13a9",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__368fdaff-b3cd-5613-b0d2-a7cbcf3f13a9__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "feb8eb24-4d68-5343-93e5-e7131904017d",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__feb8eb24-4d68-5343-93e5-e7131904017d__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "8080b22a-b03e-53fa-a877-00c1db08205d",
+        "url": "./assets/portfolio/details/c5a2e600-923e-52cc-b9ca-679bd33953fe__8080b22a-b03e-53fa-a877-00c1db08205d__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "d06f303f-08ab-5296-b0a2-4309424fc6bc",
+    "title": "순천척병원 발바닥통증 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-23",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d06f303f-08ab-5296-b0a2-4309424fc6bc__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "72eb4432-486e-5cd1-a28a-8ab78d3249d7",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__72eb4432-486e-5cd1-a28a-8ab78d3249d7__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "351cefde-db15-580f-8c07-a414c399dfe7",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__351cefde-db15-580f-8c07-a414c399dfe7__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "af461db9-51ab-5d29-9088-1170b46bb49c",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__af461db9-51ab-5d29-9088-1170b46bb49c__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "9560022b-9855-5c60-9336-8ee1b6fbf2af",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__9560022b-9855-5c60-9336-8ee1b6fbf2af__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "e64e04ef-c73f-529c-8958-bc5b14e2b595",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__e64e04ef-c73f-529c-8958-bc5b14e2b595__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "617395f0-3fea-5459-b45a-715c7255463b",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__617395f0-3fea-5459-b45a-715c7255463b__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "924c4e1e-8466-5f9d-bd21-e9344945b033",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__924c4e1e-8466-5f9d-bd21-e9344945b033__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "77e4ab2e-79ae-50ea-bea3-7fb8e353e251",
+        "url": "./assets/portfolio/details/d06f303f-08ab-5296-b0a2-4309424fc6bc__77e4ab2e-79ae-50ea-bea3-7fb8e353e251__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "bd733cd3-2649-53e4-b8ba-7c90e769dbe2",
+    "title": "방지성에이스의원 12월 휴무 팝업 배너",
+    "category": "광고·캠페인",
+    "startDate": "2026-11-23",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/bd733cd3-2649-53e4-b8ba-7c90e769dbe2__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f64828b4-5906-543a-bb6f-3d2ce3f05b29",
+    "title": "치유한방병원 자궁경부암검사시기 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-20",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f64828b4-5906-543a-bb6f-3d2ce3f05b29__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "fe470b55-be73-58ed-b43c-8e3a60c49673",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__fe470b55-be73-58ed-b43c-8e3a60c49673__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "59630d62-382b-56ae-b8ee-5fd2f6db5bcb",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__59630d62-382b-56ae-b8ee-5fd2f6db5bcb__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "d0c1687b-7144-5627-a936-19653d4947db",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__d0c1687b-7144-5627-a936-19653d4947db__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "1d567421-a841-512a-8885-35143a868add",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__1d567421-a841-512a-8885-35143a868add__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "434a5813-dc7a-577e-b409-2c87909ec79b",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__434a5813-dc7a-577e-b409-2c87909ec79b__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "b8d63f8f-99b2-5729-ba7c-a9b23f0def49",
+        "url": "./assets/portfolio/details/f64828b4-5906-543a-bb6f-3d2ce3f05b29__b8d63f8f-99b2-5729-ba7c-a9b23f0def49__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f8c48848-909a-55c4-aac3-00a3258a4a91",
+    "title": "연세UP성형외과 로고 디자인",
+    "category": "그래픽·인쇄물",
+    "startDate": "2026-11-19",
+    "endDate": "2026-11-20",
+    "tools": [
+      "Figma",
+      "Photoshop",
+      "ChatGPT"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f8c48848-909a-55c4-aac3-00a3258a4a91__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "9b9cfb4b-004e-5793-80a9-2b98a9f84608",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__9b9cfb4b-004e-5793-80a9-2b98a9f84608__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "1764ca8c-eb49-5bc6-8410-ddb66d5117dc",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__1764ca8c-eb49-5bc6-8410-ddb66d5117dc__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "e5ae8d6c-265b-5fe4-94ac-bc5a7ef01c39",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__e5ae8d6c-265b-5fe4-94ac-bc5a7ef01c39__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "bbaba114-092e-5e26-a9cc-2bce6643cfea",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__bbaba114-092e-5e26-a9cc-2bce6643cfea__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "c4188905-df2b-5819-8033-9bd1014b7459",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__c4188905-df2b-5819-8033-9bd1014b7459__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "c56dc428-1585-5a27-9021-2d02e12e626b",
+        "url": "./assets/portfolio/details/f8c48848-909a-55c4-aac3-00a3258a4a91__c56dc428-1585-5a27-9021-2d02e12e626b__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "dabd7217-d09d-509d-92c4-483d14ec9b42",
+    "title": "순천척병원 목디스크 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-19",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/dabd7217-d09d-509d-92c4-483d14ec9b42__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "c1364469-a198-5f12-81f5-7dd755ff68b1",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__c1364469-a198-5f12-81f5-7dd755ff68b1__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "4787dcac-eb59-5c68-8cc7-344c969896fe",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__4787dcac-eb59-5c68-8cc7-344c969896fe__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "19a66982-07eb-57bb-8247-81f38d58752c",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__19a66982-07eb-57bb-8247-81f38d58752c__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "edc6b26e-ab7b-5bd0-b9df-418afb81f66c",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__edc6b26e-ab7b-5bd0-b9df-418afb81f66c__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "ad010a9f-c12d-59fa-a0db-631bb087c538",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__ad010a9f-c12d-59fa-a0db-631bb087c538__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "5e14f3f8-b152-5457-8606-7c0c50371667",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__5e14f3f8-b152-5457-8606-7c0c50371667__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "16cff6d1-5214-5120-bf8c-ea7a8841d8b2",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__16cff6d1-5214-5120-bf8c-ea7a8841d8b2__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "1ba998fd-5eb2-59f1-b31c-91d8c584c258",
+        "url": "./assets/portfolio/details/dabd7217-d09d-509d-92c4-483d14ec9b42__1ba998fd-5eb2-59f1-b31c-91d8c584c258__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "57ec826d-c3c4-59d0-aa2e-7af19f88db76",
+    "title": "순천척병원 순천신경외과 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-18",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/57ec826d-c3c4-59d0-aa2e-7af19f88db76__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "a7442772-4dab-52c7-bb8c-138e6536b508",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__a7442772-4dab-52c7-bb8c-138e6536b508__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "012b37e7-5cc6-544b-9269-a4052d9d2e2b",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__012b37e7-5cc6-544b-9269-a4052d9d2e2b__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "65a31cd9-1ab9-53a9-97ab-1b0901f0f7e4",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__65a31cd9-1ab9-53a9-97ab-1b0901f0f7e4__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "9ebb89d6-aa20-57e1-8225-51e9ae4c3b67",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__9ebb89d6-aa20-57e1-8225-51e9ae4c3b67__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "a3b859a3-7ded-5b27-a15b-0ae9d68a81e7",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__a3b859a3-7ded-5b27-a15b-0ae9d68a81e7__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "1c5f582e-8295-59b6-932c-bf7739b27480",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__1c5f582e-8295-59b6-932c-bf7739b27480__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "46c79aa9-327c-5dac-b35d-e10e38a28bf4",
+        "url": "./assets/portfolio/details/57ec826d-c3c4-59d0-aa2e-7af19f88db76__46c79aa9-327c-5dac-b35d-e10e38a28bf4__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "d692489c-07bd-5032-a664-1e946fc099b2",
+    "title": "모델모아 SNS 12월 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-18",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d692489c-07bd-5032-a664-1e946fc099b2__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "d2b40da7-157c-5f51-8d00-7e5cc94ceaa8",
+        "url": "./assets/portfolio/details/d692489c-07bd-5032-a664-1e946fc099b2__d2b40da7-157c-5f51-8d00-7e5cc94ceaa8__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "d4b8575c-d04b-55c3-947b-494d4e364856",
+        "url": "./assets/portfolio/details/d692489c-07bd-5032-a664-1e946fc099b2__d4b8575c-d04b-55c3-947b-494d4e364856__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "68524d30-bcb4-55fc-be1d-5dd10a40dcf7",
+        "url": "./assets/portfolio/details/d692489c-07bd-5032-a664-1e946fc099b2__68524d30-bcb4-55fc-be1d-5dd10a40dcf7__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "83881a11-404b-542f-b35a-a196f6ef4895",
+    "title": "모델모아 SNS 12월 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-18",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/83881a11-404b-542f-b35a-a196f6ef4895__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "5d67da47-8ede-549c-87f6-1afaefb33d4b",
+        "url": "./assets/portfolio/details/83881a11-404b-542f-b35a-a196f6ef4895__5d67da47-8ede-549c-87f6-1afaefb33d4b__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "4a1ca6eb-063e-586d-8584-76b5ae9c6ab0",
+        "url": "./assets/portfolio/details/83881a11-404b-542f-b35a-a196f6ef4895__4a1ca6eb-063e-586d-8584-76b5ae9c6ab0__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "3bf6c2da-ef1e-5e74-9239-894cf2133fe9",
+        "url": "./assets/portfolio/details/83881a11-404b-542f-b35a-a196f6ef4895__3bf6c2da-ef1e-5e74-9239-894cf2133fe9__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "99bc9ca2-2fed-50cf-9f71-b04ebb11260f",
+    "title": "연세UP 귀족수술 상세페이지",
+    "category": "상세·랜딩페이지",
+    "startDate": "2026-11-17",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/99bc9ca2-2fed-50cf-9f71-b04ebb11260f__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "39d939e0-e95b-532b-8347-656b3d587829",
+        "url": "./assets/portfolio/details/99bc9ca2-2fed-50cf-9f71-b04ebb11260f__39d939e0-e95b-532b-8347-656b3d587829__detail.webp",
+        "sortOrder": 0
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "1f7c8218-df25-5fb2-bacf-edf09208517d",
+    "title": "순천척병원 회전근개파열 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-17",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/1f7c8218-df25-5fb2-bacf-edf09208517d__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "aaf1e1b0-b54a-545a-9652-45279560efb4",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__aaf1e1b0-b54a-545a-9652-45279560efb4__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "322a9e9b-8f08-56cd-921e-20d8ef7f0abf",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__322a9e9b-8f08-56cd-921e-20d8ef7f0abf__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2553cc5f-9bdb-5b3b-abd7-a8ad1d20fcaf",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__2553cc5f-9bdb-5b3b-abd7-a8ad1d20fcaf__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "4a98d25a-d643-5ff6-a8c3-159ef013753b",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__4a98d25a-d643-5ff6-a8c3-159ef013753b__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "3adb5582-2c10-52ff-9a7e-81d889ff0e75",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__3adb5582-2c10-52ff-9a7e-81d889ff0e75__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "854e38b8-6baa-5df8-953b-b9ef800d539c",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__854e38b8-6baa-5df8-953b-b9ef800d539c__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "d27aad15-3735-5c16-a35e-3efbdd9704fb",
+        "url": "./assets/portfolio/details/1f7c8218-df25-5fb2-bacf-edf09208517d__d27aad15-3735-5c16-a35e-3efbdd9704fb__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "a1ca2690-1499-5e78-841b-ba9878d7cca0",
+    "title": "루트테마피부과 12월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-17",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/a1ca2690-1499-5e78-841b-ba9878d7cca0__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "df3c8240-ea22-5fc8-922b-9fc3cdf2155a",
+        "url": "./assets/portfolio/details/a1ca2690-1499-5e78-841b-ba9878d7cca0__df3c8240-ea22-5fc8-922b-9fc3cdf2155a__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "f5343bfe-d88a-5bd7-bb5f-1cd1c2cba2c8",
+        "url": "./assets/portfolio/details/a1ca2690-1499-5e78-841b-ba9878d7cca0__f5343bfe-d88a-5bd7-bb5f-1cd1c2cba2c8__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "5efb9522-6d49-5969-b824-5e16823529ec",
+        "url": "./assets/portfolio/details/a1ca2690-1499-5e78-841b-ba9878d7cca0__5efb9522-6d49-5969-b824-5e16823529ec__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "d178c705-2452-58a8-a1fc-ad975cc5805d",
+    "title": "치유한방병원 인천대장암항암관리 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d178c705-2452-58a8-a1fc-ad975cc5805d__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "b8858daf-e26d-5108-819d-667505fe1402",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__b8858daf-e26d-5108-819d-667505fe1402__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "5fa0d374-48d4-56e2-b4a9-fcb7f6f63c06",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__5fa0d374-48d4-56e2-b4a9-fcb7f6f63c06__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "67b56e2b-87f3-5988-a8f8-5982e53e0cc9",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__67b56e2b-87f3-5988-a8f8-5982e53e0cc9__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "a086ea7f-fb62-547b-a0eb-ae04ecc10b4c",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__a086ea7f-fb62-547b-a0eb-ae04ecc10b4c__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "3a1f4c0e-1bb1-5fe1-9497-67e58792d791",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__3a1f4c0e-1bb1-5fe1-9497-67e58792d791__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "bb4baad9-67cf-5f2a-9b02-071d537103a1",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__bb4baad9-67cf-5f2a-9b02-071d537103a1__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "9fa6f2b6-00af-588c-9354-5a4316deff05",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__9fa6f2b6-00af-588c-9354-5a4316deff05__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "1421ef0d-2094-518d-bf81-e033806fab19",
+        "url": "./assets/portfolio/details/d178c705-2452-58a8-a1fc-ad975cc5805d__1421ef0d-2094-518d-bf81-e033806fab19__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "b4b6331a-5ddf-5661-be74-023009c0a4ca",
+    "title": "신세계서울병원 전방십자인대 재활 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/b4b6331a-5ddf-5661-be74-023009c0a4ca__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "025c965a-8595-57b6-a06f-490a364002a9",
+        "url": "./assets/portfolio/details/b4b6331a-5ddf-5661-be74-023009c0a4ca__025c965a-8595-57b6-a06f-490a364002a9__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "8c10c51f-2b10-5cf9-801e-3afdd77d1e1b",
+        "url": "./assets/portfolio/details/b4b6331a-5ddf-5661-be74-023009c0a4ca__8c10c51f-2b10-5cf9-801e-3afdd77d1e1b__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "a182b3f6-283b-5014-b4ea-7fe8956e6e1c",
+        "url": "./assets/portfolio/details/b4b6331a-5ddf-5661-be74-023009c0a4ca__a182b3f6-283b-5014-b4ea-7fe8956e6e1c__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "8505ab2c-2327-56d9-b6f1-916f90a36f59",
+    "title": "신세계서울병원 왼쪽 어깨 저림 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/8505ab2c-2327-56d9-b6f1-916f90a36f59__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "ef901642-bf25-5bde-8e52-e8bd8ac96ebc",
+        "url": "./assets/portfolio/details/8505ab2c-2327-56d9-b6f1-916f90a36f59__ef901642-bf25-5bde-8e52-e8bd8ac96ebc__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "8c79fbc2-625c-5ba2-bfd5-001d5592e14b",
+        "url": "./assets/portfolio/details/8505ab2c-2327-56d9-b6f1-916f90a36f59__8c79fbc2-625c-5ba2-bfd5-001d5592e14b__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "eed02230-4729-59b0-bde9-1ba8f762c782",
+        "url": "./assets/portfolio/details/8505ab2c-2327-56d9-b6f1-916f90a36f59__eed02230-4729-59b0-bde9-1ba8f762c782__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f5a56d24-52cf-528f-9da2-0f60aac3a0d5",
+    "title": "신세계서울병원 발목 인대 봉합술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f5a56d24-52cf-528f-9da2-0f60aac3a0d5__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "2819a2ed-cd1b-5e0c-a2af-dd99a4fb1d49",
+        "url": "./assets/portfolio/details/f5a56d24-52cf-528f-9da2-0f60aac3a0d5__2819a2ed-cd1b-5e0c-a2af-dd99a4fb1d49__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "7ddbaff5-259b-5b2b-97e4-f3dbf62c9b4e",
+        "url": "./assets/portfolio/details/f5a56d24-52cf-528f-9da2-0f60aac3a0d5__7ddbaff5-259b-5b2b-97e4-f3dbf62c9b4e__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "beee28b2-58cd-5c89-884f-3b7e4e120270",
+        "url": "./assets/portfolio/details/f5a56d24-52cf-528f-9da2-0f60aac3a0d5__beee28b2-58cd-5c89-884f-3b7e4e120270__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f3906653-d3f7-53c8-985c-2b175a00a911",
+    "title": "순천척병원 척추관협착증 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f3906653-d3f7-53c8-985c-2b175a00a911__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "e4c3859f-78dc-5656-bd99-7695b013732a",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__e4c3859f-78dc-5656-bd99-7695b013732a__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "d807981a-1d90-50db-b4a6-804376f8bf37",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__d807981a-1d90-50db-b4a6-804376f8bf37__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "1a868328-a9c1-50fa-bfde-29249a8286a0",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__1a868328-a9c1-50fa-bfde-29249a8286a0__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "aa5a5f49-bc46-50e5-a45c-5c8bf6ca846d",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__aa5a5f49-bc46-50e5-a45c-5c8bf6ca846d__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "816287ed-4616-5d03-83dc-72607331c23d",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__816287ed-4616-5d03-83dc-72607331c23d__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "e29c77ca-a78f-5298-ab9f-54ebec329079",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__e29c77ca-a78f-5298-ab9f-54ebec329079__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "717100e1-4ffe-5be7-9a4c-6d30b6e6764f",
+        "url": "./assets/portfolio/details/f3906653-d3f7-53c8-985c-2b175a00a911__717100e1-4ffe-5be7-9a4c-6d30b6e6764f__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "c2baee24-1752-5906-8cab-457856826dc9",
+    "title": "루트테마피부과 12월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/c2baee24-1752-5906-8cab-457856826dc9__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "c1822ca5-3f91-5193-93e2-49aaf2361155",
+        "url": "./assets/portfolio/details/c2baee24-1752-5906-8cab-457856826dc9__c1822ca5-3f91-5193-93e2-49aaf2361155__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "dfd50046-2544-50ef-ba83-a5162842f721",
+        "url": "./assets/portfolio/details/c2baee24-1752-5906-8cab-457856826dc9__dfd50046-2544-50ef-ba83-a5162842f721__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "f34a530a-b61f-54c4-bda9-e5f208c5a28d",
+        "url": "./assets/portfolio/details/c2baee24-1752-5906-8cab-457856826dc9__f34a530a-b61f-54c4-bda9-e5f208c5a28d__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "b1ee7171-8a4f-5273-bcde-104b2f73882f",
+    "title": "루트테마피부과 12월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-16",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/b1ee7171-8a4f-5273-bcde-104b2f73882f__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "efe59ad5-845d-576f-a0b6-5fccd07f2762",
+        "url": "./assets/portfolio/details/b1ee7171-8a4f-5273-bcde-104b2f73882f__efe59ad5-845d-576f-a0b6-5fccd07f2762__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "815fed09-8b0d-5a7f-84fa-9f582fda44de",
+        "url": "./assets/portfolio/details/b1ee7171-8a4f-5273-bcde-104b2f73882f__815fed09-8b0d-5a7f-84fa-9f582fda44de__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "d83b228a-83f4-56d5-a0d6-2611155c6752",
+        "url": "./assets/portfolio/details/b1ee7171-8a4f-5273-bcde-104b2f73882f__d83b228a-83f4-56d5-a0d6-2611155c6752__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "716c5da5-a53b-506b-81da-f485b0bc975e",
+    "title": "치유한방병원 췌장암 초기증상 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-13",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/716c5da5-a53b-506b-81da-f485b0bc975e__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "fd00fe95-49f6-5514-bd71-42fed75f4ddd",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__fd00fe95-49f6-5514-bd71-42fed75f4ddd__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "a7a44d25-0e59-5c93-93ee-7d8daa80e682",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__a7a44d25-0e59-5c93-93ee-7d8daa80e682__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "40ef98db-6aaf-5d0e-a621-9d50cf53861a",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__40ef98db-6aaf-5d0e-a621-9d50cf53861a__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "40c890fd-b106-5384-97f1-7944bb53fdd8",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__40c890fd-b106-5384-97f1-7944bb53fdd8__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "f29b683c-8191-5d9f-894d-632a8dc5307e",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__f29b683c-8191-5d9f-894d-632a8dc5307e__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "e930929f-577d-577c-bc95-2a18957c0e88",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__e930929f-577d-577c-bc95-2a18957c0e88__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "1fa5ea2f-c221-57c1-88dc-18c9469dc438",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__1fa5ea2f-c221-57c1-88dc-18c9469dc438__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "5bf21f30-8a77-5f2f-bcea-1556d6feee0a",
+        "url": "./assets/portfolio/details/716c5da5-a53b-506b-81da-f485b0bc975e__5bf21f30-8a77-5f2f-bcea-1556d6feee0a__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "42fbf7bf-ec75-598a-b17f-e7a3ae53b176",
+    "title": "메젠 무보형물코수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-13",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "c4855055-3186-5661-92fa-1dbf63427bf0",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__c4855055-3186-5661-92fa-1dbf63427bf0__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "1f4e9051-5620-5dee-8908-695c1ecacaea",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__1f4e9051-5620-5dee-8908-695c1ecacaea__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "3ec726ff-1c56-5389-85db-f5e59678879c",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__3ec726ff-1c56-5389-85db-f5e59678879c__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "8a2ae563-7877-5c08-b35e-62ce53a9087f",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__8a2ae563-7877-5c08-b35e-62ce53a9087f__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "a68af5d6-be4e-5890-8ee6-f80d5cf58949",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__a68af5d6-be4e-5890-8ee6-f80d5cf58949__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "cf1451d1-1cd6-59a2-a627-583fce1671e8",
+        "url": "./assets/portfolio/details/42fbf7bf-ec75-598a-b17f-e7a3ae53b176__cf1451d1-1cd6-59a2-a627-583fce1671e8__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "e7d102df-a89b-574d-8526-6273da450ba1",
+    "title": "마리나산부인과 질초음파 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-13",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/e7d102df-a89b-574d-8526-6273da450ba1__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "949644a8-1135-5ab8-ba06-1377da18d2a4",
+        "url": "./assets/portfolio/details/e7d102df-a89b-574d-8526-6273da450ba1__949644a8-1135-5ab8-ba06-1377da18d2a4__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "93253b26-5352-5522-a502-109f86a512e3",
+        "url": "./assets/portfolio/details/e7d102df-a89b-574d-8526-6273da450ba1__93253b26-5352-5522-a502-109f86a512e3__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "c6c2e0bf-524a-5c3e-bef9-07137d53632e",
+        "url": "./assets/portfolio/details/e7d102df-a89b-574d-8526-6273da450ba1__c6c2e0bf-524a-5c3e-bef9-07137d53632e__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "96d1aabc-7bce-5484-a407-4e41067e828c",
+        "url": "./assets/portfolio/details/e7d102df-a89b-574d-8526-6273da450ba1__96d1aabc-7bce-5484-a407-4e41067e828c__detail.webp",
+        "sortOrder": 3
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "665a2364-bf31-5787-a29e-1c707a87c5d4",
+    "title": "순천척병원 무릎퇴행성관절염 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-12",
+    "endDate": "2026-11-13",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/665a2364-bf31-5787-a29e-1c707a87c5d4__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "17132469-db3e-5ebe-9705-104a686386d6",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__17132469-db3e-5ebe-9705-104a686386d6__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "6e883300-204c-544a-8990-893169f6cbec",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__6e883300-204c-544a-8990-893169f6cbec__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "5339d8f4-eff6-5c87-ba71-b7a83921041b",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__5339d8f4-eff6-5c87-ba71-b7a83921041b__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "7064b029-e90e-5714-91a3-6f52196d259b",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__7064b029-e90e-5714-91a3-6f52196d259b__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "e8784ca6-5030-57ec-8e9e-8912a16121eb",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__e8784ca6-5030-57ec-8e9e-8912a16121eb__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "298ebf5f-4a65-54a3-810f-d29689bc91e3",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__298ebf5f-4a65-54a3-810f-d29689bc91e3__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "f7e45293-eb5c-5bde-b964-6fbff8d1beb8",
+        "url": "./assets/portfolio/details/665a2364-bf31-5787-a29e-1c707a87c5d4__f7e45293-eb5c-5bde-b964-6fbff8d1beb8__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "4ad7b583-8ebe-5106-a628-ed9c32199307",
+    "title": "플래닛성형외과 안면거상술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/4ad7b583-8ebe-5106-a628-ed9c32199307__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "1f707155-b2ee-5528-8bad-1e8ffac0e514",
+        "url": "./assets/portfolio/details/4ad7b583-8ebe-5106-a628-ed9c32199307__1f707155-b2ee-5528-8bad-1e8ffac0e514__detail.webp",
+        "sortOrder": 0
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f405e577-4bec-519d-a4fb-c4c085af7f84",
+    "title": "아르노피부과 메타 광고",
+    "category": "광고·캠페인",
+    "startDate": "2026-11-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f405e577-4bec-519d-a4fb-c4c085af7f84__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "4403e803-9d1f-5a82-ac9b-697b2cdac8b9",
+        "url": "./assets/portfolio/details/f405e577-4bec-519d-a4fb-c4c085af7f84__4403e803-9d1f-5a82-ac9b-697b2cdac8b9__detail.webp",
+        "sortOrder": 0
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "e084432f-3cf8-56cf-88df-3d617d6a0b9a",
+    "title": "메젠 이마볼륨 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-12",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/e084432f-3cf8-56cf-88df-3d617d6a0b9a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "a90a945f-4ae1-5172-b138-f2d12b844caf",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__a90a945f-4ae1-5172-b138-f2d12b844caf__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "01f54ca2-abdc-5308-ac19-143e9477f5a0",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__01f54ca2-abdc-5308-ac19-143e9477f5a0__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "a0955f8a-4a8b-5fdb-a5ba-083df5e1f9be",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__a0955f8a-4a8b-5fdb-a5ba-083df5e1f9be__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "8e110b74-9780-50e1-8e85-f83b52f729bd",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__8e110b74-9780-50e1-8e85-f83b52f729bd__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "724f49ff-bd6c-5a91-9025-bc8e73d049b8",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__724f49ff-bd6c-5a91-9025-bc8e73d049b8__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "4be1807d-a58a-5765-88b1-dff701665386",
+        "url": "./assets/portfolio/details/e084432f-3cf8-56cf-88df-3d617d6a0b9a__4be1807d-a58a-5765-88b1-dff701665386__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f1cd2445-7625-5e12-bbd1-08784fb35353",
+    "title": "순천척병원 허리디스크 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-11",
+    "endDate": "2026-11-13",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f1cd2445-7625-5e12-bbd1-08784fb35353__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "b444fa6b-5885-5af7-9a72-54db89a196a6",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__b444fa6b-5885-5af7-9a72-54db89a196a6__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "a0c5f0f5-efd0-53f5-85f7-c138c17ceea9",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__a0c5f0f5-efd0-53f5-85f7-c138c17ceea9__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "29eac683-c335-51f2-986c-919abd3f70e9",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__29eac683-c335-51f2-986c-919abd3f70e9__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "e1f6c4e5-3bee-52df-9dd4-47b3050ea875",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__e1f6c4e5-3bee-52df-9dd4-47b3050ea875__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "c60c03be-d7ed-5678-a4ef-32b64d87e77f",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__c60c03be-d7ed-5678-a4ef-32b64d87e77f__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "4da148dd-f5a2-591b-9150-98cc325ed120",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__4da148dd-f5a2-591b-9150-98cc325ed120__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "3bc51e8c-8353-5007-b9ca-bab620240d13",
+        "url": "./assets/portfolio/details/f1cd2445-7625-5e12-bbd1-08784fb35353__3bc51e8c-8353-5007-b9ca-bab620240d13__detail.webp",
+        "sortOrder": 6
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "ac60b43b-3f62-5bb0-82b9-5ad41a1fa683",
+    "title": "치유한방병원 위암에 좋은 음식 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-11",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "37870441-8071-5523-8522-257f48a3156b",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__37870441-8071-5523-8522-257f48a3156b__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "14c17aac-2b1a-5bee-b643-2f9bd42a36b4",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__14c17aac-2b1a-5bee-b643-2f9bd42a36b4__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "6062bf5c-4152-5559-9529-64cc7faa0eeb",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__6062bf5c-4152-5559-9529-64cc7faa0eeb__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "4e7cfab8-23ff-5e20-81fb-52bede6b149e",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__4e7cfab8-23ff-5e20-81fb-52bede6b149e__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "5eac0660-4a87-5c8a-9048-d19534d5c336",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__5eac0660-4a87-5c8a-9048-d19534d5c336__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "dfe69c66-f04e-5e39-a411-647d74c72b85",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__dfe69c66-f04e-5e39-a411-647d74c72b85__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "03037808-96a7-5856-9aa0-ccd91c72e6f5",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__03037808-96a7-5856-9aa0-ccd91c72e6f5__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "d275b392-dd6f-5ed9-a7ed-33495550616a",
+        "url": "./assets/portfolio/details/ac60b43b-3f62-5bb0-82b9-5ad41a1fa683__d275b392-dd6f-5ed9-a7ed-33495550616a__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "fa9094e6-51c5-59aa-be2e-5782c9c986c8",
+    "title": "신세계서울병원 척추관협착증 시술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-10",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/fa9094e6-51c5-59aa-be2e-5782c9c986c8__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "11b401d8-cf4f-526e-a62b-d48d83767d28",
+        "url": "./assets/portfolio/details/fa9094e6-51c5-59aa-be2e-5782c9c986c8__11b401d8-cf4f-526e-a62b-d48d83767d28__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "a4c568c2-9c8d-58e7-8a97-6ea19fe86046",
+        "url": "./assets/portfolio/details/fa9094e6-51c5-59aa-be2e-5782c9c986c8__a4c568c2-9c8d-58e7-8a97-6ea19fe86046__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "5ae2ae3f-e261-5f57-84e4-485c93ecac26",
+        "url": "./assets/portfolio/details/fa9094e6-51c5-59aa-be2e-5782c9c986c8__5ae2ae3f-e261-5f57-84e4-485c93ecac26__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "d97323fe-3dc1-5c1c-bc03-f05e8359fe71",
+    "title": "루트모발이식 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-09",
+    "endDate": "2026-11-12",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d97323fe-3dc1-5c1c-bc03-f05e8359fe71__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "db40f0ae-2bd5-55a4-a91c-2542b29ae756",
+        "url": "./assets/portfolio/details/d97323fe-3dc1-5c1c-bc03-f05e8359fe71__db40f0ae-2bd5-55a4-a91c-2542b29ae756__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "421ab808-46fe-574e-aeb5-404e5dd2771d",
+        "url": "./assets/portfolio/details/d97323fe-3dc1-5c1c-bc03-f05e8359fe71__421ab808-46fe-574e-aeb5-404e5dd2771d__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2bdc9a85-8e9d-527d-b6c2-1091d72968c4",
+        "url": "./assets/portfolio/details/d97323fe-3dc1-5c1c-bc03-f05e8359fe71__2bdc9a85-8e9d-527d-b6c2-1091d72968c4__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "26f0db7d-c88a-528b-bb38-36f073b9feeb",
+    "title": "순천척병원 블로그 스킨",
+    "category": "웹디자인",
+    "startDate": "2026-11-09",
+    "endDate": "2026-11-10",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/26f0db7d-c88a-528b-bb38-36f073b9feeb__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "ad7e1c8a-0a1c-5128-9e7e-f858feda005f",
+        "url": "./assets/portfolio/details/26f0db7d-c88a-528b-bb38-36f073b9feeb__ad7e1c8a-0a1c-5128-9e7e-f858feda005f__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "567fea15-9777-538c-be7f-b449f399b6b8",
+        "url": "./assets/portfolio/covers/56dfc55a-d771-5598-a250-2bd49ca4e7f0__cover.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "98944f99-dbcd-5c50-a49a-99b0a09ebe6f",
+        "url": "./assets/portfolio/details/56dfc55a-d771-5598-a250-2bd49ca4e7f0__98944f99-dbcd-5c50-a49a-99b0a09ebe6f__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "0cd294b3-2b83-5579-9529-f082bb18ff11",
+    "title": "루트테마피부과 12월 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-09",
+    "endDate": "2026-11-10",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/0cd294b3-2b83-5579-9529-f082bb18ff11__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "8cec13e8-8ef3-5153-acae-055595b63222",
+        "url": "./assets/portfolio/details/0cd294b3-2b83-5579-9529-f082bb18ff11__8cec13e8-8ef3-5153-acae-055595b63222__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "4c10e338-6eee-5aa1-8801-9bc71a99c531",
+        "url": "./assets/portfolio/details/0cd294b3-2b83-5579-9529-f082bb18ff11__4c10e338-6eee-5aa1-8801-9bc71a99c531__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "bbcfcb1e-4fda-532c-94a1-2f954cd3b259",
+        "url": "./assets/portfolio/details/0cd294b3-2b83-5579-9529-f082bb18ff11__bbcfcb1e-4fda-532c-94a1-2f954cd3b259__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "ae51943c-12f6-5b40-b3c8-f467ddeb5dc5",
+    "title": "치유한방병원 방사선치료 후유증 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-09",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "c737bded-ff7e-57a9-9a13-2491fcc85505",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__c737bded-ff7e-57a9-9a13-2491fcc85505__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "09d1b224-3ba0-589c-b572-e72dd2106f9d",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__09d1b224-3ba0-589c-b572-e72dd2106f9d__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "93866e9a-2cc7-5c4d-a1aa-dd1a5a7a9aec",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__93866e9a-2cc7-5c4d-a1aa-dd1a5a7a9aec__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "55e7a238-4d35-5813-a3d2-98c337dbb0f1",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__55e7a238-4d35-5813-a3d2-98c337dbb0f1__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "380d0892-f40f-544c-b455-c0ee3c9147c7",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__380d0892-f40f-544c-b455-c0ee3c9147c7__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "ea5e198d-fe97-5e65-9396-e04c1fed96f3",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__ea5e198d-fe97-5e65-9396-e04c1fed96f3__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "f63f5c46-f3c4-599e-a32c-ac3884170ba7",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__f63f5c46-f3c4-599e-a32c-ac3884170ba7__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "18809198-45f3-55c5-ba35-f48fb08397d9",
+        "url": "./assets/portfolio/details/ae51943c-12f6-5b40-b3c8-f467ddeb5dc5__18809198-45f3-55c5-ba35-f48fb08397d9__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "dde21453-0d82-52bd-a2c0-80d82fd9d3f7",
+    "title": "루트모발이식 SNS 피드",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-09",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/dde21453-0d82-52bd-a2c0-80d82fd9d3f7__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "636c0297-7c01-5982-85f0-d7de5f2d926f",
+        "url": "./assets/portfolio/details/dde21453-0d82-52bd-a2c0-80d82fd9d3f7__636c0297-7c01-5982-85f0-d7de5f2d926f__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "84a7871f-b445-5cac-b128-c78f96a4a852",
+        "url": "./assets/portfolio/details/dde21453-0d82-52bd-a2c0-80d82fd9d3f7__84a7871f-b445-5cac-b128-c78f96a4a852__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "e5b67102-2569-5576-987c-4d9d753dfcf2",
+        "url": "./assets/portfolio/details/dde21453-0d82-52bd-a2c0-80d82fd9d3f7__e5b67102-2569-5576-987c-4d9d753dfcf2__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "7a9a2ac5-560a-54d4-aa66-0d0b1ff64420",
+    "title": "신세계서울병원 위내시경 대장내시경 같은 날 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-06",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/7a9a2ac5-560a-54d4-aa66-0d0b1ff64420__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "ad59f506-3f36-58cd-a6bb-b85844551d8f",
+        "url": "./assets/portfolio/details/7a9a2ac5-560a-54d4-aa66-0d0b1ff64420__ad59f506-3f36-58cd-a6bb-b85844551d8f__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "17d3bef4-edfe-5ec5-b40b-f258e4890f50",
+        "url": "./assets/portfolio/details/7a9a2ac5-560a-54d4-aa66-0d0b1ff64420__17d3bef4-edfe-5ec5-b40b-f258e4890f50__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "6fd975a8-b391-59bf-be5b-7a876fb55be5",
+        "url": "./assets/portfolio/details/7a9a2ac5-560a-54d4-aa66-0d0b1ff64420__6fd975a8-b391-59bf-be5b-7a876fb55be5__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "f4dd4b32-5013-5595-bd9d-9cb7668b4f9a",
+    "title": "메젠 콧대성형 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-06",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "6139fb53-03f8-5122-8edc-7334e9be0d0e",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__6139fb53-03f8-5122-8edc-7334e9be0d0e__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "e2e472b3-0011-5a31-8cec-9aad283a752f",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__e2e472b3-0011-5a31-8cec-9aad283a752f__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "a19c1322-9a5e-552f-bf16-6bc5586707f6",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__a19c1322-9a5e-552f-bf16-6bc5586707f6__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "ab6f93c4-7cfd-5405-8076-66c110b45ce5",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__ab6f93c4-7cfd-5405-8076-66c110b45ce5__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "1da4a139-4e5e-5500-820c-2ac323ef34ef",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__1da4a139-4e5e-5500-820c-2ac323ef34ef__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "b37c12f7-4771-5f6c-a534-cf632ac2d067",
+        "url": "./assets/portfolio/details/f4dd4b32-5013-5595-bd9d-9cb7668b4f9a__b37c12f7-4771-5f6c-a534-cf632ac2d067__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a",
+    "title": "치유한방병원 갑상선암 항암치료 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-03",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "f0e6853b-12c3-5a88-b64c-f203cd19f8fa",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__f0e6853b-12c3-5a88-b64c-f203cd19f8fa__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "5beaf91a-6c7c-5643-add1-e96949c18a40",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__5beaf91a-6c7c-5643-add1-e96949c18a40__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "b1d1b652-3cef-5678-8e24-be257cb0b887",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__b1d1b652-3cef-5678-8e24-be257cb0b887__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "dec2fc1d-4f38-53db-a142-4b45662a4cf0",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__dec2fc1d-4f38-53db-a142-4b45662a4cf0__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "4888ed30-b3b3-515b-8002-f877a5786fc3",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__4888ed30-b3b3-515b-8002-f877a5786fc3__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "7a8caba8-d740-5f0b-a99d-da6175cdb964",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__7a8caba8-d740-5f0b-a99d-da6175cdb964__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "eb9e5387-cafe-59b6-8695-11078dc9bc86",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__eb9e5387-cafe-59b6-8695-11078dc9bc86__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "e52dc2de-278c-5dd6-832e-e0c06699fe46",
+        "url": "./assets/portfolio/details/ee8d1ab0-7af4-50ed-a2bd-06e6a62d3d0a__e52dc2de-278c-5dd6-832e-e0c06699fe46__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "97601d38-7adb-5aef-813a-fa6ca7805512",
+    "title": "메젠 귀족수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-03",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/97601d38-7adb-5aef-813a-fa6ca7805512__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "0746e8f8-25db-5052-8b2d-15a223b1eb24",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__0746e8f8-25db-5052-8b2d-15a223b1eb24__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "b3bb2e72-20e8-52a8-8a00-f23ea3846d9e",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__b3bb2e72-20e8-52a8-8a00-f23ea3846d9e__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "0be90b3a-451a-5f8b-84bb-0244215ac43f",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__0be90b3a-451a-5f8b-84bb-0244215ac43f__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "dd337c15-03e5-55ad-95fb-344b4177b7b1",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__dd337c15-03e5-55ad-95fb-344b4177b7b1__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "354ea1d5-b53c-5309-a861-5e1b291092c0",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__354ea1d5-b53c-5309-a861-5e1b291092c0__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "3f350515-6f22-5183-8c16-f0d0e6f70830",
+        "url": "./assets/portfolio/details/97601d38-7adb-5aef-813a-fa6ca7805512__3f350515-6f22-5183-8c16-f0d0e6f70830__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "795863b1-c995-5a03-b570-daf0c43850dd",
+    "title": "신세계서울병원 손목 골절 수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-02",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/795863b1-c995-5a03-b570-daf0c43850dd__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "924b05a6-dc00-5484-ab94-d0a92a63ef9a",
+        "url": "./assets/portfolio/details/795863b1-c995-5a03-b570-daf0c43850dd__924b05a6-dc00-5484-ab94-d0a92a63ef9a__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "efb15fb4-6dd0-50f7-833d-5185a6a3271f",
+        "url": "./assets/portfolio/details/795863b1-c995-5a03-b570-daf0c43850dd__efb15fb4-6dd0-50f7-833d-5185a6a3271f__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "233a071c-4d2f-5bf4-a096-05e97914e490",
+        "url": "./assets/portfolio/details/795863b1-c995-5a03-b570-daf0c43850dd__233a071c-4d2f-5bf4-a096-05e97914e490__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "bd39f709-9683-5ba1-a2e6-25a707c32648",
+        "url": "./assets/portfolio/details/795863b1-c995-5a03-b570-daf0c43850dd__bd39f709-9683-5ba1-a2e6-25a707c32648__detail.webp",
+        "sortOrder": 3
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "1ede8dbf-580c-5c4c-a539-b75b1a349d1d",
+    "title": "신세계서울병원 무지외반증 수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-02",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/1ede8dbf-580c-5c4c-a539-b75b1a349d1d__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "4c37e334-ea96-56cb-ba32-6e78cdf60216",
+        "url": "./assets/portfolio/details/1ede8dbf-580c-5c4c-a539-b75b1a349d1d__4c37e334-ea96-56cb-ba32-6e78cdf60216__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "74c25afc-0ed4-5f32-8bef-2f65e1bec90c",
+        "url": "./assets/portfolio/details/1ede8dbf-580c-5c4c-a539-b75b1a349d1d__74c25afc-0ed4-5f32-8bef-2f65e1bec90c__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "24c88939-cccf-5617-9b27-7cd7f17673e4",
+        "url": "./assets/portfolio/details/1ede8dbf-580c-5c4c-a539-b75b1a349d1d__24c88939-cccf-5617-9b27-7cd7f17673e4__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "3061a55d-2ce0-572d-8255-8f7154245dd2",
+    "title": "메젠 코재수술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-02",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/3061a55d-2ce0-572d-8255-8f7154245dd2__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "f72cb779-3876-56b1-bc12-ed406a41202d",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__f72cb779-3876-56b1-bc12-ed406a41202d__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "92829270-5920-582f-b944-5e4c0c43345b",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__92829270-5920-582f-b944-5e4c0c43345b__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "6cf3b6a7-e644-5d43-b612-125b98146ae8",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__6cf3b6a7-e644-5d43-b612-125b98146ae8__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "dd99f056-0bb3-514a-a1b1-f2dfc116843b",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__dd99f056-0bb3-514a-a1b1-f2dfc116843b__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "7adeabe0-4071-5cf3-bf95-75a690625e0f",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__7adeabe0-4071-5cf3-bf95-75a690625e0f__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "f438ea5b-01ad-54f9-84df-f95d7405a49c",
+        "url": "./assets/portfolio/details/3061a55d-2ce0-572d-8255-8f7154245dd2__f438ea5b-01ad-54f9-84df-f95d7405a49c__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "7fee1f8b-a278-524e-aae1-8cd2753b2b89",
+    "title": "메젠 코끝성형 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-11-02",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/7fee1f8b-a278-524e-aae1-8cd2753b2b89__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "46afaa1f-691f-5e5c-a3c6-6c1e080a2a0b",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__46afaa1f-691f-5e5c-a3c6-6c1e080a2a0b__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "c88e8b99-4901-5844-9218-a46c3e719607",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__c88e8b99-4901-5844-9218-a46c3e719607__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "d708353c-f33c-57d6-8720-bb5fbd1fe1fd",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__d708353c-f33c-57d6-8720-bb5fbd1fe1fd__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "47a33896-a950-52ae-8b55-3fe129716c83",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__47a33896-a950-52ae-8b55-3fe129716c83__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "f108e0a1-93c3-5ba6-aee1-43397762913d",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__f108e0a1-93c3-5ba6-aee1-43397762913d__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "e4a5b89f-8311-53ca-b30a-65f13be3cd08",
+        "url": "./assets/portfolio/details/7fee1f8b-a278-524e-aae1-8cd2753b2b89__e4a5b89f-8311-53ca-b30a-65f13be3cd08__detail.webp",
+        "sortOrder": 5
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "a432f69f-5503-538b-8189-c62dc5960659",
+    "title": "치유한방병원 폐암에 좋은 음식 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-28",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/a432f69f-5503-538b-8189-c62dc5960659__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "d2d0763d-e1fe-5077-8ba4-912278e2ad3c",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__d2d0763d-e1fe-5077-8ba4-912278e2ad3c__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "dafc7463-1f76-580d-ac0f-e8d4e572ec0d",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__dafc7463-1f76-580d-ac0f-e8d4e572ec0d__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "1bde61c0-5105-53c1-a49f-1097d86ceaca",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__1bde61c0-5105-53c1-a49f-1097d86ceaca__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "fe1d0261-1a0c-5ef6-90a2-a4d468b1e979",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__fe1d0261-1a0c-5ef6-90a2-a4d468b1e979__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "8a0d9292-b211-5eda-99d8-f11e0e709f73",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__8a0d9292-b211-5eda-99d8-f11e0e709f73__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "2fe82399-5930-521a-b200-5d7627a955c0",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__2fe82399-5930-521a-b200-5d7627a955c0__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "20c407cb-1b0c-5862-8eec-319005a5968c",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__20c407cb-1b0c-5862-8eec-319005a5968c__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "bebe7c0f-4316-505c-ba31-627ec3be602e",
+        "url": "./assets/portfolio/details/a432f69f-5503-538b-8189-c62dc5960659__bebe7c0f-4316-505c-ba31-627ec3be602e__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "0e7b9c8e-682d-5724-b801-f240808b2f7a",
+    "title": "신세계서울병원 오다리교정술 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-28",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/0e7b9c8e-682d-5724-b801-f240808b2f7a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "e0f9b69d-e4f5-5483-b2b3-4335861700cd",
+        "url": "./assets/portfolio/details/0e7b9c8e-682d-5724-b801-f240808b2f7a__e0f9b69d-e4f5-5483-b2b3-4335861700cd__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "7b7be548-b7ce-59d2-83a5-77039c35e59c",
+        "url": "./assets/portfolio/details/0e7b9c8e-682d-5724-b801-f240808b2f7a__7b7be548-b7ce-59d2-83a5-77039c35e59c__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "80b1a9f6-ccdb-54b6-b4d0-97e5aa7097be",
+        "url": "./assets/portfolio/details/0e7b9c8e-682d-5724-b801-f240808b2f7a__80b1a9f6-ccdb-54b6-b4d0-97e5aa7097be__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "dc67d643-3345-56da-b6c1-fe3d7013fbd1",
+    "title": "치유한방병원 인천유방암항암관리 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-27",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/dc67d643-3345-56da-b6c1-fe3d7013fbd1__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "1e8d9f97-1aac-55d1-a46b-eb7edc1a190a",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__1e8d9f97-1aac-55d1-a46b-eb7edc1a190a__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "3765e5e9-20ad-5d8c-b672-053878063807",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__3765e5e9-20ad-5d8c-b672-053878063807__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "c1ab16f0-ea64-5dfa-863a-c53542537aa1",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__c1ab16f0-ea64-5dfa-863a-c53542537aa1__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "f38a6751-2920-5166-bf8c-0188e40a5466",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__f38a6751-2920-5166-bf8c-0188e40a5466__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "4cd7b8f1-f002-5450-a0af-2fdda5aef00c",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__4cd7b8f1-f002-5450-a0af-2fdda5aef00c__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "caea7e5f-3bf3-5591-9093-927fb941a405",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__caea7e5f-3bf3-5591-9093-927fb941a405__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "39a3d26d-e53d-5216-97a9-d268f72e87b7",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__39a3d26d-e53d-5216-97a9-d268f72e87b7__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "b8b7453c-f816-5011-ac45-9ff0a633abc4",
+        "url": "./assets/portfolio/details/dc67d643-3345-56da-b6c1-fe3d7013fbd1__b8b7453c-f816-5011-ac45-9ff0a633abc4__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "4fa7a105-f94d-50ad-a857-a2a9a2b2763b",
+    "title": "치유한방병원 대장암 3기 생존율 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-27",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "3aa98ec5-1dbb-597d-b4c9-a5541f7ec840",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__3aa98ec5-1dbb-597d-b4c9-a5541f7ec840__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "86d64a6e-7347-5c83-9325-60f105e53a0f",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__86d64a6e-7347-5c83-9325-60f105e53a0f__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "a6ad93a1-e719-5d3e-a4aa-014c387835c5",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__a6ad93a1-e719-5d3e-a4aa-014c387835c5__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "b5174552-d917-5994-accb-e6e4cf599bdc",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__b5174552-d917-5994-accb-e6e4cf599bdc__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "4c84b168-3421-589a-baaa-c381e1fb8e0d",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__4c84b168-3421-589a-baaa-c381e1fb8e0d__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "466aca35-d36f-58ea-be71-c7b4dd0a8338",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__466aca35-d36f-58ea-be71-c7b4dd0a8338__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "d5ec055f-f9b2-5dd1-974e-299e88692d7c",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__d5ec055f-f9b2-5dd1-974e-299e88692d7c__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "63e38e8f-dbf4-5ff4-a452-a410b2b795c1",
+        "url": "./assets/portfolio/details/4fa7a105-f94d-50ad-a857-a2a9a2b2763b__63e38e8f-dbf4-5ff4-a452-a410b2b795c1__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "4e9d0828-a64f-57be-82f5-dd47084a34fc",
+    "title": "신세계서울병원 회전근개파열 수술 후 재활 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-27",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/4e9d0828-a64f-57be-82f5-dd47084a34fc__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "729ba7c2-89f3-5263-925b-e8804e16d120",
+        "url": "./assets/portfolio/details/4e9d0828-a64f-57be-82f5-dd47084a34fc__729ba7c2-89f3-5263-925b-e8804e16d120__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "c671ccc1-e271-5a66-810e-0f016652cc31",
+        "url": "./assets/portfolio/details/4e9d0828-a64f-57be-82f5-dd47084a34fc__c671ccc1-e271-5a66-810e-0f016652cc31__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "1ddaad9f-04a6-55c8-ab7a-a1acabd26aea",
+        "url": "./assets/portfolio/details/4e9d0828-a64f-57be-82f5-dd47084a34fc__1ddaad9f-04a6-55c8-ab7a-a1acabd26aea__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "932ea642-3b52-53d9-bf21-bfbdf9c01261",
+        "url": "./assets/portfolio/details/4e9d0828-a64f-57be-82f5-dd47084a34fc__932ea642-3b52-53d9-bf21-bfbdf9c01261__detail.webp",
+        "sortOrder": 3
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "41c2ae05-6413-569e-8904-00b8917f45a2",
+    "title": "신세계서울병원 양방향 척추내시경 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-27",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/41c2ae05-6413-569e-8904-00b8917f45a2__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "b125d5bb-56a9-593e-80ad-ad28017237dc",
+        "url": "./assets/portfolio/details/41c2ae05-6413-569e-8904-00b8917f45a2__b125d5bb-56a9-593e-80ad-ad28017237dc__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "7cbf8192-e1ef-5c59-aa08-d069f930922e",
+        "url": "./assets/portfolio/details/41c2ae05-6413-569e-8904-00b8917f45a2__7cbf8192-e1ef-5c59-aa08-d069f930922e__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "2a72e80f-a8fc-5ed1-8cfb-ea0c10f61f7b",
+        "url": "./assets/portfolio/details/41c2ae05-6413-569e-8904-00b8917f45a2__2a72e80f-a8fc-5ed1-8cfb-ea0c10f61f7b__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "28677d25-971b-5262-8d84-c282a163a5b6",
+    "title": "골드제이의원 입가주름필러 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-26",
+    "endDate": "2026-11-02",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/28677d25-971b-5262-8d84-c282a163a5b6__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "2353407e-7d56-5f37-89c4-46e0d94235df",
+        "url": "./assets/portfolio/details/28677d25-971b-5262-8d84-c282a163a5b6__2353407e-7d56-5f37-89c4-46e0d94235df__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "42210fab-176a-5447-8a81-e795a11b502d",
+        "url": "./assets/portfolio/details/28677d25-971b-5262-8d84-c282a163a5b6__42210fab-176a-5447-8a81-e795a11b502d__detail.webp",
+        "sortOrder": 1
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "21b53aee-ec9f-5e6e-84a5-963b84ee2b1a",
+    "title": "골드제이의원 쥬베룩볼륨후기 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-26",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/21b53aee-ec9f-5e6e-84a5-963b84ee2b1a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "fb65b0d2-0297-5611-b147-1acec16b343b",
+        "url": "./assets/portfolio/details/21b53aee-ec9f-5e6e-84a5-963b84ee2b1a__fb65b0d2-0297-5611-b147-1acec16b343b__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "5359145a-e7a2-55f1-8dd3-54bfc48a8dcc",
+        "url": "./assets/portfolio/details/21b53aee-ec9f-5e6e-84a5-963b84ee2b1a__5359145a-e7a2-55f1-8dd3-54bfc48a8dcc__detail.webp",
+        "sortOrder": 1
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "cca3ac51-4cee-5abb-ad87-0d8ed4a14c28",
+    "title": "치유한방병원 인천척추관협착증치료 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-23",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "81f9fad1-b1b7-5ffd-87c6-2fdfdc82e8db",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__81f9fad1-b1b7-5ffd-87c6-2fdfdc82e8db__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "f13b3f32-4e02-5d32-8902-8d25f3990def",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__f13b3f32-4e02-5d32-8902-8d25f3990def__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "bcaab0b6-e436-5209-ab38-36e248969090",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__bcaab0b6-e436-5209-ab38-36e248969090__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "78aee0a0-2534-5ed4-8f95-0c6a91866b11",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__78aee0a0-2534-5ed4-8f95-0c6a91866b11__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "c1f0ca69-06b6-5d21-9bb7-75569a78af4e",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__c1f0ca69-06b6-5d21-9bb7-75569a78af4e__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "88f22653-0adc-5641-90e1-ce1e1157d62a",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__88f22653-0adc-5641-90e1-ce1e1157d62a__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "94884360-56ca-5757-bbc1-d20466dd0a23",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__94884360-56ca-5757-bbc1-d20466dd0a23__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "a89df8fb-350b-5ceb-85cd-f16a09f34e44",
+        "url": "./assets/portfolio/details/cca3ac51-4cee-5abb-ad87-0d8ed4a14c28__a89df8fb-350b-5ceb-85cd-f16a09f34e44__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "b03ba97d-fe24-5f79-a7c9-da1723cf177a",
+    "title": "골드제이의원 쥬베룩볼륨부작용 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-22",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/b03ba97d-fe24-5f79-a7c9-da1723cf177a__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "93c315a5-f57a-532c-b7c6-18d1c5047025",
+        "url": "./assets/portfolio/details/b03ba97d-fe24-5f79-a7c9-da1723cf177a__93c315a5-f57a-532c-b7c6-18d1c5047025__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "02e3ea26-8695-5cf2-9d8b-69a8f5fe2304",
+        "url": "./assets/portfolio/details/b03ba97d-fe24-5f79-a7c9-da1723cf177a__02e3ea26-8695-5cf2-9d8b-69a8f5fe2304__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "48c6590d-6b90-5bec-a991-acea0af032ef",
+        "url": "./assets/portfolio/details/b03ba97d-fe24-5f79-a7c9-da1723cf177a__48c6590d-6b90-5bec-a991-acea0af032ef__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "d61ffa9e-3be6-5e20-abd8-7c3b68593ceb",
+    "title": "골드제이의원 선정릉피부과 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-22",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/d61ffa9e-3be6-5e20-abd8-7c3b68593ceb__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "71da4d9b-a760-565a-a152-71be2a3704c6",
+        "url": "./assets/portfolio/details/d61ffa9e-3be6-5e20-abd8-7c3b68593ceb__71da4d9b-a760-565a-a152-71be2a3704c6__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "1587a490-40ab-5f6a-a8d9-499116604eb0",
+        "url": "./assets/portfolio/details/d61ffa9e-3be6-5e20-abd8-7c3b68593ceb__1587a490-40ab-5f6a-a8d9-499116604eb0__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "00bdcefa-2f18-5b79-a135-9dd5d08c3bc7",
+        "url": "./assets/portfolio/details/d61ffa9e-3be6-5e20-abd8-7c3b68593ceb__00bdcefa-2f18-5b79-a135-9dd5d08c3bc7__detail.webp",
+        "sortOrder": 2
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "317b7421-e739-56bb-9a69-6658f89654f4",
+    "title": "치유한방병원 간암 3기 생존율 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-21",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude",
+      "Photoshop"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/317b7421-e739-56bb-9a69-6658f89654f4__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "ca5eea2d-5586-5720-9781-4fab3428d90b",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__ca5eea2d-5586-5720-9781-4fab3428d90b__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "9b4ff21b-b3c3-5595-a685-e3496d3876f2",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__9b4ff21b-b3c3-5595-a685-e3496d3876f2__detail.webp",
+        "sortOrder": 1
+      },
+      {
+        "id": "9ce1c258-b4b0-5369-8854-9ad7de0efeb0",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__9ce1c258-b4b0-5369-8854-9ad7de0efeb0__detail.webp",
+        "sortOrder": 2
+      },
+      {
+        "id": "d10981e4-2a95-5b49-942e-9f17995a4688",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__d10981e4-2a95-5b49-942e-9f17995a4688__detail.webp",
+        "sortOrder": 3
+      },
+      {
+        "id": "730b0a38-504e-57c7-87c0-924c78228fc0",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__730b0a38-504e-57c7-87c0-924c78228fc0__detail.webp",
+        "sortOrder": 4
+      },
+      {
+        "id": "e58f49b6-60cd-5557-931c-c4676e19081b",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__e58f49b6-60cd-5557-931c-c4676e19081b__detail.webp",
+        "sortOrder": 5
+      },
+      {
+        "id": "744054e3-2ec0-59a4-9771-3fe0eea309d4",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__744054e3-2ec0-59a4-9771-3fe0eea309d4__detail.webp",
+        "sortOrder": 6
+      },
+      {
+        "id": "a4fd1921-bd96-5195-a0af-9542f253ce15",
+        "url": "./assets/portfolio/details/317b7421-e739-56bb-9a69-6658f89654f4__a4fd1921-bd96-5195-a0af-9542f253ce15__detail.webp",
+        "sortOrder": 7
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
+    "id": "4efe1f16-70be-524b-be60-9a534133fcca",
+    "title": "골드제이의원 대치동피부과 블로그 콘텐츠",
+    "category": "콘텐츠 디자인",
+    "startDate": "2026-10-21",
+    "endDate": "",
+    "tools": [
+      "Figma",
+      "ChatGPT",
+      "Claude"
+    ],
+    "role": "디자인 100%",
+    "description": "",
+    "thumbnail": {
+      "mode": "contain",
+      "scale": 1,
+      "x": 0,
+      "y": 0
+    },
+    "coverUrl": "./assets/portfolio/covers/4efe1f16-70be-524b-be60-9a534133fcca__cover.webp",
+    "isPublic": true,
+    "isFeatured": false,
+    "isPinned": false,
+    "pinOrder": null,
+    "images": [
+      {
+        "id": "11ca4a41-fd0f-5e78-9d0a-121ab0656499",
+        "url": "./assets/portfolio/details/4efe1f16-70be-524b-be60-9a534133fcca__11ca4a41-fd0f-5e78-9d0a-121ab0656499__detail.webp",
+        "sortOrder": 0
+      },
+      {
+        "id": "edee9647-05f7-531f-937f-bc7c7cb43651",
+        "url": "./assets/portfolio/details/4efe1f16-70be-524b-be60-9a534133fcca__edee9647-05f7-531f-937f-bc7c7cb43651__detail.webp",
+        "sortOrder": 1
+      }
+    ],
+    "tags": [
+      "실무 프로젝트"
+    ]
+  },
+  {
     "id": "bbfd518a-6e95-4c17-bd55-7757a1a406d7",
     "title": "MORI DEW 데일리 수분 세럼(반응형 웹 배너)",
     "category": "웹디자인",
